@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <settings>
+        <setting name="cacheEnabled" value="true"/>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <!--가져온 컬럼의 데이터가 Null 이어도 Setter Method 를 통해 데이터를 바인딩 한다. -->
+        <setting name="callSettersOnNulls" value="true"/>
+
+        <!--가져온 Row 의 컬럼 데이터 전체가 Null 이어도 컬럼별 NULL 데이터를 생성한다. -->
+        <setting name="returnInstanceForEmptyRow" value="true"/>
+
+        <!--        <setting name="lazyLoadingEnabled" value="true"/>-->
+        <!--        <setting name="multipleResultSetsEnabled" value="true"/>-->
+        <!--        <setting name="useColumnLabel" value="true"/>-->
+        <!--        <setting name="useGeneratedKeys" value="false"/>-->
+        <!--        <setting name="autoMappingBehavior" value="PARTIAL"/>-->
+        <!--        <setting name="autoMappingUnknownColumnBehavior" value="WARNING"/>-->
+        <!--        <setting name="defaultExecutorType" value="SIMPLE"/>-->
+        <!--        <setting name="defaultStatementTimeout" value="25"/>-->
+        <!--        <setting name="defaultFetchSize" value="100"/>-->
+        <!--        <setting name="safeRowBoundsEnabled" value="false"/>-->
+        <!--        <setting name="mapUnderscoreToCamelCase" value="false"/>-->
+        <!--        <setting name="localCacheScope" value="SESSION"/>-->
+        <!--        <setting name="jdbcTypeForNull" value="OTHER"/>-->
+        <!--        <setting name="lazyLoadTriggerMethods" value="equals,clone,hashCode,toString"/>-->
+    </settings>
+    <!--
+          VO를 선언하여  mybatis/sql/하위의 쿼리들을 실행할때 resultType, parameterType에
+풀 패키지명을 쓰지 않고 선언한 alias의 이름만 사용하여 VO를 주고 받을 수 있도록 해줌.
+
+          **** 예시  ****
+          mybatis/mybatis-config.xml
+          <typeAlias alias="TestVO" type="com.hee.heechart.VO.TestVO"></typeAlias>
+
+          mybatis/sql/test.xml
+           *alias를 선언했을 때
+           <select id="getShowroomList" resultType="TestVO" parameterType="TestVO">
+                SELECT * FROM TableName WHERE ColumnName = #{parameter}
+           </select>
+
+           *alias를 선언하지 않았을 때
+           <select id="getShowroomList" resultType="패키지명.TestVO"
+                parameterType="om.hee.heechart.VO.TestVO">
+                SELECT * FROM TableName WHERE ColumnName = #{parameter}
+           </select>
+    -->
+
+    <typeAliases>
+        <typeAlias alias="DTO" type="com.spring.ex.dto.MemberDTO"></typeAlias>
+        <!--        <typeAlias alias="DAO" type="com.spring.ex.dao.MemberDAO"></typeAlias>-->
+
+    </typeAliases>
+
+
+</configuration>
