@@ -17,7 +17,7 @@
 </head>
 <body>
 <h1 style="text-align: center;">공지사항</h1><br>
-
+<h1>집가자</h1>
 <div class="container">
     <div class="row">
         <section class="mypage_sidebar">
