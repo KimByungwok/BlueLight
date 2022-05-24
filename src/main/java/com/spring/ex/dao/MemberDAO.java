@@ -7,5 +7,5 @@ public interface MemberDAO {
     public List<MemberDTO> memberList();
 
     public int test(MemberDTO dto);
-    public void insertMember(MemberDTO dto);
+    public int insertMember(MemberDTO dto);
 }

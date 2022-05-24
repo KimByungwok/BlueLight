@@ -15,8 +15,9 @@
 	<div class="container mt-3">
 		<h3 ><a href = "privateregister" style="text-decoration:none" >개인 회원가입</a></h3>
 		<br><a href="registerselect"><button class="btn btn-outline-success">뒤로가기</button></a>
-		<%-- 아이디 입력 --%>
-		<form action="개인 회원가입#" class="was-validated">
+
+		<form action="registerOk" class="was-validated">
+			<%-- 아이디 입력 --%>
 			<div class="mb-3 mt-3">
 				<label for="id" class="form-label">아이디:</label>
 				<input type="text" class="form-control" id="id" placeholder="Enter ID" name="id" required>
@@ -65,8 +66,27 @@
 					<input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">
 					<label class="form-check-label" for="check2">약관 동의</label>
 				</div>
+				<%-- 빈값 검증 --%>
+				<script>
+
+					$(document).ready(function(){
+
+						$("#submit").click(function(){
+							if($("#id").val().length==0){ alert("아이디를 입력하세요."); $("#id").focus(); return false; }
+							if($("#pw").val().length==0){ alert("비밀번호를 입력하세요."); $("#pw").focus(); return false; }
+							if($("#name").val().length==0){ alert("이름을 입력하세요."); $("#name").focus(); return false; }
+							if($("#phonenum").val().length==0){ alert("휴대폰번호를 입력하세요."); $("#phonenum").focus(); return false; }
+							if($("#address").val().length==0){ alert("주소를 입력하세요."); $("#address").focus(); return false; }
+							if($("#email").val().length==0){ alert("이메일을 입력하세요."); $("#email").focus(); return false; }
+
+						});
+					});
+
+				</script>
+				<input type="hidden" name="flag" value="0">
+				<input type="hidden" name="s_number" value="0">
 				<div class="col-12 col-sm-4 col-xl-3">
-					<button type="submit" class="btn btn-primary">기업 회원가입</button>
+					<button type="submit" class="btn btn-primary">개인 회원가입</button>
 				</div>
 			</div>
 

@@ -53,17 +53,17 @@ public class MainController {
 	@RequestMapping("/registerOk")
 	public String registerOk(HttpServletRequest request, Model model) {
 		System.out.println("RegisterOk");
-		//System.out.println(request.getParameter("id"));
-		//model.addAttribute("id", request.getAttribute("id"));
-		//model.addAttribute("pw", request.getAttribute("pw"));
 		MemberDTO dto = new MemberDTO();
 		MemberDAO dao = null;
+		dto.setM_flag(request.getParameter("flag"));
 		dto.setM_id(request.getParameter("id"));
 		dto.setM_pw(request.getParameter("pw"));
-		String id = request.getParameter("id");
-		String pw = request.getParameter("pw");
-		//System.out.println("아이디"+ dto.getM_id());
-		//System.out.println("비밀번호" + dto.getM_pw());
+		dto.setM_name(request.getParameter("name"));
+		dto.setM_phone(request.getParameter("phonenum"));
+		dto.setM_address(request.getParameter("address"));
+		dto.setM_email(request.getParameter("email"));
+		dto.setM_s_number(request.getParameter("s_number"));
+
 
 		mService.insertMember(dto);
 
