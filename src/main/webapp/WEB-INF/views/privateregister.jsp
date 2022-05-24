@@ -16,7 +16,7 @@
 		<h3 ><a href = "privateregister" style="text-decoration:none" >개인 회원가입</a></h3>
 		<br><a href="registerselect"><button class="btn btn-outline-success">뒤로가기</button></a>
 
-		<form action="registerOk#" class="was-validated">
+		<form action="registerOk" class="was-validated">
 			<%-- 아이디 입력 --%>
 			<div class="mb-3 mt-3">
 				<label for="id" class="form-label">아이디:</label>
