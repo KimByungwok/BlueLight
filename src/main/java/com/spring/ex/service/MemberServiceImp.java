@@ -18,7 +18,7 @@ public class MemberServiceImp implements MemberService {
 
     @Override
     public int insertMember(MemberDTO dto) {
-        return memberDAO.test(dto);
+        return memberDAO.insertMember(dto);
     }
     @Override
     public List<MemberDTO> memberList() {

@@ -22,10 +22,7 @@ public class MemberDAOImp implements MemberDAO{
 
     }
     @Override
-    public void insertMember(MemberDTO dto) {
-        System.out.println("3");
-        System.out.println(dto.getM_id());
-        System.out.println(dto.getM_pw());
-        sqlSession.insert("member.insertMember", dto);
+    public int insertMember(MemberDTO dto) {
+        return sqlSession.insert("member.insertMember", dto);
     }
 }
