@@ -13,10 +13,12 @@
 </head>
 <body>
 
-<div class="container row">
-    <div class="col-12 col-sm-12 col-xl-12" style="text-align: center;">
-        <h2>회원가입을 축하드립니다.</h2>
-    </div>
+<div class="container" style="text-align: center;">
+    <br><br>
+    <h2>회원가입을 축하드립니다.</h2>
+    <br><br>
+    <a href="login"><button class="btn btn-outline-secondary">로그인 하기</button></a>
+    <br><br>
 </div>
 
 </body>

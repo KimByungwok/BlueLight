@@ -6,7 +6,7 @@
         <div class="map-img">
             <img src="${pageContext.request.contextPath}/resources/images/footer/map-img.svg" alt="">
         </div>
-        <div class="container">
+        <div class="container" style="margin-top: 30px;">
             <div class="row">
                 <%--푸터 로고, sns링크 --%>
                 <div class="col-xl-4 col-md-7">
@@ -38,7 +38,7 @@
                         <ul class="link">
                             <li><a href="javascript:void(0)">실시간 상담</a></li>
                             <li><a href="javascript:void(0)">고객센터</a></li>
-                            <li><a href="javascript:void(0)">도움말</a></li>
+                            <li><a href="javascript:void(0)">QnA</a></li>
                         </ul>
                     </div>
                 </div>
@@ -47,7 +47,7 @@
                     <div class="footer-widget">
                         <h4>Company Info</h4>
                         <ul class="link">
-                            <li><a href="javascript:void(0)">회사 소개</a></li>
+                            <li><a href="javascript:void(0)">회사소개</a></li>
                             <li><a href="javascript:void(0)">약관정보</a></li>
                         </ul>
                     </div>

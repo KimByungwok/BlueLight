@@ -149,4 +149,8 @@ public class MainController {
 	//기업랭킹
 	@RequestMapping("/companyrank")
 	public String companyrank() { return "companyrank";}
+
+	//관리자 메인
+	@RequestMapping("/adminmain")
+	public String adminmain() { return "adminmain";}
 }

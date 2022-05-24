@@ -237,7 +237,7 @@
                                 <ul class="dropdown-nav">
                                     <li><a href="login">로그인</a></li>
                                     <li><a href="registerselect">회원가입</a></li>
-                                    <li><a href="javascript:void(0)">로그Out</a></li>
+                                    <li><a href="adminmain">로그Out</a></li>
                                 </ul>
                             </li>
                         </ul>
