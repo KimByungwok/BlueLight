@@ -28,19 +28,46 @@
         <article class="donationheader" style="flex-direction: column">
             <span class="donationinfo">후원정보 : 어쩌구~저쩌구~ 아무튼 기부할게~~</span><hr>
             <span class="userinfo">후원자 정보 : 행복한 돼지<%--${java}--%></span><hr>
-            <span class="donationmoney">후원금액
-                <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" class="donationtextarea" placeholder="숫자를 입력해주세요" style="width: 50%; margin-left: 10px;"></input>
-                <p style="font-weight: bold; margin-left: 10px;">원</p>
-                <span class="donationanony">
-                <div class="form-check">
-                    <label class="form-check-label" for="check1" style="font-size: 20px; margin-top: 5px; ">자원봉사</label>
-                    <input type="checkbox" class="form-check-input1" id="check1" name="option1" value="something" style="width: 20px; height: 20px; float: left;">
 
-                    <label class="form-check-label" for="check2" style="font-size: 20px; margin-top: 5px; ">물품기부</label>
-                    <input type="checkbox" class="form-check-input1" id="check2" name="option1" value="something" style="width: 20px; height: 20px; float: left;">
-                </div>
+            <article>
+                <span style="width: 100px;">기부 종류<%--${java}--%></span>
+                    <span style="padding-left: 5.75em; width: 300px;">
+                    <label class="form-check-label" for="itemcheckbox" style="font-size: 20px; margin-top: 5px; ">물품기부</label>
+                    <input type="checkbox" class="form-check-input1" id='itemcheckbox' onclick='itemcheckbox(this)' name="option1" value="something" style="width: 20px; height: 20px; float: left; ">
+                    </span>
+                <span style="width: 300px;">
+                    <label class="form-check-label" for="livecheckbox" style="font-size: 20px; margin-top: 5px; ">현장후원</label>
+                    <input type="checkbox" class="form-check-input1" id='livecheckbox' onclick='livecheckbox(this)' name="option1" value="something" style="width: 20px; height: 20px; float: left; ">
                 </span>
+            </article>
+
+            <hr>
+            <span class="donationmoney">후원금액
+                <input type="text" id= "itemdonation" disabled  class="donationtextarea" placeholder="기부할 물품을 입력해주세요" style="width: 50%; margin-left: 70px;"></input>
+                <br><span style="margin-left: 15px;">배송지 주소 : 경민대 효 401호</span>
             </span><hr>
+
+            <article>
+                <span style="width: 100px;">신청 날짜<%--${java}--%></span>
+                <span style="padding-left: 5.75em; width: 150px;">
+                    <label class="form-check-label" for="itemcheckbox" style="font-size: 20px; margin-top: 5px; ">22</label>
+                    <input type='checkbox' name="options" id='date1' disabled value="옵션1" style="width: 20px; height: 20px; float: left; ">
+                </span>
+                <span style="padding-left: 5.75em; width: 150px;">
+                    <label class="form-check-label" for="itemcheckbox" style="font-size: 20px; margin-top: 5px; ">24</label>
+                    <input type='checkbox' name="options" id='date2' disabled value="옵션2" style="width: 20px; height: 20px; float: left; ">
+                </span>
+                <span style="padding-left: 5.75em; width: 150px;">
+                    <label class="form-check-label" for="itemcheckbox" style="font-size: 20px; margin-top: 5px; ">26</label>
+                    <input type='checkbox' name="options" id='date3' disabled value="옵션3" style="width: 20px; height: 20px; float: left; ">
+                </span><hr>
+            </article>
+            <article>
+                <div class="col-lg-12" style="display: flex; justify-content: space-evenly; flex-direction: column">
+                    <a href="#"><input type="button" class="btn btn-outline-secondary" value="신청하기"></a>
+                </div>
+            </article>
+
         </article>
     </section>
 </div>

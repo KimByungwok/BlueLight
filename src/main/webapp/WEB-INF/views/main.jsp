@@ -100,7 +100,7 @@
                 <div class="single-product">
                     <div class="product-img">
                         <a href="product-details.html">
-                            <img src="${pageContext.request.contextPath}/resources/images/product/l-product-1.jpg" alt="">
+                            <img src="${pageContext.request.contextPath}/resources/images/product/donationimg1.jpg" alt="">
                         </a>
                         <div class="product-action">
                             <a href="javascript:void(0)"><i class="lni lni-heart"></i></a>
@@ -109,24 +109,21 @@
                     </div>
 
                     <div class="product-content">
-                        <h3 class="name"><a href="#">Apple iPhone x</a></h3>
+                        <h3 class="name"><a href="#">우크라이나 전쟁 기부</a></h3>
                         <span class="update">Last Update: <%-- {$ java} --%></span>
                         <ul class="address">
                             <li>
-                                <a href="javascript:void(0)"><i class="lni lni-calendar"></i> 20 June, 2023</a>
+                                <a href="javascript:void(0)"><i class="lni lni-calendar"></i> ~ 2023.01.05</a>
                             </li>
                             <li>
-                                <a href="javascript:void(0)"><i class="lni lni-map-marker"></i> Canada</a>
+                                <a href="javascript:void(0)"><i class="lni lni-map-marker"></i> 우크라이나</a>
                             </li>
                             <li>
-                                <a href="javascript:void(0)"><i class="lni lni-user"></i> Stifen Jon</a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)"><i class="lni lni-package"></i> Used</a>
+                                <a href="javascript:void(0)"><i class="lni lni-user"></i> 전쟁 피해자</a>
                             </li>
                         </ul>
                         <div class="product-bottom">
-                            <h3 class="price">$120.99</h3>
+                            <h3 class="price">10,000 ~ </h3>
                         </div>
                     </div>
                 </div>

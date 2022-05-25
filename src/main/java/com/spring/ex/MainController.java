@@ -165,6 +165,10 @@ public class MainController {
 	@RequestMapping("/donationsuccess")
 	public String donationsuccess() { return "/donationpage/donationsuccess";}
 
+	//후원하기 결제 완료
+	@RequestMapping("/livedonation1payment")
+	public String livedonation1payment() { return "/donationpage/livedonation1payment";}
+
 	//테스트 페이지
 	@RequestMapping("/test123")
 	public String test123() {

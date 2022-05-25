@@ -80,6 +80,11 @@
     <!--====== Main js ======-->
     <script src="${pageContext.request.contextPath}/resources/js/main.js"></script>
 
+    <!--====== checkbox js ======-->
+    <script src="${pageContext.request.contextPath}/resources/js/checkbox.js"></script>
+
+    <!--====== chart js ======-->
+    <script src="${pageContext.request.contextPath}/resources/js/chart.js"></script>
 
 
     <script>
