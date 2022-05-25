@@ -40,7 +40,7 @@
 			<%-- 핸드폰 번호 입력 --%>
 			<div class="mb-3 mt-3">
 				<label for="phonenum" class="form-label">핸드폰 번호:</label>
-				<input type="number" class="form-control" id="phonenum" placeholder="Enter phonenum" name="phonenum" required>
+				<input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" class="form-control" id="phonenum" placeholder="Enter phonenum" name="phonenum" required>
 				<div class="valid-feedback">확인</div>
 				<div class="invalid-feedback">핸드폰 번호를 입력해주세요</div>
 			</div>

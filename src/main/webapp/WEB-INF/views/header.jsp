@@ -41,11 +41,17 @@
     <!--====== Style CSS ======-->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css">
 
-    <!--====== qudwok_style css ======-->
+    <!--====== notice_style css ======-->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/notice.css">
 
-    <!--====== noticeNAV css ======-->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/noticeNAV.css">
+    <!--====== donationdetails css ======-->
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/donationdetails.css">
+
+    <!--====== donationreport css ======-->
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/donationreport.css">
+
+    <!--====== validation css ======-->
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/validation.css">
 
 
     <!--====== BACK TOP TOP PART START ======-->

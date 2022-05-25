@@ -1,0 +1,82 @@
+.donationheader{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.donationname{
+    width: 800px;
+    font-weight: bold;
+    font-size: 30px;
+
+}
+
+.donationdate{
+    width: 800px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.donationinfo{
+    width: 800px;
+}
+
+.userinfo{
+    width: 800px;
+}
+
+.donationmoney{
+    display: flex;
+    align-items: center;
+}
+
+.donationtextarea{
+    border: 1px solid;
+}
+
+.donationanony{
+    display: flex;
+    width: 200px;
+    margin-left: 100px;
+}
+
+.donationtitle{
+    display: flex;
+}
+
+
+
+.mypage_sidebar{
+    display: flex;
+    margin: 30px 30px;
+
+}
+
+.mypage_list{
+    width: 150px;
+    height: 500px;
+    border: #8a8a8a 1px solid;
+    border-radius: 15px;
+    margin-right: 30px;
+}
+
+.mypage_list ul{
+    text-align: center;
+    margin-top : 20px;
+}
+
+.mypage_list ul li{
+    text-align: center;
+    margin-bottom : 20px;
+}
+
+.mypage_list ul li a{
+    color:black;
+}
+
+.mypage_list ul li a:hover{
+    color:#0167f3;
+}
+
+.donationheader{
+    display: flex;
+}

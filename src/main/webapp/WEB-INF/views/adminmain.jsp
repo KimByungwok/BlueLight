@@ -11,40 +11,82 @@
     <%@include file="header.jsp"%><br><br><br><br>
     <!--====== chart CSS ======-->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/notice.css">
-
+    <!--====== qudwok_style css ======-->
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/donationreport.css">
 
 
 </head>
 <body>
 
+
 <div class="container">
-    <div class="pie-chart2" style="justify-content: center;">
-        <span class="center"><p>총액 : 123,456,789<%--{$ java}--%> 원</p></span>
-    </div>
-    <section class="mypage_sidebar">
-        <article class="mypage_list">
-            <ul>
-                <li><a href="adminmain">관리자 메인</a></li>
-                <li><a href="sponsorschedule">후원일정</a></li>
-                <li><a href="donationreport">기부현황</a></li>
-            </ul>
-        </article>
-        <article class="noticeheader">
-            <span class="bbsnum">글번호</span>
-            <span class="bbstitle">글제목</span>
-            <span class="bbsname">작성자</span>
-            <span class="bbsdate">작성 시간</span>
-            <span class="bbshit">조회수</span><hr>
-            <!-- 게시글  -->
-            <article class="noticemiddle">
-                <span class="bbsnum">1</span>
-                <span class="bbstitle">집갈뤠ㅜㅜ</span>
-                <span class="bbsname">나다</span>
-                <span class="bbsdate">22.05.23.11.46</span>
-                <span class="bbshit">7</span>
+    <div class="row">
+        <h1>기부 수입(관리자)</h1><br>
+        <div class="pie-chart2" style="justify-content: center;">
+            <span class="center"><p>총액 : 123,456,789<%--{$ java}--%> 원</p></span>
+        </div>
+        <section class="mypage_sidebar">
+            <%--사이드 메뉴--%>
+            <article class="mypage_list">
+                <ul>
+                    <li><a href="adminmain">관리자 메인</a></li>
+                    <li><a href="notice">공지사항</a></li>
+                    <li><a href="sponsorschedule">후원일정</a></li>
+                    <li><a href="donationreport">기부현황</a></li>
+                </ul>
             </article>
-        </article>
-    </section>
+            <%--기부현황 헤더--%>
+            <article class="reportheader">
+                <span class="bbsdivision">구분</span>
+                <span class="bbssum">금액(원)</span>
+                <span class="bbsratio">비율</span><hr>
+                <!-- 게시글  -->
+                <article class="reportmiddle">
+                    <span class="bbshead">후원금 지출</span><br><br>
+                    <span class="bbsdivision">정기 후원</span>
+                    <span class="bbssum">250,000원</span>
+                    <span class="bbsratio">30%</span><hr>
+                </article>
+                <article class="reportbottom">
+                    <span class="bbstotaldivision">소계</span>
+                    <span class="bbstotal">89,456,789원</span>
+                    <span class="bbstotalratio">70.1%</span><hr>
+                </article>
+            </article>
+        </section>
+
+
+        <%--기부현황 지출부분--%>
+        <h1 style="text-align: center;">지출 현황</h1><br>
+        <div class="pie-chart2" style="justify-content: center;">
+            <span class="center"><p>총액 : 123,456,789<%--{$ java}--%> 원</p></span>
+        </div>
+        <section class="mypage_sidebar">
+            <article class="mypage_listbottom">
+
+            </article>
+            <%--기부현황 헤더--%>
+            <article class="reportheader">
+                <span class="bbsdivision">구분</span>
+                <span class="bbssum">금액(원)</span>
+                <span class="bbsratio">비율</span><hr>
+                <!-- 게시글  -->
+                <article class="reportmiddle">
+                    <span class="bbshead">후원금수입</span><br><br>
+                    <span class="bbsdivision">정기 후원</span>
+                    <span class="bbssum">250,000원</span>
+                    <span class="bbsratio">25%</span><hr>
+                </article>
+                <article class="reportbottom">
+                    <span class="bbstotaldivision">소계</span>
+                    <span class="bbstotal">123,456,789원</span>
+                    <span class="bbstotalratio">90.1%</span><hr>
+                </article>
+            </article>
+        </section>
+        <%--공지사항 중앙--%>
+
+    </div>
 </div>
 <%@include file="footer.jsp"%>
 </body>

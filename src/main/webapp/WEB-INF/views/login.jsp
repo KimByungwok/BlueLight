@@ -10,7 +10,7 @@
 
 </head>
 <body>
-<%@include file="header.jsp"%>
+<%@include file="header.jsp"%><br><br><br><br>
 
 <%--로그인 박스--%>
 <div class="container mt-3">
@@ -33,12 +33,11 @@
             <div class="invalid-feedback">비밀번호를 입력하세요!</div>
         </div>
             <div class="col-12 col-sm-10 col-lg-12">
-                <div class="form-check">
-                    <label class="form-check-label">ID 기억하기</label>
-                    <input class="form-check-input" type="checkbox" name="remember"/>
+                    <div class="form-check1">
+                        <label class="form-check-label" for="remembercheck" style="font-size: 20px; margin-top: 5px; left: 0px;">ID 기억하기</label>
+                        <input type="checkbox" class="form-check-input1" id="remembercheck" name="remember" value="something" style="width: 20px; height: 20px; float: left;">
+                    </div>
             </div>
-
-        </div>
         <br>
         <%--로그인 버튼--%>
         <div class="col-12 col-sm-12 col-lg-12">

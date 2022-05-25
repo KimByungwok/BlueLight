@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 
 import javax.inject.Inject;
-import javax.inject.Named;
 import javax.servlet.http.HttpServletRequest;
 
 @Controller
@@ -153,4 +152,25 @@ public class MainController {
 	//관리자 메인
 	@RequestMapping("/adminmain")
 	public String adminmain() { return "adminmain";}
+
+	//후원하기1
+	@RequestMapping("/donation1")
+	public String donation1() { return "/donationpage/donation1";}
+
+	//후원하기1 결제
+	@RequestMapping("/donation1payment")
+	public String donation1payment() { return "/donationpage/donation1payment";}
+
+	//후원하기 결제 완료
+	@RequestMapping("/donationsuccess")
+	public String donationsuccess() { return "/donationpage/donationsuccess";}
+
+	//테스트 페이지
+	@RequestMapping("/test123")
+	public String test123() {
+		return "test123";
+	}
+
+
+
 }

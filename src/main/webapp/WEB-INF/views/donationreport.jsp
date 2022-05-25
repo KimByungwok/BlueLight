@@ -16,10 +16,10 @@
 
 </head>
 <body>
-<h1 style="text-align: center;">기부 수입</h1><br>
 
 <div class="container">
     <div class="row">
+        <h1 style="text-align: center;">기부수입</h1><br>
         <div class="pie-chart2" style="justify-content: center;">
             <span class="center"><p>총액 : 123,456,789<%--{$ java}--%> 원</p></span>
         </div>
@@ -83,7 +83,13 @@
             </article>
         </section>
         <%--공지사항 중앙--%>
-
+        <ul class="pagination" style="justify-content: center;">
+            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item "><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
     </div>
 </div>
 <%@include file="footer.jsp"%>
