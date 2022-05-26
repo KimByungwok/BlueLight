@@ -30,6 +30,9 @@
                     <li><a href="companyrank">기업랭킹</a></li>
                 </ul>
             </article>
+            <%--랭킹 차트 구간--%>
+
+
             <%--공지사항 헤더--%>
             <article class="noticeheader">
                 <span class="bbsnum">글번호</span>
@@ -49,7 +52,6 @@
             </article>
         </section>
         <%--공지사항 중앙--%>
-
     </div>
 </div>
 <%@include file="footer.jsp"%>
