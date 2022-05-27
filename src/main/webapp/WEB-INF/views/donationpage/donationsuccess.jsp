@@ -25,9 +25,10 @@
             </ul>
         </article>
         <article class="noticeheader">
-            <span class="donationname" style="text-align: center">후원이 완료되었습니다.</span><br><br><br>
+            <span class="donationname" style="text-align: center">후원이 완료되었습니다.</span><hr>
             <span class="donationdate" style="text-align: center">후원 정보 뭐시기</span>
-            <hr>
+            <a href="donation"><input type="button" class="btn btn-outline-dark" value="목록"></a>
+
         </article>
     </section>
 </div>

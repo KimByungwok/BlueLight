@@ -1,0 +1,24 @@
+.mypageid{
+    width: 150px;
+    text-align: center;
+}
+
+.mypagepw{
+    width: 200px;
+    text-align: center;
+}
+
+.mypagename{
+    width: 100px;
+    text-align: center;
+}
+
+.mypagepnum{
+    width: 110px;
+    text-align: center;
+}
+
+.mypageaddress{
+    width: 350px;
+    text-align: center;
+}

@@ -14,11 +14,6 @@
 <%@include file="header.jsp"%>
 <br><br><br><br>
 <h1>나와라~~나와라요~~</h1>
-
-<div class="container">
-    <div class="pie-chart2"><span class="center"></span></div>
-</div>
-
 <%--슬라이드 캐러셀--%>
 <section id="slider">
     <div class="container">

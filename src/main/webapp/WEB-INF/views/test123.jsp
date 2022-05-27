@@ -11,9 +11,6 @@
 <head>
     <%@include file="header.jsp"%><br><br><br><br>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <style>
         #ulranking>li{
             line-height: 50px;
@@ -24,43 +21,39 @@
     </style>
 
     <!-- 부트스트랩 -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<%--    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>--%>
 
 
 </head>
 
 <body>
 
-<div class="container" style="min-width: 842px">
-    <article style="float: left">
+<div class="container-lg" style="min-width: 842px">
+    <div class="row">
+        <h1>개인랭킹</h1><br>
         <div class="card">
             <div class="card-body">
-                <canvas id="privaterank" width="500" height="524"></canvas>
+                <canvas id="privaterank" width="800" height="500" style="display: inline-block"></canvas>
+                <ul id="ulranking"  style=" list-style: none; float: right">
+                    <li class="ranktext" style="font-size: 30px">1등 000님 500원</li>
+                    <li class="ranktext"  style="font-size: 30px">2등 000님 300원</li>
+                    <li class="ranktext"  style="font-size: 30px; margin-bottom: 20px">3등 000님 100원</li>
+                    <li class="ranktext"  style="font-size: 20px">4등 000님 90원</li>
+                    <li class="ranktext" style="font-size: 20px">5등 000님 90원</li>
+                    <li class="ranktext" style="font-size: 20px">6등 000님 90원</li>
+                    <li class="ranktext" style="font-size: 20px">7등 000님 90원</li>
+                    <li class="ranktext" style="font-size: 20px">8등 000님 90원</li>
+                    <li class="ranktext" style="font-size: 20px">9등 000님 90원</li>
+                    <li class="ranktext" style="font-size: 20px">10등 000님 90원</li>
+
+                    <li class="ranktext">
+                        <a href="#" style="color: #6c757d; text-decoration-line: none; width: 50px; font-weight: bold; position: relative; left: 50px;">더보기</a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </article>
-    <article<%-- style="float: left; --%>width: 500px;">
-        <ul id="ulranking" class="card" style=" list-style: none;">
-            <li class="ranktext" style="font-size: 30px">1등 000님 500원</li>
-            <li class="ranktext"  style="font-size: 30px">2등 000님 300원</li>
-            <li class="ranktext"  style="font-size: 30px; margin-bottom: 20px">3등 000님 100원</li>
-            <li class="ranktext"  style="font-size: 20px">4등 000님 90원</li>
-            <li class="ranktext" style="font-size: 20px">5등 000님 90원</li>
-            <li class="ranktext" style="font-size: 20px">6등 000님 90원</li>
-            <li class="ranktext" style="font-size: 20px">7등 000님 90원</li>
-            <li class="ranktext" style="font-size: 20px">8등 000님 90원</li>
-            <li class="ranktext" style="font-size: 20px">9등 000님 90원</li>
-            <li class="ranktext" style="font-size: 20px">10등 000님 90원</li>
-
-            <a href="#" style="color: #6c757d; text-decoration-line: none; width: 50px; font-weight: bold; position: relative; left: 500px;">더보기</a>
-
-        </ul>
-    </article>
-
-    <article>
-        <h1>개인랭킹</h1><br>
         <section class="mypage_sidebar">
             <%--사이드 메뉴--%>
             <article class="mypage_list">
@@ -89,7 +82,7 @@
                 </article>
             </article>
         </section>
-    </article>
+    </div>
 </div>
 
 
@@ -109,6 +102,7 @@
         type: 'doughnut',
         data: data,
         options: {
+            responsive:false,
             title: {
                 display: true, text: '상위 n명의 기부 퍼센트 ', fontsize: 20
             },
@@ -119,7 +113,6 @@
     });
 </script>
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <%@include file="footer.jsp"%>
 </body>
 

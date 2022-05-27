@@ -17,7 +17,6 @@
 </head>
 <body>
 
-<h1>집가자</h1>
 <div class="container">
     <div class="row">
         <h1>공지사항</h1><br>

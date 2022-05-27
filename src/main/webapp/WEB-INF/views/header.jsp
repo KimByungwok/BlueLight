@@ -53,6 +53,9 @@
     <!--====== validation css ======-->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/validation.css">
 
+    <!--====== mypage css ======-->
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/mypage.css">
+
 
     <!--====== BACK TOP TOP PART START ======-->
     <a href="#" class="back-to-top btn-hover"><i class="lni lni-chevron-up"></i></a>
@@ -86,6 +89,10 @@
     <!--====== chart js ======-->
     <script src="${pageContext.request.contextPath}/resources/js/chart.js"></script>
 
+    <%--랭킹 차트 JS 퍼온거--%>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
     <script>
 
@@ -239,7 +246,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <ul class="header-btn d-md-flex">
+                        <ul class="header-btn d-md-flex" style="margin-bottom: 0">
                             <li>
                                 <a href="#" class="main-btn account-btn">
                                     <span class="d-md-none"><i class="lni lni-user"></i></span>
@@ -248,7 +255,8 @@
                                 <ul class="dropdown-nav">
                                     <li><a href="login">로그인</a></li>
                                     <li><a href="registerselect">회원가입</a></li>
-                                    <li><a href="adminmain">로그Out</a></li>
+                                    <li><a href="adminmain">어드민</a></li>
+                                    <li><a href="mypage">내정보</a></li>
                                 </ul>
                             </li>
                         </ul>

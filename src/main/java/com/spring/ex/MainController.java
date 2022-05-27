@@ -165,14 +165,30 @@ public class MainController {
 	@RequestMapping("/donationsuccess")
 	public String donationsuccess() { return "/donationpage/donationsuccess";}
 
+	//현장기부 신청 완료
+	@RequestMapping("/livedonationsuccess")
+	public String livedonationsuccess() { return "/donationpage/livedonationsuccess";}
+
 	//후원하기 결제 완료
 	@RequestMapping("/livedonation1payment")
 	public String livedonation1payment() { return "/donationpage/livedonation1payment";}
+
+	//마이페이지
+	@RequestMapping("/mypage")
+	public String mypage() {
+		return "mypage";
+	}
 
 	//테스트 페이지
 	@RequestMapping("/test123")
 	public String test123() {
 		return "test123";
+	}
+
+	//어드민 인덱스
+	@RequestMapping("/index123")
+	public String index123() {
+		return "/html/index123";
 	}
 
 
