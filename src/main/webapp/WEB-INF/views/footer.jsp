@@ -67,7 +67,7 @@
                             </li>
                             <li>
                                 <span>Location:</span>
-                                경민대학교 효행관 401
+                                경민대 효행관 401
                             </li>
                         </ul>
                     </div>

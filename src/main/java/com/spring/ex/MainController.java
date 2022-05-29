@@ -179,16 +179,41 @@ public class MainController {
 		return "mypage";
 	}
 
+	//어드민 인덱스
+	@RequestMapping("/index123")
+	public String index123() {
+		return "/adminpage/index123";
+	}
+
+	//어드민 차트
+	@RequestMapping("/charts")
+	public String adminchart() {
+		return "/adminpage/charts";
+	}
+
+	//어드민 테이블
+	@RequestMapping("/tables")
+	public String admintable() {
+		return "/adminpage/tables";
+	}
+
+	//어드민 사이드 네비 라이트
+	@RequestMapping("/layout-sidenav-light")
+	public String adminlayoutsidenavlight() {
+		return "/adminpage/layout-sidenav-light";
+	}
+
+	//어드민 스태틱
+	@RequestMapping("/layout-static")
+	public String adminlayoutstatic() {
+		return "/adminpage/layout-static";
+	}
+
+
 	//테스트 페이지
 	@RequestMapping("/test123")
 	public String test123() {
 		return "test123";
-	}
-
-	//어드민 인덱스
-	@RequestMapping("/index123")
-	public String index123() {
-		return "/html/index123";
 	}
 
 

@@ -1,18 +1,21 @@
 <%--흑흑흑--%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
-<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/donationreport.css">
+    <!--====== Favicon Icon ======-->
+    <link rel="shortcut icon" href="${pageContext.request.contextPath}/resources/images/favicon.png" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <!--====== Title ======-->
     <title>푸른빛</title>
-
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="${pageContext.request.contextPath}/resources/images/favicon.png" type="image/png">
@@ -35,6 +38,7 @@
     <!--====== Nouislider CSS ======-->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/nouislider.css">
 
+    <%--캐러셀 하얀색 원인;;--%>
     <!--====== Bootstrap CSS ======-->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap-5.0.5-alpha.min.css">
 
@@ -60,7 +64,6 @@
     <!--====== BACK TOP TOP PART START ======-->
     <a href="#" class="back-to-top btn-hover"><i class="lni lni-chevron-up"></i></a>
     <!--====== BACK TOP TOP PART ENDS ======-->
-
 
     <!--====== Bootstrap js ======-->
     <script src="${pageContext.request.contextPath}/resources/js/bootstrap.bundle-5.0.0.alpha-min.js"></script>
@@ -89,9 +92,17 @@
     <!--====== chart js ======-->
     <script src="${pageContext.request.contextPath}/resources/js/chart.js"></script>
 
+    <%-- carousel js --%>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!--====== carousel css ======-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" >
+
     <%--랭킹 차트 JS 퍼온거--%>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--====== Bootstrap CSS ======-->
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstarp-4.3.1.min.css">
+    <%--href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 캐러셀 버벅임 원인;;--%>
+    <link rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
     <script>
@@ -163,6 +174,8 @@
             }
         });
     </script>
+
+
 </head>
 <body>
 <div class="preloader">
@@ -244,6 +257,14 @@
                                         <li><a href="companyrank">- 기업</a></li>
                                     </ul>
                                 </li>
+                                <%--검색 폼--%>
+                                <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                                    <div class="input-group">
+                                        <input class="form-control" id="keyword" type="text" placeholder="Search for" aria-label="Search for..." aria-describedby="btnNavbarSearch"
+                                        style="border-radius: 10px;"/>
+                                        <label for="keyword" style="background-color: #FFFFFF"><a href="#" class="lni lni-search-alt theme-color"></a></label>
+                                    </div>
+                                </form>
                             </ul>
                         </div>
                         <ul class="header-btn d-md-flex" style="margin-bottom: 0">

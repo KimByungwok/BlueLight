@@ -35,9 +35,9 @@
         <h1>개인랭킹</h1><br>
         <div class="card">
             <div class="card-body">
-                <canvas id="privaterank" width="800" height="500" style="display: inline-block"></canvas>
-                <ul id="ulranking"  style=" list-style: none; float: right">
-                    <li class="ranktext" style="font-size: 30px">1등 000님 500원</li>
+                <canvas id="privaterank" width="600" height="500" style="display: inline-block"></canvas>
+                <ul id="ulranking"  style="list-style: none; width: 500px; float: right">
+                    <li class="ranktext" style="font-size: 30px">1등 리민용님 {$java}200,000,000 원</li>
                     <li class="ranktext"  style="font-size: 30px">2등 000님 300원</li>
                     <li class="ranktext"  style="font-size: 30px; margin-bottom: 20px">3등 000님 100원</li>
                     <li class="ranktext"  style="font-size: 20px">4등 000님 90원</li>
