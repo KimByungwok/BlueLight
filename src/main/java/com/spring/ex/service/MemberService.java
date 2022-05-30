@@ -10,5 +10,7 @@ public interface MemberService {
     public int insertMember(MemberDTO dto);
     public int testMember(MemberDTO dto);
     public List<MemberDTO> memberList();
+
+    public int checkID(MemberDTO dto);
 }
 

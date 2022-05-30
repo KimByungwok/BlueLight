@@ -24,4 +24,13 @@ public class MemberServiceImp implements MemberService {
     public List<MemberDTO> memberList() {
         return memberDAO.memberList();
     }
+
+    @Override
+    public int checkID(MemberDTO dto)
+    {
+        System.out.println("service");
+        int result = memberDAO.checkID(dto);
+        System.out.println(result);
+        return result;
+    }
 }

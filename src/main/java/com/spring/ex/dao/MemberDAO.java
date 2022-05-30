@@ -8,4 +8,6 @@ public interface MemberDAO {
 
     public int test(MemberDTO dto);
     public int insertMember(MemberDTO dto);
+
+    public int checkID(MemberDTO dto);
 }

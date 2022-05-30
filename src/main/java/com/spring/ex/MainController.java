@@ -6,11 +6,14 @@ import com.spring.ex.service.MemberService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
-
+import javax.servlet.http.HttpSession;
 @Controller
 public class MainController {
 
@@ -49,8 +52,11 @@ public class MainController {
 		System.out.println("testDAO 발동");
 		return "login";
 	}
+	//회원가입처리
 	@RequestMapping("/registerOk")
-	public String registerOk(HttpServletRequest request, Model model) {
+	public String registerOk(HttpServletRequest request,  RedirectAttributes ra) {
+		//개인은 flag 0, s_number 0
+		//기업은 flag 1, s_number 사업자번호
 		System.out.println("RegisterOk");
 		MemberDTO dto = new MemberDTO();
 		MemberDAO dao = null;
@@ -61,13 +67,47 @@ public class MainController {
 		dto.setM_phone(request.getParameter("phonenum"));
 		dto.setM_address(request.getParameter("address"));
 		dto.setM_email(request.getParameter("email"));
-		dto.setM_s_number(request.getParameter("s_number"));
+		dto.setM_s_number(request.getParameter("companynum"));
+
+		System.out.println(dto.getM_s_number());
 
 
+//		int result = mService.checkID(dto);
+//		//중복1 미중복0
+//		if(result == 1) {
+//			ra.addFlashAttribute("result", "registerFalse");
+//			//return "/user/register";
+//		} else if(result == 0) {
+//			mService.checkID(dto);
+//			ra.addFlashAttribute("result", "registerOK");
+//		}
 		mService.insertMember(dto);
-
-		return "login";
+		return "joinsuccess";
 	}
+	@RequestMapping(value="/dbCheckID", method = RequestMethod.GET)
+	public String dbCheckID(HttpServletRequest request) {
+		String id = request.getParameter("user_id");
+		System.out.println("아이디가져옴"+ id);
+		MemberDTO dto = new MemberDTO();
+		dto.setM_id(id);
+		int result = mService.checkID(dto);
+		HttpSession session = request.getSession();
+		session.setAttribute("result", result);
+		return "CheckID";
+
+
+	}
+//	@ResponseBody
+//	@RequestMapping(value="/idCheck", method = RequestMethod.GET)
+//	public int idCheck(String id) {
+//		System.out.println("controller");
+//		System.out.println(id);
+//		MemberDTO dto = new MemberDTO();
+//		dto.setM_id(id);
+//		int result = mService.checkID(dto);
+//		System.out.println(result);
+//		return result;
+//	}
 
 	//인덱스 템플릿 페이지
 	@RequestMapping("/index")

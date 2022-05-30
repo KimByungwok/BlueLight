@@ -25,4 +25,13 @@ public class MemberDAOImp implements MemberDAO{
     public int insertMember(MemberDTO dto) {
         return sqlSession.insert("member.insertMember", dto);
     }
+    @Override
+    public int checkID(MemberDTO dto) {
+        System.out.println("dao");
+
+        int result = sqlSession.selectOne("member.checkID", dto);
+        System.out.println(result);
+        return result;
+    }
+
 }
