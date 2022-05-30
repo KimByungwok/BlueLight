@@ -1,0 +1,46 @@
+.donationheader{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.donationname{
+    width: 800px;
+    font-weight: bold;
+    font-size: 30px;
+
+}
+
+.donationdate{
+    width: 800px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.donationinfo{
+    width: 800px;
+}
+
+.userinfo{
+    width: 800px;
+}
+
+.donationmoney{
+    display: flex;
+    align-items: center;
+}
+
+.donationtextarea{
+    border: 1px solid;
+}
+
+.donationanony{
+    display: flex;
+    width: 200px;
+    margin-left: 100px;
+}
+
+.donationtitle{
+    display: flex;
+}
+
+

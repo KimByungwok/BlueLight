@@ -1,0 +1,107 @@
+.mypage_sidebar{
+    display: flex;
+    margin-bottom: 15px;
+
+}
+
+.mypage_list{
+    width: 150px;
+    height: 500px;
+    border: #8a8a8a 1px solid;
+    border-radius: 15px;
+    margin-right: 30px;
+}
+
+.mypage_listbottom{
+    width: 150px;
+    height: 500px;
+
+    border-radius: 15px;
+    margin-right: 30px;
+}
+
+.mypage_list ul{
+    text-align: center;
+    margin-top : 20px;
+}
+
+.mypage_list ul li{
+    text-align: center;
+    margin-bottom : 20px;
+}
+
+.mypage_list ul li a{
+    color:black;
+}
+
+.mypage_list ul li a:hover{
+    color:#0167f3;
+}
+
+/*chart css*/
+
+.pie-chart2 {
+    display: flex;
+    position:relative;
+    width: 300px;
+    height: 300px;
+    background: conic-gradient(#8b22ff 0% 25%, #ffc33b 25% 56%, #21f3d6 56% 100%);
+    border-radius: 50%;
+    margin-left: 500px;
+}
+
+.pie-chart2 .center p{
+    margin-top: 85px;
+    margin-left: 5px;
+}
+
+.pie-chart2  .center{
+    position:absolute;
+    width:200px;
+    height: 200px;
+    background :#fff;
+    border-radius: 50%;
+    top: 50px;
+    left:50px;
+
+}
+
+.charthead{
+    display: flex;
+    width: 300px;
+}
+
+.chartbody{
+    width: 300px;
+}
+
+.bbsdivision{
+    width: 300px;
+}
+
+.bbstotaldivision{
+    width: 300px;
+    font-weight: bold;
+}
+
+.bbssum{
+    width: 300px;
+}
+
+.bbstotal{
+    width: 300px;
+    font-weight: bold;
+}
+
+.bbsratio{
+    width: 100px;
+}
+
+.bbstotalratio{
+    width: 100px;
+    font-weight: bold;
+}
+
+.bbshead{
+    font-weight: bold;
+}

@@ -12,14 +12,17 @@
 <head>
     <%@include file="header.jsp"%><br><br><br><br>
     <!--====== qudwok_style css ======-->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/notice.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/donationreport.css">
 
 </head>
 <body>
-<h1 style="text-align: center;">기부현황</h1><br>
 
 <div class="container">
     <div class="row">
+        <h1 style="text-align: center;">기부수입</h1><br>
+        <div class="pie-chart2" style="justify-content: center;">
+            <span class="center"><p>총액 : 123,456,789<%--{$ java}--%> 원</p></span>
+        </div>
         <section class="mypage_sidebar">
             <%--사이드 메뉴--%>
             <article class="mypage_list">
@@ -31,25 +34,62 @@
                 </ul>
             </article>
             <%--기부현황 헤더--%>
-            <article class="noticeheader">
-                <span class="bbsnum">글번호</span>
-                <span class="bbstitle">글제목</span>
-                <span class="bbsname">작성자</span>
-                <span class="bbsdate">작성 시간</span>
-                <span class="bbshit">조회수</span><hr>
+            <article class="reportheader">
+                <span class="bbsdivision">구분</span>
+                <span class="bbssum">금액(원)</span>
+                <span class="bbsratio">비율</span><hr>
                 <!-- 게시글  -->
-                <article class="noticemiddle">
-                    <span class="bbsnum">1</span>
-                    <span class="bbstitle">기부 허/쉴?</span>
-                    <span class="bbsname">나다</span>
-                    <span class="bbsdate">22.05.23.11.46</span>
-                    <span class="bbshit">7</span>
+                <article class="reportmiddle">
+                    <span class="bbshead">후원금수입</span><br><br>
+                    <span class="bbsdivision">정기 후원</span>
+                    <span class="bbssum">250,000원</span>
+                    <span class="bbsratio">25%</span><hr>
                 </article>
+                <article class="reportbottom">
+                    <span class="bbstotaldivision">소계</span>
+                    <span class="bbstotal">123,456,789원</span>
+                    <span class="bbstotalratio">90.1%</span><hr>
+                </article>
+            </article>
+        </section>
 
+
+        <%--기부현황 지출부분--%>
+        <h1 style="text-align: center;">지출 현황</h1><br>
+        <div class="pie-chart2" style="justify-content: center;">
+            <span class="center"><p>총액 : 123,456,789<%--{$ java}--%> 원</p></span>
+        </div>
+        <section class="mypage_sidebar">
+            <article class="mypage_listbottom">
+
+            </article>
+            <%--기부현황 헤더--%>
+            <article class="reportheader">
+                <span class="bbsdivision">구분</span>
+                <span class="bbssum">금액(원)</span>
+                <span class="bbsratio">비율</span><hr>
+                <!-- 게시글  -->
+                <article class="reportmiddle">
+                    <span class="bbshead">후원금수입</span><br><br>
+                    <span class="bbsdivision">정기 후원</span>
+                    <span class="bbssum">250,000원</span>
+                    <span class="bbsratio">25%</span><hr>
+                </article>
+                <article class="reportbottom">
+                    <span class="bbstotaldivision">소계</span>
+                    <span class="bbstotal">123,456,789원</span>
+                    <span class="bbstotalratio">90.1%</span><hr>
+                </article>
             </article>
         </section>
         <%--공지사항 중앙--%>
-
+        <ul class="pagination" style="justify-content: center;">
+            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item "><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
     </div>
 </div>
 <%@include file="footer.jsp"%>

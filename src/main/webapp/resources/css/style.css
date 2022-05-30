@@ -186,7 +186,7 @@ textarea {
   border-radius: 10px;
   background: #fff;
   font-size: 16px;
-  padding: 17px 30px;
+  padding: 5px 30px;
   margin-top: 10px;
   margin-bottom: 10px;
   transition: all 0.3s ease-out 0s;
@@ -2247,7 +2247,7 @@ hero area css
 }
 
 .single-product .product-content .address li {
-  width: 50%;
+  width: 100%;
   margin-bottom: 15px;
 }
 
@@ -2262,7 +2262,7 @@ hero area css
 .single-product .product-content .product-bottom {
   border-top: 1px dotted rgba(124, 134, 154, 0.25);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding-top: 20px;
 }
 

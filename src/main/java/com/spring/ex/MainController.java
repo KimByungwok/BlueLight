@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 
 import javax.inject.Inject;
-import javax.inject.Named;
 import javax.servlet.http.HttpServletRequest;
 
 @Controller
@@ -149,4 +148,74 @@ public class MainController {
 	//기업랭킹
 	@RequestMapping("/companyrank")
 	public String companyrank() { return "companyrank";}
+
+	//관리자 메인
+	@RequestMapping("/adminmain")
+	public String adminmain() { return "adminmain";}
+
+	//후원하기1
+	@RequestMapping("/donation1")
+	public String donation1() { return "/donationpage/donation1";}
+
+	//후원하기1 결제
+	@RequestMapping("/donation1payment")
+	public String donation1payment() { return "/donationpage/donation1payment";}
+
+	//후원하기 결제 완료
+	@RequestMapping("/donationsuccess")
+	public String donationsuccess() { return "/donationpage/donationsuccess";}
+
+	//현장기부 신청 완료
+	@RequestMapping("/livedonationsuccess")
+	public String livedonationsuccess() { return "/donationpage/livedonationsuccess";}
+
+	//후원하기 결제 완료
+	@RequestMapping("/livedonation1payment")
+	public String livedonation1payment() { return "/donationpage/livedonation1payment";}
+
+	//마이페이지
+	@RequestMapping("/mypage")
+	public String mypage() {
+		return "mypage";
+	}
+
+	//어드민 인덱스
+	@RequestMapping("/index123")
+	public String index123() {
+		return "/adminpage/index123";
+	}
+
+	//어드민 차트
+	@RequestMapping("/charts")
+	public String adminchart() {
+		return "/adminpage/charts";
+	}
+
+	//어드민 테이블
+	@RequestMapping("/tables")
+	public String admintable() {
+		return "/adminpage/tables";
+	}
+
+	//어드민 사이드 네비 라이트
+	@RequestMapping("/layout-sidenav-light")
+	public String adminlayoutsidenavlight() {
+		return "/adminpage/layout-sidenav-light";
+	}
+
+	//어드민 스태틱
+	@RequestMapping("/layout-static")
+	public String adminlayoutstatic() {
+		return "/adminpage/layout-static";
+	}
+
+
+	//테스트 페이지
+	@RequestMapping("/test123")
+	public String test123() {
+		return "test123";
+	}
+
+
+
 }

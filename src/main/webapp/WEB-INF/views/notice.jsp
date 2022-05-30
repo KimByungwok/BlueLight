@@ -16,10 +16,10 @@
 
 </head>
 <body>
-<h1 style="text-align: center;">공지사항</h1><br>
-<h1>집가자</h1>
+
 <div class="container">
     <div class="row">
+        <h1>공지사항</h1><br>
         <section class="mypage_sidebar">
             <%--사이드 메뉴--%>
             <article class="mypage_list">
