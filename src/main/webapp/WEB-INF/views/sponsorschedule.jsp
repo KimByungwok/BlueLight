@@ -16,10 +16,10 @@
 
 </head>
 <body>
-<h1 style="text-align: center;">후원일정</h1><br>
 
 <div class="container">
     <div class="row">
+        <h1>후원일정</h1><br>
         <section class="mypage_sidebar">
             <%--사이드 메뉴--%>
             <article class="mypage_list">

@@ -1,18 +1,21 @@
 <%--흑흑흑--%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
-<!DOCTYPE html>
 <html>
 <head>
+
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/donationreport.css">
+    <!--====== Favicon Icon ======-->
+    <link rel="shortcut icon" href="${pageContext.request.contextPath}/resources/images/favicon.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="${pageContext.request.contextPath}/resources/css/bootstrap-5.1.3.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
     <!--====== Title ======-->
     <title>푸른빛</title>
-
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="${pageContext.request.contextPath}/resources/images/favicon.png" type="image/png">
@@ -35,23 +38,29 @@
     <!--====== Nouislider CSS ======-->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/nouislider.css">
 
+    <%--캐러셀 하얀색 원인;;--%>
     <!--====== Bootstrap CSS ======-->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap-5.0.5-alpha.min.css">
 
-    <!--====== Style CSS ======-->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css">
-
-    <!--====== qudwok_style css ======-->
+    <!--====== notice_style css ======-->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/notice.css">
 
-    <!--====== noticeNAV css ======-->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/noticeNAV.css">
+    <!--====== donationdetails css ======-->
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/donationdetails.css">
+
+    <!--====== donationreport css ======-->
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/donationreport.css">
+
+    <!--====== validation css ======-->
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/validation.css">
+
+    <!--====== mypage css ======-->
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/mypage.css">
 
 
     <!--====== BACK TOP TOP PART START ======-->
     <a href="#" class="back-to-top btn-hover"><i class="lni lni-chevron-up"></i></a>
     <!--====== BACK TOP TOP PART ENDS ======-->
-
 
     <!--====== Bootstrap js ======-->
     <script src="${pageContext.request.contextPath}/resources/js/bootstrap.bundle-5.0.0.alpha-min.js"></script>
@@ -74,7 +83,24 @@
     <!--====== Main js ======-->
     <script src="${pageContext.request.contextPath}/resources/js/main.js"></script>
 
+    <!--====== checkbox js ======-->
+    <script src="${pageContext.request.contextPath}/resources/js/checkbox.js"></script>
 
+    <!--====== chart js ======-->
+    <script src="${pageContext.request.contextPath}/resources/js/chart.js"></script>
+
+    <%-- carousel js --%>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!--====== carousel css ======-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" >
+
+    <%--랭킹 차트 JS 퍼온거--%>
+    <!--====== Bootstrap CSS ======-->
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstarp-4.3.1.min.css">
+    <%--href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 캐러셀 버벅임 원인;;--%>
+    <link rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
     <script>
 
@@ -145,6 +171,9 @@
             }
         });
     </script>
+    <!--====== Style CSS ======-->
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css">
+
 </head>
 <body>
 <div class="preloader">
@@ -226,9 +255,18 @@
                                         <li><a href="companyrank">- 기업</a></li>
                                     </ul>
                                 </li>
+                                <%--검색 폼--%>
+                                <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                                    <div class="input-group">
+                                        <input class="form-control" id="keyword" type="text" placeholder="Search for" aria-label="Search for..." aria-describedby="btnNavbarSearch"
+                                        style="border-radius: 10px;"/>
+                                        <label for="keyword" style="background-color: #FFFFFF"><a href="#" class="lni lni-search-alt theme-color"></a></label>
+                                    </div>
+                                </form>
+                                <label><%--로그인 했을 때만 라벨 뜨게 하기--%>{$java}님 환영합니다.</label>
                             </ul>
                         </div>
-                        <ul class="header-btn d-md-flex">
+                        <ul class="header-btn d-md-flex" style="margin-bottom: 0">
                             <li>
                                 <a href="#" class="main-btn account-btn">
                                     <span class="d-md-none"><i class="lni lni-user"></i></span>
@@ -237,7 +275,8 @@
                                 <ul class="dropdown-nav">
                                     <li><a href="login">로그인</a></li>
                                     <li><a href="registerselect">회원가입</a></li>
-                                    <li><a href="javascript:void(0)">로그Out</a></li>
+                                    <li><a href="adminmain">어드민</a></li>
+                                    <li><a href="mypage">내정보</a></li>
                                 </ul>
                             </li>
                         </ul>

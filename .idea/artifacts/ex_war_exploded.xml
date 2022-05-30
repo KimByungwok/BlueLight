@@ -12,7 +12,6 @@
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="ex" />
-          <element id="library" level="application" name="bootstrap" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: org.mybatis:mybatis:3.5.9" />
@@ -38,7 +37,6 @@
           <element id="library" level="project" name="Maven: log4j:log4j:1.2.15" />
           <element id="library" level="project" name="Maven: javax.inject:javax.inject:1" />
           <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
-          <element id="library" level="project" name="mariadb.jdbc.java.client" />
         </element>
       </element>
       <element id="directory" name="META-INF">

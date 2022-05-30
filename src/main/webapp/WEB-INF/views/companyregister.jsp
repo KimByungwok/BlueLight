@@ -51,8 +51,8 @@
 			</div>
 			<%-- 핸드폰 번호 입력 --%>
 			<div class="mb-3 mt-3">
-				<label for="phonenum" class="form-label">핸드폰 번호:</label>
-				<input type="number" class="form-control" id="phonenum" placeholder="Enter phonenum" name="phonenum" required>
+        <label for="phonenum" class="form-label">대표 번호:</label>
+        <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" class="form-control" id="phonenum" placeholder="Enter companyphonenum" name="phonenum" required>
 				<div class="valid-feedback">확인</div>
 				<div class="invalid-feedback">핸드폰 번호를 입력해주세요</div>
 			</div>
@@ -73,35 +73,19 @@
 			<%-- 사업자 번호 입력 --%>
 			<div class="mb-3 mt-3">
 				<label for="companynum" class="form-label">사업자 번호:</label>
-				<input type="number" class="form-control" id="companynum" placeholder="Enter companynum" name="companynum" required>
+				<input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" class="form-control" id="companynum" placeholder="Enter companynum" name="companynum" required>
 				<div class="valid-feedback">확인</div>
 				<div class="invalid-feedback">사업자 번호를 입력해주세요</div>
-			</div>
-				<%-- 빈값 검증 --%>
-				<script>
-
-					$(document).ready(function(){
-
-						$("#submit").click(function(){
-							if($("#id").val().length==0){ alert("아이디를 입력하세요."); $("#id").focus(); return false; }
-							if($("#pw").val().length==0){ alert("비밀번호를 입력하세요."); $("#pw").focus(); return false; }
-							if($("#name").val().length==0){ alert("이름을 입력하세요."); $("#name").focus(); return false; }
-							if($("#phonenum").val().length==0){ alert("휴대폰번호를 입력하세요."); $("#phonenum").focus(); return false; }
-							if($("#address").val().length==0){ alert("주소를 입력하세요."); $("#address").focus(); return false; }
-							if($("#email").val().length==0){ alert("이메일을 입력하세요."); $("#email").focus(); return false; }
-							if($("#companynum").val().length==0){ alert("사업자 번호를 입력하세요."); $("#companynum").focus(); return false; }
-
-						});
-					});
-
-				</script>
+      </div>
 				<%-- 히든값 --%>
 				<input type="hidden" name="flag" value="1">
 			<%-- 개인정보 체크박스 --%>
 			<div class="container row">
 				<div class="col-12 col-sm-8 col-xl-9" >
-					<input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">
-					<label class="form-check-label" for="check2">약관 동의</label>
+					<div class="form-check1">
+						<label class="form-check-label" for="remembercheck" style="font-size: 20px; margin-top: 5px; left: 0px;">ID 기억하기</label>
+						<input type="checkbox" class="form-check-input1" id="remembercheck" name="remember" value="something" style="width: 20px; height: 20px; float: left;">
+					</div>
 				</div>
 				<%-- 빈값 검증 --%>
 				<script>
