@@ -8,7 +8,7 @@
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="${pageContext.request.contextPath}/resources/images/favicon.png" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/resources/css/bootstrap-5.1.3.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -41,9 +41,6 @@
     <%--캐러셀 하얀색 원인;;--%>
     <!--====== Bootstrap CSS ======-->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap-5.0.5-alpha.min.css">
-
-    <!--====== Style CSS ======-->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css">
 
     <!--====== notice_style css ======-->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/notice.css">
@@ -174,7 +171,8 @@
             }
         });
     </script>
-
+    <!--====== Style CSS ======-->
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css">
 
 </head>
 <body>
@@ -265,6 +263,7 @@
                                         <label for="keyword" style="background-color: #FFFFFF"><a href="#" class="lni lni-search-alt theme-color"></a></label>
                                     </div>
                                 </form>
+                                <label><%--로그인 했을 때만 라벨 뜨게 하기--%>{$java}님 환영합니다.</label>
                             </ul>
                         </div>
                         <ul class="header-btn d-md-flex" style="margin-bottom: 0">
