@@ -14,46 +14,59 @@
 		<h3 ><a href = "companyregister" style="text-decoration:none" >기업 회원가입</a></h3>
 		<br><a href="registerselect"><button class="btn btn-outline-success">뒤로가기</button></a>
 		<%-- 아이디 입력 --%>
-		<form action="기업 회원가입#" class="was-validated">
+		<form action="registerOk" class="was-validated" name="joinForm" id="joinForm" onsubmit="return ncheck();">		<%-- 아이디 입력 --%>
+			<%-- 아이디 입력 --%>
 			<div class="mb-3 mt-3">
-				<hr>
-				<label for="companyid" class="form-label">아이디:</label>
-				<input type="text" class="form-control" id="companyid" placeholder="Enter companyid" name="companyid" required>
+				<label for="id" class="form-label">아이디:</label>
+				<input type="text" class="form-control" id="id" placeholder="Enter ID" name="id" required>
 				<div class="valid-feedback">확인</div>
-				<div class="invalid-feedback">아이디를 입력해주세요</div>
+				<button type="button" id="idOverlap" onclick="fn_idOverlap2();">중복확인</button>
+				<input hidden="hidden" id="idDuplication" name="idDuplication" value="idUncheck"/>
 			</div>
+				<script type="text/javascript">
+
+					function  fn_idOverlap2() {
+						var joinForm = document.joinForm;
+						var id = joinForm.id.value;
+						if(id.length==0 || id=="") {
+							alert("아이디를 입력해주세요");
+						} else {
+							window.open("dbCheckID?user_id="+id,"","width=500, height=300");
+						}
+					}
+				</script>
 			<%-- 비밀번호 입력 --%>
 			<div class="mb-3">
-				<label for="companypw" class="form-label">비밀번호:</label>
-				<input type="password" class="form-control" id="companypw" placeholder="Enter companypw" name="companypw" required>
+				<label for="pw" class="form-label">비밀번호:</label>
+				<input type="password" class="form-control" id="pw" placeholder="Enter password" name="pw" required>
 				<div class="valid-feedback">확인</div>
 				<div class="invalid-feedback">비밀번호를 입력해주세요</div>
 			</div>
-			<%-- 기업 이름 입력 --%>
+			<%-- 이름 입력 --%>
 			<div class="mb-3 mt-3">
-				<label for="companyname" class="form-label">기업 이름 :</label>
-				<input type="text" class="form-control" id="companyname" placeholder="Enter companyname" name="companyname" required>
+				<label for="name" class="form-label">이름 :</label>
+				<input type="text" class="form-control" id="name" placeholder="Enter name" name="name" required>
 				<div class="valid-feedback">확인</div>
 				<div class="invalid-feedback">이름을 입력해주세요</div>
 			</div>
-			<%-- 대표 번호 입력 --%>
+			<%-- 핸드폰 번호 입력 --%>
 			<div class="mb-3 mt-3">
-				<label for="companyphonenum" class="form-label">대표 번호:</label>
-				<input type="number" class="form-control" id="companyphonenum" placeholder="Enter companyphonenum" name="companyphonenum" required>
+				<label for="phonenum" class="form-label">핸드폰 번호:</label>
+				<input type="number" class="form-control" id="phonenum" placeholder="Enter phonenum" name="phonenum" required>
 				<div class="valid-feedback">확인</div>
 				<div class="invalid-feedback">핸드폰 번호를 입력해주세요</div>
 			</div>
 			<%-- 주소 입력 --%>
 			<div class="mb-3 mt-3">
-				<label for="companyaddress" class="form-label">주소:</label>
-				<input type="text" class="form-control" id="companyaddress" placeholder="Enter companyaddress" name="companyaddress" required>
+				<label for="address" class="form-label">주소:</label>
+				<input type="text" class="form-control" id="address" placeholder="Enter address" name="address" required>
 				<div class="valid-feedback">확인</div>
 				<div class="invalid-feedback">주소를 입력해주세요</div>
 			</div>
 			<%-- 이메일 입력 --%>
 			<div class="mb-3 mt-3">
-				<label for="companyemail" class="form-label">이메일:</label>
-				<input type="email" class="form-control" id="companyemail" placeholder="Enter companyemail" name="companyemail" required>
+				<label for="email" class="form-label">이메일:</label>
+				<input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
 				<div class="valid-feedback">확인</div>
 				<div class="invalid-feedback">이메일을 입력해주세요</div>
 			</div>
@@ -64,14 +77,52 @@
 				<div class="valid-feedback">확인</div>
 				<div class="invalid-feedback">사업자 번호를 입력해주세요</div>
 			</div>
+				<%-- 빈값 검증 --%>
+				<script>
+
+					$(document).ready(function(){
+
+						$("#submit").click(function(){
+							if($("#id").val().length==0){ alert("아이디를 입력하세요."); $("#id").focus(); return false; }
+							if($("#pw").val().length==0){ alert("비밀번호를 입력하세요."); $("#pw").focus(); return false; }
+							if($("#name").val().length==0){ alert("이름을 입력하세요."); $("#name").focus(); return false; }
+							if($("#phonenum").val().length==0){ alert("휴대폰번호를 입력하세요."); $("#phonenum").focus(); return false; }
+							if($("#address").val().length==0){ alert("주소를 입력하세요."); $("#address").focus(); return false; }
+							if($("#email").val().length==0){ alert("이메일을 입력하세요."); $("#email").focus(); return false; }
+							if($("#companynum").val().length==0){ alert("사업자 번호를 입력하세요."); $("#companynum").focus(); return false; }
+
+						});
+					});
+
+				</script>
+				<%-- 히든값 --%>
+				<input type="hidden" name="flag" value="1">
 			<%-- 개인정보 체크박스 --%>
 			<div class="container row">
 				<div class="col-12 col-sm-8 col-xl-9" >
 					<input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">
 					<label class="form-check-label" for="check2">약관 동의</label>
 				</div>
+				<%-- 빈값 검증 --%>
+				<script>
+					function ncheck() {
+						if (document.getElementById('idDuplication').value == "idUncheck")
+						{
+							alert("아이디 중복확인을 하세요.");
+							return false;
+
+						}
+						else {
+							return true;
+						}
+
+					}
+
+
+				</script>
 				<div class="col-12 col-sm-4 col-xl-3">
-					<button type="submit" class="btn btn-primary">기업 회원가입</button>
+					<button type="buttin"  class="btn btn-primary">기업 회원가입</button>
+
 				</div>
 			</div>
 		</form>

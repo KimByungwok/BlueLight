@@ -1,3 +1,4 @@
+<%@ page import="com.spring.ex.dto.MemberDTO" %>
 <%@include file="header.jsp"%>
 
 <br><br><br><br>
@@ -13,17 +14,33 @@
 <body>
 <div class="loginform"  style="margin-left: 20%; margin-right: 20%;">
 	<div class="container mt-3">
+
 		<h3 ><a href = "privateregister" style="text-decoration:none" >개인 회원가입</a></h3>
 		<br><a href="registerselect"><button class="btn btn-outline-success">뒤로가기</button></a>
 
-		<form action="registerOk" class="was-validated">
-			<%-- 아이디 입력 --%>
+		<form action="registerOk" class="was-validated" name="joinForm" id="joinForm" onsubmit="return ncheck();">		<%-- 아이디 입력 --%>
 			<div class="mb-3 mt-3">
 				<label for="id" class="form-label">아이디:</label>
 				<input type="text" class="form-control" id="id" placeholder="Enter ID" name="id" required>
 				<div class="valid-feedback">확인</div>
 				<div class="invalid-feedback">아이디를 입력해주세요</div>
+				<button type="button" id="idOverlap" onclick="fn_idOverlap2();">중복확인</button>
+				<input hidden="hidden" id="idDuplication" name="idDuplication" value="idUncheck"/>
 			</div>
+				<script type="text/javascript">
+
+					function  fn_idOverlap2() {
+						var joinForm = document.joinForm;
+						var id = joinForm.id.value;
+						if(id.length==0 || id=="") {
+							alert("아이디를 입력해주세요");
+						} else {
+							window.open("dbCheckID?user_id="+id,"","width=500, height=300");
+						}
+					}
+				</script>
+
+
 			<%-- 비밀번호 입력 --%>
 			<div class="mb-3">
 				<label for="pw" class="form-label">비밀번호:</label>
@@ -68,25 +85,27 @@
 				</div>
 				<%-- 빈값 검증 --%>
 				<script>
+					function ncheck() {
+						if (document.getElementById('idDuplication').value == "idUncheck")
+						{
+							alert("아이디 중복확인을 하세요.");
+							return false;
 
-					$(document).ready(function(){
+						}
+						else {
+							return true;
+						}
 
-						$("#submit").click(function(){
-							if($("#id").val().length==0){ alert("아이디를 입력하세요."); $("#id").focus(); return false; }
-							if($("#pw").val().length==0){ alert("비밀번호를 입력하세요."); $("#pw").focus(); return false; }
-							if($("#name").val().length==0){ alert("이름을 입력하세요."); $("#name").focus(); return false; }
-							if($("#phonenum").val().length==0){ alert("휴대폰번호를 입력하세요."); $("#phonenum").focus(); return false; }
-							if($("#address").val().length==0){ alert("주소를 입력하세요."); $("#address").focus(); return false; }
-							if($("#email").val().length==0){ alert("이메일을 입력하세요."); $("#email").focus(); return false; }
+					}
 
-						});
-					});
 
 				</script>
+				<%-- 히든값 --%>
 				<input type="hidden" name="flag" value="0">
 				<input type="hidden" name="s_number" value="0">
 				<div class="col-12 col-sm-4 col-xl-3">
-					<button type="submit" class="btn btn-primary">개인 회원가입</button>
+					<button type="buttin"  class="btn btn-primary">개인 회원가입</button>
+
 				</div>
 			</div>
 
