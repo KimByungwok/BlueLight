@@ -10,4 +10,6 @@ public interface MemberDAO {
     public int insertMember(MemberDTO dto);
 
     public int checkID(MemberDTO dto);
+
+    public int loginService(MemberDTO dto);
 }

@@ -12,5 +12,7 @@ public interface MemberService {
     public List<MemberDTO> memberList();
 
     public int checkID(MemberDTO dto);
+
+    public int loginService(MemberDTO dto);
 }
 

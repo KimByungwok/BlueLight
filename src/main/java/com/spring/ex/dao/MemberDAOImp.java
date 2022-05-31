@@ -34,4 +34,10 @@ public class MemberDAOImp implements MemberDAO{
         return result;
     }
 
+    @Override
+    public int loginService(MemberDTO dto) {
+        int result = sqlSession.selectOne("member.loginService", dto);
+        return result;
+    }
+
 }

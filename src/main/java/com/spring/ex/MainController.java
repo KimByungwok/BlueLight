@@ -54,7 +54,7 @@ public class MainController {
 	}
 	//회원가입처리
 	@RequestMapping("/registerOk")
-	public String registerOk(HttpServletRequest request,  RedirectAttributes ra) {
+	public String registerOk(HttpServletRequest request) {
 		//개인은 flag 0, s_number 0
 		//기업은 flag 1, s_number 사업자번호
 		System.out.println("RegisterOk");
@@ -70,20 +70,35 @@ public class MainController {
 		dto.setM_s_number(request.getParameter("companynum"));
 
 		System.out.println(dto.getM_s_number());
-
-
-//		int result = mService.checkID(dto);
-//		//중복1 미중복0
-//		if(result == 1) {
-//			ra.addFlashAttribute("result", "registerFalse");
-//			//return "/user/register";
-//		} else if(result == 0) {
-//			mService.checkID(dto);
-//			ra.addFlashAttribute("result", "registerOK");
-//		}
 		mService.insertMember(dto);
 		return "joinsuccess";
 	}
+	@RequestMapping("/loginOK")
+	public String loginOK(HttpServletRequest request)
+	{
+
+		System.out.println("loginOK");
+		MemberDTO dto = new MemberDTO();
+		MemberDAO dao = null;
+
+		dto.setM_id(request.getParameter("id"));
+		dto.setM_pw(request.getParameter("pw"));
+
+		int result = mService.loginService(dto);
+		System.out.println(result);
+		HttpSession session = request.getSession();
+		if(result == 1)
+		{
+			//로그인성공
+			session.setAttribute("id", dto.getM_id());
+			return "main";
+		} else
+		{
+			//로그인실패
+			return "main";
+		}
+	}
+
 	@RequestMapping(value="/dbCheckID", method = RequestMethod.GET)
 	public String dbCheckID(HttpServletRequest request) {
 		String id = request.getParameter("user_id");
@@ -150,6 +165,16 @@ public class MainController {
 	public String loginForm() {
 		return "login";
 	}
+
+	@RequestMapping("/logout")
+	public String logoutForm(HttpServletRequest request) {
+
+		HttpSession session = request.getSession();
+		session.removeAttribute("id");
+		return "main";
+	}
+
+
 
 	//회원가입 축핳ㅎㅎ
 	@RequestMapping("/joinsuccess")
