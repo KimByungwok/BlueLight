@@ -15,4 +15,7 @@
     <select id="checkID" parameterType="DTO" resultType="int">
         SELECT COUNT(m_id) FROM member WHERE m_id=#{m_id}
     </select>
+
+    <select id="loginService" parameterType="DTO" resultType="int">
+        SELECT count(m_id) FROM member WHERE m_id = #{m_id} and m_pw = #{m_pw}    </select>
 </mapper>

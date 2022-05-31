@@ -263,8 +263,17 @@
                                         <label for="keyword" style="background-color: #FFFFFF"><a href="#" class="lni lni-search-alt theme-color"></a></label>
                                     </div>
                                 </form>
-                                <label><%--로그인 했을 때만 라벨 뜨게 하기--%>{$java}님 환영합니다.</label>
-                            </ul>
+                                <%
+                                    String seid;
+                                    if(session.getAttribute("id") == null) {
+                                        seid = "로그인을 해주세요";
+                                    } else {
+
+                                        seid = (String) session.getAttribute("id") +  "님 환영합니다.";
+                                    }
+                                %>
+                                <label><%=seid%></label>
+                                </ul>
                         </div>
                         <ul class="header-btn d-md-flex" style="margin-bottom: 0">
                             <li>
@@ -273,10 +282,19 @@
                                     <span class="d-none d-md-block">내 계정</span>
                                 </a>
                                 <ul class="dropdown-nav">
+                                    <%
+                                        if(session.getAttribute("id") == null)
+                                        {
+                                            %>
                                     <li><a href="login">로그인</a></li>
+                                    <%
+                                        } else
+                                            %><li><a href="logout">로그아웃</a></li>
+
                                     <li><a href="registerselect">회원가입</a></li>
                                     <li><a href="adminmain">어드민</a></li>
                                     <li><a href="mypage">내정보</a></li>
+
                                 </ul>
                             </li>
                         </ul>

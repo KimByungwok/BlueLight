@@ -33,4 +33,11 @@ public class MemberServiceImp implements MemberService {
         System.out.println(result);
         return result;
     }
+
+    @Override
+    public int loginService(MemberDTO dto)
+    {
+        int result = memberDAO.loginService(dto);
+        return result;
+    }
 }
