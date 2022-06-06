@@ -26,6 +26,7 @@
 				<div class="invalid-feedback">아이디를 입력해주세요</div>
 				<button type="button" id="idOverlap" onclick="fn_idOverlap2();">중복확인</button>
 				<input hidden="hidden" id="idDuplication" name="idDuplication" value="idUncheck"/>
+
 			</div>
 				<script type="text/javascript">
 
@@ -103,13 +104,11 @@
 				<%-- 히든값 --%>
 				<input type="hidden" name="flag" value="0">
 				<input type="hidden" name="s_number" value="0">
-				<div class="col-12 col-sm-4 col-xl-3">
-					<button type="buttin"  class="btn btn-primary">개인 회원가입</button>
-
-				</div>
 			</div>
-
 		</form>
+		<div style="display: flex; justify-content: flex-end">
+			<button type="button"  class="btn btn-primary">개인 회원가입</button>
+		</div>
 	</div>
 </div>
 </body>

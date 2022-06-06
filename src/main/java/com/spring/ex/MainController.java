@@ -244,6 +244,24 @@ public class MainController {
 		return "mypage";
 	}
 
+	//마이페이지 정보수정
+	@RequestMapping("/mypageupdate")
+	public String mypageupdate() {
+		return "mypageupdate";
+	}
+
+	//마이페이지 비번수정
+	@RequestMapping("/changepw")
+	public String changepw() {
+		return "changepw";
+	}
+
+	//문의하기
+	@RequestMapping("/inquiry")
+	public String inquiry() {
+		return "inquiry";
+	}
+
 	//어드민 인덱스
 	@RequestMapping("/index123")
 	public String index123() {
@@ -272,6 +290,24 @@ public class MainController {
 	@RequestMapping("/layout-static")
 	public String adminlayoutstatic() {
 		return "/adminpage/layout-static";
+	}
+
+	//회원 검색 - 김범준
+	@RequestMapping("/membersearch")
+	public String membersearch() {
+		return "/adminpage/membersearch";
+	}
+
+	//회원 상세 - 김범준
+	@RequestMapping("/memberdetail")
+	public String memberdetail() {
+		return "/adminpage/memberdetail";
+	}
+
+	//게시판 상세 - 김범준
+	@RequestMapping("/bbsdetail")
+	public String bbsdetail() {
+		return "/adminpage/bbsdetail";
 	}
 
 

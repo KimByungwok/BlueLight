@@ -82,10 +82,8 @@
 			<%-- 개인정보 체크박스 --%>
 			<div class="container row">
 				<div class="col-12 col-sm-8 col-xl-9" >
-					<div class="form-check1">
-						<label class="form-check-label" for="remembercheck" style="font-size: 20px; margin-top: 5px; left: 0px;">ID 기억하기</label>
-						<input type="checkbox" class="form-check-input1" id="remembercheck" name="remember" value="something" style="width: 20px; height: 20px; float: left;">
-					</div>
+					<input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">
+					<label class="form-check-label" for="check2">약관 동의</label>
 				</div>
 				<%-- 빈값 검증 --%>
 				<script>
@@ -101,17 +99,13 @@
 						}
 
 					}
-
-
 				</script>
-				<div class="col-12 col-sm-4 col-xl-3">
-					<button type="buttin"  class="btn btn-primary">기업 회원가입</button>
-
-				</div>
 			</div>
 		</form>
+		<div style="display: flex; justify-content: flex-end">
+			<button type="button"  class="btn btn-primary">개인 회원가입</button>
+		</div>
 	</div>
-
 </div>
 </body>
 </html>
