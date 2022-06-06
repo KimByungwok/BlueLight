@@ -67,5 +67,6 @@
     <orderEntry type="library" name="simple-datatables" level="application" />
     <orderEntry type="library" name="all" level="application" />
     <orderEntry type="library" name="Chart.js" level="application" />
+    <orderEntry type="library" name="jquery" level="application" />
   </component>
 </module>

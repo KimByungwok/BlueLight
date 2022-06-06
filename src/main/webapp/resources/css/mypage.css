@@ -26,3 +26,18 @@
 span{
     text-decoration: none;
 }
+
+.inquirytitle{
+    width: 300px;
+    text-align: center;
+}
+
+.inquirydate{
+    width: 200px;
+    text-align: center;
+}
+
+.inquiryreply{
+    width: 200px;
+    text-align: center;
+}
