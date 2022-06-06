@@ -51,6 +51,8 @@
 
     <typeAliases>
         <typeAlias alias="DTO" type="com.spring.ex.dto.MemberDTO"></typeAlias>
+        <typeAlias alias="bbsDTO" type="com.spring.ex.dto.bbsDTO"></typeAlias>
+
 
         <!--        <typeAlias alias="DAO" type="com.spring.ex.dao.MemberDAO"></typeAlias>-->
 

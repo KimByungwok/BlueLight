@@ -287,11 +287,12 @@
                                         {
                                             %>
                                     <li><a href="login">로그인</a></li>
+                                    <li><a href="registerselect">회원가입</a></li>
                                     <%
                                         } else
                                             %><li><a href="logout">로그아웃</a></li>
 
-                                    <li><a href="registerselect">회원가입</a></li>
+
                                     <li><a href="adminmain">어드민</a></li>
                                     <li><a href="mypage">내정보</a></li>
 

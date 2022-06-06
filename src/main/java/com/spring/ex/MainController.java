@@ -1,19 +1,32 @@
 package com.spring.ex;
 
+import com.oreilly.servlet.MultipartRequest;
+import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 import com.spring.ex.dao.MemberDAO;
 import com.spring.ex.dto.MemberDTO;
+import com.spring.ex.dao.bbsDAO;
+import com.spring.ex.dto.bbsDTO;
 import com.spring.ex.service.MemberService;
+import com.spring.ex.service.bbsService;
+
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import javax.inject.Inject;
+import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.io.File;
+import java.io.IOException;
+import java.util.Iterator;
+import java.util.List;
+
 @Controller
 public class MainController {
 
@@ -22,36 +35,10 @@ public class MainController {
 	@Inject
 	MemberService mService;
 
-	//public MemberDAO dao;
+	@Inject
+	bbsService bService;
 
-	//public MemberDTO dto = new MemberDTO();
-	//회원가입
-	@RequestMapping("/register")
-	public String registerForm(Model model) {
-		return "register";
-	}
 
-	//   @RequestMapping("/registerOk")
-//   public String registerOk(@RequestParam("id") String  id, @RequestParam("pw") String pw)
-//   {
-//
-//      new MemberRegister(id, pw);
-//      return "login";
-	//}
-	@RequestMapping(value = "/test")
-	public String testDAO() {
-		//MemberDTO dto = null;
-
-		MemberDTO dto = new MemberDTO();
-		dto.setM_id("wa");
-		dto.setM_pw("A");
-		System.out.println(dto.getM_id());
-		System.out.println(dto.getM_pw());
-		//dao.insertMember(dto);
-		int result = mService.testMember(dto);
-		System.out.println("testDAO 발동");
-		return "login";
-	}
 	//회원가입처리
 	@RequestMapping("/registerOk")
 	public String registerOk(HttpServletRequest request) {
@@ -91,6 +78,10 @@ public class MainController {
 		{
 			//로그인성공
 			session.setAttribute("id", dto.getM_id());
+
+
+			List<String> as = mService.adminflagService(dto);
+			System.out.println(as);
 			return "main";
 		} else
 		{
@@ -112,17 +103,9 @@ public class MainController {
 
 
 	}
-//	@ResponseBody
-//	@RequestMapping(value="/idCheck", method = RequestMethod.GET)
-//	public int idCheck(String id) {
-//		System.out.println("controller");
-//		System.out.println(id);
-//		MemberDTO dto = new MemberDTO();
-//		dto.setM_id(id);
-//		int result = mService.checkID(dto);
-//		System.out.println(result);
-//		return result;
-//	}
+
+
+
 
 	//인덱스 템플릿 페이지
 	@RequestMapping("/index")
@@ -182,11 +165,7 @@ public class MainController {
 		return "joinsuccess";
 	}
 
-	//공지사항
-	@RequestMapping("/notice")
-	public String notice() {
-		return "notice";
-	}
+
 
 	//후원일정
 	@RequestMapping("/sponsorschedule")

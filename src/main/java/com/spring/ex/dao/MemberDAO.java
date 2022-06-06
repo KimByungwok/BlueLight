@@ -12,4 +12,7 @@ public interface MemberDAO {
     public int checkID(MemberDTO dto);
 
     public int loginService(MemberDTO dto);
+
+    public List adminflagService(MemberDTO dto);
+
 }

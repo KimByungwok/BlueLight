@@ -104,7 +104,7 @@
 				<input type="hidden" name="flag" value="0">
 				<input type="hidden" name="s_number" value="0">
 				<div class="col-12 col-sm-4 col-xl-3">
-					<button type="buttin"  class="btn btn-primary">개인 회원가입</button>
+					<button type="button"  class="btn btn-primary">개인 회원가입</button>
 
 				</div>
 			</div>

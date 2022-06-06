@@ -1,4 +1,6 @@
-<%--
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page import="com.spring.ex.dto.bbsDTO" %>
+<%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: user
   Date: 2022-05-17
@@ -38,16 +40,22 @@
                 <span class="bbsdate">작성 시간</span>
                 <span class="bbshit">조회수</span><hr>
                 <!-- 게시글  -->
+                <c:forEach items="${list}" var="bbsDTO" varStatus="status">
                 <article class="noticemiddle">
-                    <span class="bbsnum">1</span>
-                    <span class="bbstitle">집갈뤠ㅜㅜ</span>
-                    <span class="bbsname">나다</span>
-                    <span class="bbsdate">22.05.23.11.46</span>
-                    <span class="bbshit">7</span>
+                    <span class="bbsnum">${bbsDTO.m_bId}</span>
+                    <a href='bbsView?bId=<c:out value="${bbsDTO.m_bId}"/>'><span class="bbstitle">${bbsDTO.m_bTitle}</span></a>
+                    <span class="bbsname">${bbsDTO.m_bName}</span>
+                    <span class="bbsdate">${bbsDTO.m_bDate}</span>
+                    <span class="bbshit">${bbsDTO.m_bHit}</span>
+
                 </article>
+                </c:forEach>
             </article>
         </section>
-        <%--공지사항 중앙--%>
+
+        <button type="button" onclick="location.href='bbswrite?bd=notice'">글 쓰기</button>
+
+
 
     </div>
 </div>
@@ -55,4 +63,3 @@
 
 </body>
 </html>
-

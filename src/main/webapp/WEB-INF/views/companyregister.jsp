@@ -105,7 +105,7 @@
 
 				</script>
 				<div class="col-12 col-sm-4 col-xl-3">
-					<button type="buttin"  class="btn btn-primary">기업 회원가입</button>
+					<button type="button"  class="btn btn-primary">기업 회원가입</button>
 
 				</div>
 			</div>
