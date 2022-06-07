@@ -26,7 +26,7 @@
                     <li><a href="inquiry">문의하기</a></li>
                 </ul>
             </article>
-            <%-- 개인 정보 --%>
+            <%-- 개인 정보 start--%>
                 <article class="noticeheader">
                     <span class="mypageid">아이디</span>
                     <span class="mypagepw">비밀번호</span>
@@ -76,6 +76,7 @@
                         <a href="inquiry"><input type="button" class="btn btn-outline-primary" value="문의하기" style="margin-left: 20px; margin-right: 10px"></a>
                     </div>
                 </article>
+            <%--개인정보 end--%>
         </section>
     </div>
 </div>

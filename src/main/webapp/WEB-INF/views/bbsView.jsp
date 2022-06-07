@@ -46,7 +46,7 @@
         <br>
         <label type="text" name="bbs_title" class="form-label">제목 : ${bbsDTO.m_bTitle}</label>
         <br>
-        <img src="resources/bbsUploadimg/${bId}/${bId}" />
+        <img src="resources/bbsUploadImg/${bId}/${bId}" />
           <br>
         <label type="text" name="bbs_content" class="form-label">내용 : ${bbsDTO.m_bContent}</label>
         </article>

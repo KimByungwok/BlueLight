@@ -227,8 +227,6 @@
                                         <li><a href="notice">- 공지사항</a></li>
                                         <li><a href="sponsorschedule">- 후원 일정</a></li>
                                         <li><a href="donationreport">- 기부 현황</a></li>
-                                        <li><a href="404">404 Page</a></li>
-                                        <li><a href="joinsuccess">join</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item">

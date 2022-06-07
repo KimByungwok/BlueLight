@@ -47,13 +47,17 @@
                     <span class="bbsname">${bbsDTO.m_bName}</span>
                     <span class="bbsdate">${bbsDTO.m_bDate}</span>
                     <span class="bbshit">${bbsDTO.m_bHit}</span>
-
                 </article>
                 </c:forEach>
+                <br>
+                <%--버튼 오른쪽 끝에 두기--%>
+                <div style="display: flex; justify-content: flex-end;">
+                    <button type="button" class="btn btn-outline-dark lg" onclick="location.href='bbswrite?bd=notice'" style="margin-right: 20px;">글쓰기</button>
+                </div>
             </article>
         </section>
 
-        <button type="button" onclick="location.href='bbswrite?bd=notice'">글 쓰기</button>
+
 
 
 

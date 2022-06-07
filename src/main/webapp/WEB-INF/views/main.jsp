@@ -8,7 +8,6 @@
 </head>
 <body>
 
-<h1>나와라~~나와라요~~</h1>
 <%--슬라이드 캐러셀--%>
 <section id="slider">
     <div class="container">
