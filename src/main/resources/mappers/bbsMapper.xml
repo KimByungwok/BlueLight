@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="bbs">
+
+    <select id="threadID" resultType="int">
+        select m_bID FROM bbs_board order by m_bID DESC LIMIT 1
+
+    </select>
+
+    <insert id="insertBBS" parameterType="bbsDTO">
+        INSERT INTO bbs_board(m_bId, m_bName, m_bTitle, m_bContent, m_bDate, m_bHit, m_bGroup) VALUES (#{m_bId}, #{m_bName}, #{m_bTitle}, #{m_bContent}, #{m_bDate,javaType=java.sql.Timestamp,jdbcType=TIMESTAMP}, #{m_bHit}, #{m_bGroup})
+    </insert>
+
+    <select id="GetNext" resultType="int">
+        select m_bID FROM bbs_board order by m_bID LIMIT 1
+
+    </select>
+    
+    <select id="listBBS" resultType="map">
+        SELECT * FROM bbs_board ORDER BY m_bID DESC
+    </select>
+
+    <select id="viewBBS" resultType="map">
+        SELECT * FROM bbs_board WHERE m_bid = #{m_bId}
+    </select>
+
+    <update id="hitBBS">
+        update bbs_board set m_bHit = m_bHit+1 WHERE m_bId = #{m_bId}
+    </update>
+</mapper>

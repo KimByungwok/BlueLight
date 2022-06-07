@@ -17,5 +17,11 @@
     </select>
 
     <select id="loginService" parameterType="DTO" resultType="int">
-        SELECT count(m_id) FROM member WHERE m_id = #{m_id} and m_pw = #{m_pw}    </select>
+        SELECT count(m_id) FROM member WHERE m_id = #{m_id} and m_pw = #{m_pw}
+    </select>
+
+    <select id="admin_flag_Service" parameterType="DTO" resultType="dto">
+        SELECT m_flag, m_name FROM member WHERE m_id = #{m_id}
+    </select>
+
 </mapper>

@@ -40,4 +40,11 @@ public class MemberDAOImp implements MemberDAO{
         return result;
     }
 
+    @Override
+        public List adminflagService(MemberDTO dto) {
+        System.out.println("dao"+dto);
+
+        return sqlSession.selectList("member.admin_flag_Service", dto);
+
+    }
 }
