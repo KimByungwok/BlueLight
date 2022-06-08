@@ -10,7 +10,7 @@ public interface bbsDAO {
 
     public int GetNext();
 
-    public List<bbsDTO> bbsList();
+    public List<bbsDTO> bbsList(String i);
     public List<bbsDTO> viewBBS(String i);
 
     public int hitBBS(String i);

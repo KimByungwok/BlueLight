@@ -10,7 +10,7 @@ public interface bbsService {
 
     public int insertBBSService(bbsDTO bbsdto);
 
-    public List<bbsDTO> bbsList();
+    public List<bbsDTO> bbsList(String i);
     public List<bbsDTO> viewBBS(String i);
 
     public int hitBBS(String i);

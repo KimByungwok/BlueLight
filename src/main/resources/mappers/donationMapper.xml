@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="done">
+
+    <select id="threadID" resultType="int">
+        select m_dID FROM bbs_donation order by m_dID DESC LIMIT 1
+
+    </select>
+
+    <insert id="insertDonation" parameterType="donationDTO">
+        INSERT INTO bbs_donation(m_dId, m_dUserId, m_dTitle, m_dContent, m_ddayStart, m_ddayEnd, m_dDate, m_dHit, m_dGroup) VALUES (#{m_dId}, #{m_dUserId}, #{m_dTitle}, #{m_dContent}, #{m_ddayStart,javaType=java.sql.Timestamp,jdbcType=TIMESTAMP}, #{m_ddayEnd,javaType=java.sql.Timestamp,jdbcType=TIMESTAMP}, #{m_dDate,javaType=java.sql.Timestamp,jdbcType=TIMESTAMP}, #{m_dHit}, #{m_dGroup})    </insert>
+
+    <select id="GetNext" resultType="int">
+        select m_dID FROM bbs_donation order by m_dID LIMIT 1
+
+    </select>
+
+    <select id="listBBS" resultType="map">
+        SELECT * FROM bbs_donation  WHERE m_dGroup = #{m_dGroup} ORDER BY m_dID desc
+    </select>
+
+    <select id="viewBBS" resultType="map">
+        SELECT * FROM bbs_donation WHERE m_did = #{m_dId}
+    </select>
+
+    <update id="hitBBS">
+        update bbs_donation set m_dHit = m_dHit+1 WHERE m_dId = #{m_dId}
+    </update>
+</mapper>

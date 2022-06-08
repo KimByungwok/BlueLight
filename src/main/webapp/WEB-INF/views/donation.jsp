@@ -27,6 +27,7 @@
                     <li><a href="main">메인화면</a></li>
                     <li><a href="donation">후원하기</a></li>
                     <li><a href="livedonation">현장기부</a></li>
+                    <li><a href="donationWrite?bd=donationWrite">글쓰기</a></li>
                 </ul>
             </article>
                 <%--기부 메뉴 이미지 start--%>

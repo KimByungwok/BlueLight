@@ -109,11 +109,11 @@ public class bbsController {
 
         bService.insertBBSService(bbs);
 
-        return bbs_Group;
+        return "redirect:/"+bbs_Group;
     }
 
-    //공지사항
-    @RequestMapping("notice")
+    //공지사항, 후원일정
+        @RequestMapping(value={"notice", "sponsorschedule"})
     public ModelAndView notice(HttpServletRequest request) throws Exception {
         //HttpSession session = request.getSession();
 
@@ -123,10 +123,10 @@ public class bbsController {
         System.out.println(group);
 
         ModelAndView mv = new ModelAndView(group);
-        List<bbsDTO> bbsDTO = bService.bbsList();
+        List<bbsDTO> bbsDTO = bService.bbsList(group);
         System.out.println((int)bbsDTO.size());
 
-        mv.addObject("list", bbsDTO);
+            mv.addObject("list", bbsDTO);
         mv.addObject("bbsCount", (int)bbsDTO.size());
 
 

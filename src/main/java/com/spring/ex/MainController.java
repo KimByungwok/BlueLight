@@ -78,6 +78,7 @@ public class MainController {
 		{
 			//로그인성공
 			session.setAttribute("id", dto.getM_id());
+			session.setAttribute("adminflag", dto.getM_flag());
 
 
 			List<String> as = mService.adminflagService(dto);
@@ -154,6 +155,7 @@ public class MainController {
 
 		HttpSession session = request.getSession();
 		session.removeAttribute("id");
+		session.removeAttribute("adminflag");
 		return "main";
 	}
 
@@ -167,11 +169,7 @@ public class MainController {
 
 
 
-	//후원일정
-	@RequestMapping("/sponsorschedule")
-	public String sponsorschedule() {
-		return "sponsorschedule";
-	}
+
 
 	//기부현황
 	@RequestMapping("/donationreport")
