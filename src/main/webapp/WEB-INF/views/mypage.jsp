@@ -67,7 +67,7 @@
                         <span class="inquiryreply">답변 여부</span>
                         <%-- 내용 --%> <br><br>
                         <article class="inquirymiddle">
-                            <span class="inquirytitle">이게 왜 되지?</span>
+                            <a href="inquirybbs"><span class="inquirytitle">이게 왜 되지?</span></a>
                             <span class="inquirydate">22.06.06</span>
                             <span class="inquiryreply">미답변</span><hr>
                         </article>

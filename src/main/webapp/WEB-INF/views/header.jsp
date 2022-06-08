@@ -91,7 +91,7 @@
                                     <div class="input-group">
                                         <input class="form-control" id="keyword" type="text" placeholder="Search for" aria-label="Search for..." aria-describedby="btnNavbarSearch"
                                         style="border-radius: 10px;"/>
-                                        <label for="keyword" style="background-color: #FFFFFF"><a href="#" class="lni lni-search-alt theme-color"></a></label>
+                                        <label for="keyword" style="background-color: #FFFFFF"><a href="#" class="lni lni-search-alt theme-color" style="margin: 2px;"></a></label>
                                     </div>
                                 </form>
                                 <%
@@ -120,13 +120,22 @@
                                     <li><a href="login">로그인</a></li>
                                     <li><a href="registerselect">회원가입</a></li>
                                     <%
-                                        } else
-                                            %><li><a href="logout">로그아웃</a></li>
-
-
-                                    <li><a href="adminmain">어드민</a></li>
+                                        } else {
+                                            %>
+                                    <li><a href="logout">로그아웃</a></li>
                                     <li><a href="mypage">내정보</a></li>
+                                    <%
+                                        }
+                                    %>
 
+                                    <%
+                                        if(session.getAttribute("id") == "rina")
+                                        {
+                                    %>
+                                    <li><a href="adminmain">어드민</a></li>
+                                    <%
+                                        }
+                                    %>
                                 </ul>
                             </li>
                         </ul>

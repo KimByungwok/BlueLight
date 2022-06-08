@@ -29,232 +29,165 @@
                     <li><a href="livedonation">현장기부</a></li>
                 </ul>
             </article>
-                <%--기부 메뉴 이미지--%>
+                <%--기부 메뉴 이미지 start--%>
                 <section class="menu image">
                     <div class="container">
                         <div class="row">
+                            <%--1번 메인 기부 이미지--%>
                             <div class="col-xl-4 col-lg-6 col-md-6">
                                 <div class="single-product">
                                     <div class="product-img">
-                                        <a href="product-details.html">
-                                            <img src="${pageContext.request.contextPath}/resources/images/product/l-product-1.jpg" alt="">
+                                        <a href="donation1">
+                                            <img src="${pageContext.request.contextPath}/resources/images/product/donationimg1.jpg"
+                                                 alt="">
                                         </a>
-                                        <div class="product-action">
-                                            <a href="javascript:void(0)"><i class="lni lni-heart"></i></a>
-                                            <a href="javascript:void(0)" class="share"><i class="lni lni-share"></i></a>
-                                        </div>
                                     </div>
-
                                     <div class="product-content">
-                                        <h3 class="name"><a href="#">Apple iPhone x</a></h3>
-                                        <span class="update">Last Update: <%-- {$ java} --%></span>
+                                        <h5 class="name"><a href="donation1">우크라이나 전쟁</a></h5>
                                         <ul class="address">
                                             <li>
-                                                <a href="javascript:void(0)"><i class="lni lni-calendar"></i> 20 June, 2023</a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:void(0)"><i class="lni lni-map-marker"></i> Canada</a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:void(0)"><i class="lni lni-user"></i> Stifen Jon</a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:void(0)"><i class="lni lni-package"></i> Used</a>
+                                                <a href="donation1"><i class="lni lni-calendar"></i>시작 : 2022.05.25</a>
+                                                <a href="donation1"> ~ 종료 : 2022.12.30</a>
                                             </li>
                                         </ul>
                                         <div class="product-bottom">
-                                            <h3 class="price">$120.99</h3>
+                                            <a href="donation1">
+                                                <button class="btn btn-dark btn-lg">후원하기</button>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
+                            <%--2번 메인 기부 이미지--%>
                             <div class="col-xl-4 col-lg-6 col-md-6">
                                 <div class="single-product">
                                     <div class="product-img">
-                                        <a href="product-details.html">
-                                            <img src="${pageContext.request.contextPath}/resources/images/product/l-product-2.jpg" alt="">
+                                        <a href="donation1">
+                                            <img src="${pageContext.request.contextPath}/resources/images/product/lives.jpg"
+                                                 alt="">
                                         </a>
-                                        <div class="product-action">
-                                            <a href="javascript:void(0)"><i class="lni lni-heart"></i></a>
-                                            <a href="javascript:void(0)" class="share"><i class="lni lni-share"></i></a>
-                                        </div>
                                     </div>
-
                                     <div class="product-content">
-                                        <h3 class="name"><a href="product-details.html">Apple MacBook Air</a></h3>
-                                        <span class="update">Last Update: 5 hours ago</span>
+                                        <h5 class="name"><a href="donation1">혼자사는 어르신을 위하여</a></h5>
                                         <ul class="address">
                                             <li>
-                                                <a href="javascript:void(0)"><i class="lni lni-calendar"></i> 20 June, 2023</a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:void(0)"><i class="lni lni-map-marker"></i> Canada</a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:void(0)"><i class="lni lni-user"></i> Stifen Jon</a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:void(0)"><i class="lni lni-package"></i> Used</a>
+                                                <a href="donation1"><i class="lni lni-calendar"></i>시작 : 2022.05.25</a>
+                                                <a href="donation1"> ~ 종료 : 2022.12.30</a>
                                             </li>
                                         </ul>
-
                                         <div class="product-bottom">
-                                            <h3 class="price">$420.99</h3>
-                                            <a href="javascript:void(0)" class="link-ad"><i class="lni lni-checkmark-circle"></i> Verified Ad</a>
+                                            <a href="donation1">
+                                                <button class="btn btn-dark btn-lg">후원하기</button>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
+                            <%--3번 메인 기부 이미지--%>
                             <div class="col-xl-4 col-lg-6 col-md-6">
                                 <div class="single-product">
                                     <div class="product-img">
-                                        <a href="product-details.html">
-                                            <img src="${pageContext.request.contextPath}/resources/images/product/l-product-3.jpg" alt="">
+                                        <a href="donation1">
+                                            <img src="${pageContext.request.contextPath}/resources/images/product/age.png"
+                                                 alt="">
                                         </a>
-                                        <div class="product-action">
-                                            <a href="javascript:void(0)"><i class="lni lni-heart"></i></a>
-                                            <a href="javascript:void(0)" class="share"><i class="lni lni-share"></i></a>
-                                        </div>
                                     </div>
-
                                     <div class="product-content">
-                                        <h3 class="name"><a href="product-details.html">Cctv camera</a></h3>
-                                        <span class="update">Last Update: 5 hours ago</span>
+                                        <h5 class="name"><a href="donation1">베네수엘라 이주민</a></h5>
                                         <ul class="address">
                                             <li>
-                                                <a href="javascript:void(0)"><i class="lni lni-calendar"></i> 20 June, 2023</a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:void(0)"><i class="lni lni-map-marker"></i> Canada</a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:void(0)"><i class="lni lni-user"></i> Stifen Jon</a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:void(0)"><i class="lni lni-package"></i> Used</a>
+                                                <a href="donation1"><i class="lni lni-calendar"></i>시작 : 2022.05.25</a>
+                                                <a href="donation1"> ~ 종료 : 2022.12.30</a>
                                             </li>
                                         </ul>
                                         <div class="product-bottom">
-                                            <h3 class="price">$80.99</h3>
+                                            <a href="donation1">
+                                                <button class="btn btn-dark btn-lg">후원하기</button>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
+                            <%--4번 메인 기부 이미지--%>
                             <div class="col-xl-4 col-lg-6 col-md-6">
                                 <div class="single-product">
                                     <div class="product-img">
-                                        <a href="product-details.html">
-                                            <img src="${pageContext.request.contextPath}/resources/images/product/l-product-4.jpg" alt="">
+                                        <a href="donation1">
+                                            <img src="${pageContext.request.contextPath}/resources/images/product/eat.jpg"
+                                                 alt="">
                                         </a>
-                                        <div class="product-action">
-                                            <a href="javascript:void(0)"><i class="lni lni-heart"></i></a>
-                                            <a href="javascript:void(0)" class="share"><i class="lni lni-share"></i></a>
-                                        </div>
                                     </div>
-
                                     <div class="product-content">
-                                        <h3 class="name"><a href="product-details.html">Apple's new iMac</a></h3>
-                                        <span class="update">Last Update: 5 hours ago</span>
+                                        <h5 class="name"><a href="donation1">아동학대 아이들에게</a></h5>
                                         <ul class="address">
                                             <li>
-                                                <a href="javascript:void(0)"><i class="lni lni-calendar"></i> 20 June, 2023</a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:void(0)"><i class="lni lni-map-marker"></i> Canada</a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:void(0)"><i class="lni lni-user"></i> Stifen Jon</a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:void(0)"><i class="lni lni-package"></i> Used</a>
+                                                <a href="donation1"><i class="lni lni-calendar"></i>시작 : 2022.05.25</a>
+                                                <a href="donation1"> ~ 종료 : 2022.12.30</a>
                                             </li>
                                         </ul>
                                         <div class="product-bottom">
-                                            <h3 class="price">$3000.99</h3>
-                                            <a href="javascript:void(0)" class="link-ad"><i class="lni lni-checkmark-circle"></i> Verified Ad</a>
+                                            <a href="donation1">
+                                                <button class="btn btn-dark btn-lg">후원하기</button>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
+                            <%--5번 메인 기부 이미지--%>
                             <div class="col-xl-4 col-lg-6 col-md-6">
                                 <div class="single-product">
                                     <div class="product-img">
-                                        <a href="product-details.html">
-                                            <img src="${pageContext.request.contextPath}/resources/images/product/l-product-5.jpg" alt="">
+                                        <a href="donation1">
+                                            <img src="${pageContext.request.contextPath}/resources/images/product/water.jpg"
+                                                 alt="">
                                         </a>
-                                        <div class="product-action">
-                                            <a href="javascript:void(0)"><i class="lni lni-heart"></i></a>
-                                            <a href="javascript:void(0)" class="share"><i class="lni lni-share"></i></a>
-                                        </div>
                                     </div>
-
                                     <div class="product-content">
-                                        <h3 class="name"><a href="product-details.html">Best Compact DSLR</a></h3>
-                                        <span class="update">Last Update: 5 hours ago</span>
+                                        <h5 class="name"><a href="donation1">아프리카 주민을 위해</a></h5>
                                         <ul class="address">
                                             <li>
-                                                <a href="javascript:void(0)"><i class="lni lni-calendar"></i> 20 June, 2023</a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:void(0)"><i class="lni lni-map-marker"></i> Canada</a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:void(0)"><i class="lni lni-user"></i> Stifen Jon</a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:void(0)"><i class="lni lni-package"></i> Used</a>
+                                                <a href="donation1"><i class="lni lni-calendar"></i>시작 : 2022.05.25</a>
+                                                <a href="donation1"> ~ 종료 : 2022.12.30</a>
                                             </li>
                                         </ul>
                                         <div class="product-bottom">
-                                            <h3 class="price">$290.99</h3>
+                                            <a href="donation1">
+                                                <button class="btn btn-dark btn-lg">후원하기</button>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
+                            <%--6번 메인 기부 이미지--%>
                             <div class="col-xl-4 col-lg-6 col-md-6">
                                 <div class="single-product">
                                     <div class="product-img">
-                                        <a href="product-details.html">
-                                            <img src="${pageContext.request.contextPath}/resources/images/product/l-product-6.jpg" alt="">
+                                        <a href="donation1">
+                                            <img src="${pageContext.request.contextPath}/resources/images/product/so.jpg"
+                                                 alt="">
                                         </a>
-                                        <div class="product-action">
-                                            <a href="javascript:void(0)"><i class="lni lni-heart"></i></a>
-                                            <a href="javascript:void(0)" class="share"><i class="lni lni-share"></i></a>
-                                        </div>
                                     </div>
-
                                     <div class="product-content">
-                                        <h3 class="name"><a href="product-details.html">10 Future Concept Cars</a></h3>
-                                        <span class="update">Last Update: 5 hours ago</span>
+                                        <h5 class="name"><a href="donation1">형제의 나라 에티오피아</a></h5>
                                         <ul class="address">
                                             <li>
-                                                <a href="javascript:void(0)"><i class="lni lni-calendar"></i> 20 June, 2023</a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:void(0)"><i class="lni lni-map-marker"></i> Canada</a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:void(0)"><i class="lni lni-user"></i> Stifen Jon</a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:void(0)"><i class="lni lni-package"></i> Used</a>
+                                                <a href="donation1"><i class="lni lni-calendar"></i>시작 : 2022.05.25</a>
+                                                <a href="donation1"> ~ 종료 : 2022.12.30</a>
                                             </li>
                                         </ul>
                                         <div class="product-bottom">
-                                            <h3 class="price">$4520.99</h3>
-                                            <a href="javascript:void(0)" class="link-ad"><i class="lni lni-checkmark-circle"></i> Verified Ad</a>
+                                            <a href="donation1">
+                                                <button class="btn btn-dark btn-lg">후원하기</button>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <%-- 메인 기부 이미지 end--%>
                     </div>
                 </section>
+                <%--기부 메뉴 이미지 end--%>
         </section>
     </div>
 </div>

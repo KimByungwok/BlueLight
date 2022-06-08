@@ -1,19 +1,22 @@
 <%--
   Created by IntelliJ IDEA.
   User: quddn
-  Date: 2022-06-06
-  Time: 오전 10:57
+  Date: 2022-05-27
+  Time: 오전 7:06
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
 <html>
+
 <head>
-    <%@include file="../header.jsp" %>
-    <br><br><br><br>
+    <%@include file="../header.jsp"%><br><br><br><br>
 </head>
 <body>
+<!-- Cotainer는 그렇게 양쪽 여백을 주게 되어있고  fluid 뭐시기는 여백 없음-->
 <div class="container">
     <div class="row">
+        <h1>내정보</h1><br>
         <section class="mypage_sidebar" style="display: flex; flex-wrap: wrap; min-width: 820px;">
             <%--사이드 메뉴--%>
             <article class="mypage_list">
@@ -22,15 +25,12 @@
                     <li><a href="membersearch">회원검색</a></li>
                 </ul>
             </article>
-            <%--사이드 메뉴--%>
-            <article style="width: calc(100% - 180px); min-width: 570px">
+            <%-- 개인 정보 --%>
+            <article style="min-width: 570px">
                 <div style="margin-bottom: 10px;">
-                    <ul id="memberinfo" style="list-style: none;">
+                    <ul id="myInfo" style="list-style: none;">
                         <li class="left">
                             아이디 : kbj3145
-                        </li>
-                        <li class="left">
-                            비밀번호 : 1234
                         </li>
                         <li class="left">
                             이름 : 김범준
@@ -41,10 +41,8 @@
                         <li class="left">
                             주소 : 경민대
                         </li>
-                        <li style="text-align: right">
-                            <input type="submit" value="정보 수정" class="submit" onclick="location.href='membermodify'"
-                                   style="padding: 5px; width: 80px;">
-                            <input type="submit" value="회원 삭제" class="submit" style="padding: 5px; width: 80px;">
+                        <li style="text-align: right;">
+                            <input type="submit" value="정보 수정" class="submit" width="50px">
                         </li>
                     </ul>
                 </div>
@@ -53,7 +51,7 @@
                     <ul>
                         <!-- 게시판 목록  -->
                         <li>
-                            <ul id="memberdetail_ulBoard_donation">
+                            <ul id ="mypage_ulBoard_donation">
                                 <li>
                                     <ul>
                                         <li>후원종류</li>
@@ -107,17 +105,13 @@
                                 <div>▶</div>
                             </div>
                         </li>
-                        <li style="text-align: right">
-                            <input type="submit" value="추가" class="submit" style="padding: 5px; width: 60px;">
-                            <input type="submit" value="삭제" class="submit" style="padding: 5px; width: 60px;">
-                        </li>
                     </ul>
                 </div>
                 <div>
                     <ul>
                         <!-- 게시판 목록  -->
                         <li>
-                            <ul id="memberdetail_ulBoard_inquiry">
+                            <ul id="mypage_ulBoard_inquiry">
                                 <li>
                                     <ul>
                                         <li>답변여부</li>
@@ -172,10 +166,6 @@
                                 <div>▶</div>
                             </div>
                         </li>
-                        <li style="text-align: right">
-                            <input type="submit" value="추가" class="submit" style="padding: 5px; width: 60px;">
-                            <input type="submit" value="삭제" class="submit" style="padding: 5px; width: 60px;">
-                        </li>
 
                     </ul>
                 </div>
@@ -185,6 +175,6 @@
 </div>
 
 
-<%@include file="../footer.jsp" %>
+<%@include file="../footer.jsp"%>
 </body>
 </html>

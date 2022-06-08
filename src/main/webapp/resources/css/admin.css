@@ -1,0 +1,88 @@
+ul, li {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.left {
+    text-align: left;
+}
+#membersearch_ulBoard > li > ul {
+    padding:0px auto;
+    min-width:40px;
+}
+#membersearch_ulBoard > li > ul > li {
+    float:left;
+    font-size:15pt;
+    border-bottom:1px solid silver;
+    vertical-align:middle;
+}
+#membersearch_ulBoard > li > ul > li:first-child               {width:25%;} /*No 열 크기*/
+#membersearch_ulBoard > li > ul > li:first-child +li           {width:25%;} /*제목 열 크기*/
+#membersearch_ulBoard > li > ul > li:first-child +li+li        {width:50%;} /*작성일 열 크기*/
+
+/*#memberdetail_ulBoard_donation {*/
+/*    border-width: 0.5px;*/
+/*    border-style: solid solid;*/
+/*    border-color: rgba(149,149,149,0.23);*/
+/*}*/
+#memberdetail_ulBoard_donation > li > ul {
+    padding:0px auto;
+    min-width:40px;
+}
+#memberdetail_ulBoard_donation > li > ul > li {
+    float:left;
+    font-size:15pt;
+    border-bottom:1px solid silver;
+    vertical-align:middle;
+}
+#memberdetail_ulBoard_donation > li > ul > li:first-child               {width:20%;} /*No 열 크기*/
+#memberdetail_ulBoard_donation > li > ul > li:first-child +li           {width:60%;} /*제목 열 크기*/
+#memberdetail_ulBoard_donation > li > ul > li:first-child +li+li        {width:20%;} /*작성일 열 크기*/
+
+/*#memberdetail_ulBoard_inquiry {*/
+/*    border-width: 0.5px;*/
+/*    border-style: solid;*/
+/*    border-color: rgba(149,149,149,0.23);*/
+/*}*/
+#memberdetail_ulBoard_inquiry > li > ul {
+    padding:0px auto;
+    min-width:40px;
+}
+#memberdetail_ulBoard_inquiry > li > ul > li {
+    float:left;
+    font-size:15pt;
+    border-bottom:1px solid silver;
+    vertical-align:middle;
+}
+#memberdetail_ulBoard_inquiry > li > ul > li:first-child               {width:20%;} /*No 열 크기*/
+#memberdetail_ulBoard_inquiry > li > ul > li:first-child +li           {width:60%;} /*제목 열 크기*/
+#memberdetail_ulBoard_inquiry > li > ul > li:first-child +li+li        {width:20%;} /*작성일 열 크기*/
+
+#divPaging {
+    clear:both;
+    margin:0 auto;
+    width:220px;
+    height:50px;
+}
+
+#divPaging > div {
+    float:left;
+    width: 30px;
+    margin:0 auto;
+    text-align:center;
+}
+
+#divPaging2 {
+    clear:both;
+    margin:0 auto;
+    width:220px;
+    height:50px;
+}
+
+#divPaging2 > div {
+    float:left;
+    width: 30px;
+    margin:0 auto;
+    text-align:center;
+}

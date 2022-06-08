@@ -49,7 +49,7 @@
         </div>
         <%-- 버튼 그룹 --%>
         <div style="display: flex; justify-content: flex-end;">
-            <a href="mypage"><input type="button" class="btn btn-outline-danger" value="취소하기" style="margin-right: 10px;"></a>
+            <a href="javascript:window.history.back();"><input type="button" class="btn btn-outline-danger" value="취소하기" style="margin-right: 10px;"></a>
             <a href=""><input type="submit" class="btn btn-outline-success" value="변경하기" style="margin-left: 10px;"></a>
         </div>
     </form>
