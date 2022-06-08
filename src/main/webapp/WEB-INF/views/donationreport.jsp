@@ -25,14 +25,15 @@
         </div>
         <section class="mypage_sidebar">
             <%--사이드 메뉴--%>
-            <article class="mypage_list">
-                <ul>
-                    <li><a href="main">메인화면</a></li>
-                    <li><a href="notice">공지사항</a></li>
-                    <li><a href="sponsorschedule">후원일정</a></li>
-                    <li><a href="donationreport">기부현황</a></li>
-                </ul>
-            </article>
+                <article class="mypage_list">
+                    <ul>
+                        <li><a href="main">메인화면</a></li>
+                        <li><a href="notice">공지사항</a></li>
+                        <li><a href="faq">FAQ</a></li>
+                        <li><a href="sponsorschedule">후원일정</a></li>
+                        <li><a href="donationreport">기부현황</a></li>
+                    </ul>
+                </article>
             <%--기부현황 헤더--%>
             <article class="reportheader">
                 <span class="bbsdivision">구분</span>
@@ -82,7 +83,7 @@
                 </article>
             </article>
         </section>
-        <%--공지사항 중앙--%>
+        <%-- 기부현황 페이징? 필요한가?--%>
         <ul class="pagination" style="justify-content: center;">
             <li class="page-item"><a class="page-link" href="#">Previous</a></li>
             <li class="page-item active"><a class="page-link" href="#">1</a></li>

@@ -41,3 +41,96 @@ span{
     width: 200px;
     text-align: center;
 }
+
+ul, li{
+    list-style:none;
+    /*푸터에 영향이 감*/
+    /*text-align:center;*/
+    padding:0;
+    margin:0;
+}
+
+#mypage_ulBoard_donation > li:first-child > ul > li {
+    background-color:#c9c9c9;
+    font-weight:bold;
+    text-align:center;
+}
+
+#mypage_ulBoard_donation > li > ul {
+    padding:0px auto;
+    min-width:40px;
+}
+#mypage_ulBoard_donation > li > ul > li {
+    float:left;
+    font-size:15pt;
+    border-bottom:1px solid silver;
+    vertical-align:middle;
+}
+
+#mypage_ulBoard_donation > li > ul > li:first-child               {width:20%;} /*No 열 크기*/
+#mypage_ulBoard_donation > li > ul > li:first-child +li           {width:60%;} /*제목 열 크기*/
+#mypage_ulBoard_donation > li > ul > li:first-child +li+li        {width:20%;} /*작성일 열 크기*/
+
+
+#mypage_ulBoard_inquiry > li:first-child > ul > li {
+    background-color:#c9c9c9;
+    font-weight:bold;
+    text-align:center;
+}
+
+#mypage_ulBoard_inquiry > li > ul {
+    padding:0px auto;
+    min-width:40px;
+}
+#mypage_ulBoard_inquiry > li > ul > li {
+    float:left;
+    font-size:15pt;
+    border-bottom:1px solid silver;
+    vertical-align:middle;
+}
+#mypage_ulBoard_inquiry > li > ul > li:first-child               {width:20%;} /*No 열 크기*/
+#mypage_ulBoard_inquiry > li > ul > li:first-child +li           {width:60%;} /*제목 열 크기*/
+#mypage_ulBoard_inquiry > li > ul > li:first-child +li+li        {width:20%;} /*작성일 열 크기*/
+
+#divPaging {
+    clear:both;
+    margin:0 auto;
+    width:220px;
+    height:50px;
+}
+
+#divPaging > div {
+    float:left;
+    width: 30px;
+    margin:0 auto;
+    text-align:center;
+}
+#divPaging2 {
+    clear:both;
+    margin:0 auto;
+    width:220px;
+    height:50px;
+}
+
+#divPaging2 > div {
+    float:left;
+    width: 30px;
+    margin:0 auto;
+    text-align:center;
+}
+#liSearchOption > div {
+    margin:0 auto;
+    margin-top: 30px;
+    width:auto;
+    height:100px;
+
+}
+
+.left {
+    text-align : left;
+}
+.submit {
+    position: relative;
+    bottom: 35px;
+    line-height: 20px;
+}

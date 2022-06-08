@@ -22,22 +22,23 @@
         <h1>후원일정</h1><br>
         <section class="mypage_sidebar">
             <%--사이드 메뉴--%>
-            <article class="mypage_list">
-                <ul>
-                    <li><a href="main">메인화면</a></li>
-                    <li><a href="notice">공지사항</a></li>
-                    <li><a href="sponsorschedule">후원일정</a></li>
-                    <li><a href="donationreport">기부현황</a></li>
-                </ul>
-            </article>
-            <%--공지사항 헤더--%>
+                <article class="mypage_list">
+                    <ul>
+                        <li><a href="main">메인화면</a></li>
+                        <li><a href="notice">공지사항</a></li>
+                        <li><a href="faq">FAQ</a></li>
+                        <li><a href="sponsorschedule">후원일정</a></li>
+                        <li><a href="donationreport">기부현황</a></li>
+                    </ul>
+                </article>
+            <%--후원일정 헤더--%>
             <article class="noticeheader">
                 <span class="bbsnum">글번호</span>
                 <span class="bbstitle">글제목</span>
                 <span class="bbsname">작성자</span>
                 <span class="bbsdate">작성 시간</span>
                 <span class="bbshit">조회수</span><hr>
-                <!-- 게시글  -->
+                <!-- 게시글 내용  -->
                 <article class="noticemiddle">
                     <span class="bbsnum">1</span>
                     <span class="bbstitle">집갈뤠ㅜㅜ</span>
@@ -48,8 +49,6 @@
 
             </article>
         </section>
-        <%--공지사항 중앙--%>
-
     </div>
 </div>
 <%@include file="footer.jsp"%>

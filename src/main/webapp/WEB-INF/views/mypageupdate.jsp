@@ -16,7 +16,7 @@
 <body>
 
 <div class="container mt-3">
-    <h1>내정보</h1><br>
+    <h1>내정보수정</h1><br>
     <form action="<%-- 내정보 변경 OK.jsp --%>" class="was-validated">
         <a href="changepw"><input type="button" class="btn btn-outline-warning" value="비밀번호 변경하기"></a>
         <div class="mb-3 mt-3">
@@ -49,7 +49,7 @@
         </div>
         <%-- 버튼 그룹 --%>
         <div style="display: flex; justify-content: flex-end;">
-            <a href="mypage"><input type="button" class="btn btn-outline-danger" value="취소하기" style="margin-right: 10px;"></a>
+            <a href="javascript:window.history.back();"><input type="button" class="btn btn-outline-danger" value="취소하기" style="margin-right: 10px;"></a>
             <a href=""><input type="submit" class="btn btn-outline-success" value="변경하기" style="margin-left: 10px;"></a>
         </div>
     </form>

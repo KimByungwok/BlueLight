@@ -241,54 +241,47 @@ public class MainController {
 		return "inquiry";
 	}
 
-	//어드민 인덱스
-	@RequestMapping("/index123")
-	public String index123() {
-		return "/adminpage/index123";
+	//FAQ
+	@RequestMapping("/faq")
+	public String faq() {
+		return "faq";
 	}
 
-	//어드민 차트
-	@RequestMapping("/charts")
-	public String adminchart() {
-		return "/adminpage/charts";
+	//inquirybbs
+	@RequestMapping("/inquirybbs")
+	public String inquirybbs() {
+		return "inquirybbs";
 	}
 
-	//어드민 테이블
-	@RequestMapping("/tables")
-	public String admintable() {
-		return "/adminpage/tables";
+	//earningreport
+	@RequestMapping("/earningreport")
+	public String earningreport() {
+		return "/adminpage/earningreport";
 	}
 
-	//어드민 사이드 네비 라이트
-	@RequestMapping("/layout-sidenav-light")
-	public String adminlayoutsidenavlight() {
-		return "/adminpage/layout-sidenav-light";
-	}
-
-	//어드민 스태틱
-	@RequestMapping("/layout-static")
-	public String adminlayoutstatic() {
-		return "/adminpage/layout-static";
-	}
-
-	//회원 검색 - 김범준
-	@RequestMapping("/membersearch")
-	public String membersearch() {
-		return "/adminpage/membersearch";
-	}
-
-	//회원 상세 - 김범준
+	//memberdetail
 	@RequestMapping("/memberdetail")
 	public String memberdetail() {
 		return "/adminpage/memberdetail";
 	}
 
-	//게시판 상세 - 김범준
-	@RequestMapping("/bbsdetail")
-	public String bbsdetail() {
-		return "/adminpage/bbsdetail";
+	//membermodify
+	@RequestMapping("/membermodify")
+	public String membermodify() {
+		return "/adminpage/membermodify";
 	}
 
+	//membermypage
+	@RequestMapping("/membermypage")
+	public String membermypage() {
+		return "/adminpage/membermypage";
+	}
+
+	//membersearch
+	@RequestMapping("/membersearch")
+	public String membersearch() {
+		return "/adminpage/membersearch";
+	}
 
 	//테스트 페이지
 	@RequestMapping("/test123")

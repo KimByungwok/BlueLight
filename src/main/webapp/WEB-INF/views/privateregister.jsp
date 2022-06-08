@@ -12,11 +12,12 @@
 </head>
 
 <body>
+<%--개인 회원가입--%>
 <div class="loginform"  style="margin-left: 20%; margin-right: 20%;">
 	<div class="container mt-3">
 
 		<h3 ><a href = "privateregister" style="text-decoration:none" >개인 회원가입</a></h3>
-		<br><a href="registerselect"><button class="btn btn-outline-success">뒤로가기</button></a>
+		<br><a href="javascript:window.history.back();"><button class="btn btn-outline-success">뒤로가기</button></a>
 
 		<form action="registerOk" class="was-validated" name="joinForm" id="joinForm" onsubmit="return ncheck();">		<%-- 아이디 입력 --%>
 			<div class="mb-3 mt-3">
@@ -24,7 +25,7 @@
 				<input type="text" class="form-control" id="id" placeholder="Enter ID" name="id" required>
 				<div class="valid-feedback">확인</div>
 				<div class="invalid-feedback">아이디를 입력해주세요</div>
-				<button type="button" id="idOverlap" onclick="fn_idOverlap2();">중복확인</button>
+				<button type="button" id="idOverlap" onclick="fn_idOverlap2();" class="btn-warning">중복확인</button>
 				<input hidden="hidden" id="idDuplication" name="idDuplication" value="idUncheck"/>
 
 			</div>
@@ -104,9 +105,6 @@
 				<%-- 히든값 --%>
 				<input type="hidden" name="flag" value="0">
 				<input type="hidden" name="s_number" value="0">
-				<div class="col-12 col-sm-4 col-xl-3">
-					<button type="button"  class="btn btn-primary">개인 회원가입</button>
-				</div>
 			</div>
 		</form>
 		<div style="display: flex; justify-content: flex-end">

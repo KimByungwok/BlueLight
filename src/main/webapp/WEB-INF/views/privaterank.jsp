@@ -65,12 +65,12 @@
             </article>
             <%--랭킹 차트 구간--%>
 
-            <%--공지사항 헤더--%>
+            <%--랭킹 게시글 헤더--%>
             <article class="noticeheader">
                 <span class="bbsnum" style="width: 300px;">등수</span>
                 <span class="bbstitle" style="width: 500px;">글제목</span>
                 <span class="bbshit" style="width: 300px;">후원 포인트</span><hr>
-                <!-- 게시글  -->
+                <!-- 랭킹 게시글 내용 -->
                 <article class="noticemiddle">
                     <span class="bbsnum" style="width: 300px;">1</span>
                     <span class="bbstitle" style="width: 500px;">집갈뤠ㅜㅜ</span>
@@ -82,7 +82,7 @@
 </div>
 
 
-
+<%--차트 스크립트--%>
 <script>
     data = {
         datasets: [{
