@@ -39,9 +39,9 @@ public class bbsDAOImp implements bbsDAO{
     }
 
     @Override
-    public List<bbsDTO> bbsList(){
+    public List<bbsDTO> bbsList(String i){
         System.out.println(sqlSession.selectList("bbs.listBBS"));
-        return sqlSession.selectList("bbs.listBBS");
+        return sqlSession.selectList("bbs.listBBS", i);
     }
     @Override
     public List<bbsDTO> viewBBS(String i){

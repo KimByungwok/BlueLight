@@ -5,7 +5,6 @@
   Time: 오전 12:57
   To change this template use File | Settings | File Templates.
 --%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="com.spring.ex.dto.bbsDTO" %>
 <%@ page import="java.util.List" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
@@ -32,9 +31,9 @@
           <li><a href="donationreport">기부현황</a></li>
         </ul>
       </article>
-      <c:forEach items="${data}" var="bbsDTO" varStatus="status">
-        <article class="noticemiddle">
-       <label type="text" name="bbs_id" class="form-label">글번호 : ${bbsDTO.m_bId}</label>
+          <c:forEach items="${data}" var="bbsDTO" varStatus="status">
+            <article class="noticemiddle">
+           <label type="text" name="bbs_id" class="form-label">글번호 : ${bbsDTO.m_bId}</label>
         <br>
         <label type="text" name="bbs_name" class="form-label">글쓴이 : ${bbsDTO.m_bName}</label>
         <br>
@@ -46,7 +45,7 @@
         <br>
         <label type="text" name="bbs_title" class="form-label">제목 : ${bbsDTO.m_bTitle}</label>
         <br>
-        <img src="resources/bbsUploadimg/${bId}/${bId}" />
+        <img src="resources/bbsUploadImg/${bId}/${bId}" />
           <br>
         <label type="text" name="bbs_content" class="form-label">내용 : ${bbsDTO.m_bContent}</label>
         </article>

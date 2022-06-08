@@ -27,6 +27,7 @@
                     <li><a href="main">메인화면</a></li>
                     <li><a href="donation">후원하기</a></li>
                     <li><a href="livedonation">현장기부</a></li>
+                    <li><a href="donationWrite?bd=donationWrite">글쓰기</a></li>
                 </ul>
             </article>
             <%--기부 메뉴 이미지--%>
@@ -39,10 +40,6 @@
                                     <a href="donation1">
                                         <img src="${pageContext.request.contextPath}/resources/images/product/donationimg1.jpg" alt="">
                                     </a>
-                                    <div class="product-action">
-                                        <a href="javascript:void(0)"><i class="lni lni-heart"></i></a>
-                                        <a href="javascript:void(0)" class="share"><i class="lni lni-share"></i></a>
-                                    </div>
                                 </div>
                                 <div class="product-content">
                                     <h3 class="name"><a href="donation1">우크라이나 전쟁</a></h3>
@@ -58,6 +55,27 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="single-product">
+                            <div class="product-img">
+                                <a href="donation1">
+                                    <img src="${pageContext.request.contextPath}/resources/images/product/donationimg1.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="product-content">
+                                <h3 class="name"><a href="donation1">우크라이나 전쟁</a></h3>
+                                <ul class="address">
+                                    <li>
+                                        <a href="donation1"><i class="lni lni-calendar"></i>시작 : 2022.05.25</a>
+                                        <a href="donation1"> ~ 종료 : 2022.12.30</a>
+                                    </li>
+                                </ul>
+                                <div class="product-bottom">
+                                    <a href="donation1"><button class="btn btn-dark btn-lg">후원하기</button> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                         <div class="col-xl-4 col-lg-6 col-md-6">
                             <div class="single-product">

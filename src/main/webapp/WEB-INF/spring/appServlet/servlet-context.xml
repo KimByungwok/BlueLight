@@ -22,6 +22,7 @@
 	<!-- mapping 이미지가 실제로 저장된 경로 -->
 	<resources mapping="/resources/**" location="/resources/" />
 	<resources mapping = "/bbsUploadImg/**" location="resources/bbsUploadImg" />
+	<resources mapping = "/donationUploadImg/**" location="resources/donationUploadImg" />
 
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">

@@ -227,8 +227,6 @@
                                         <li><a href="notice">- 공지사항</a></li>
                                         <li><a href="sponsorschedule">- 후원 일정</a></li>
                                         <li><a href="donationreport">- 기부 현황</a></li>
-                                        <li><a href="404">404 Page</a></li>
-                                        <li><a href="joinsuccess">join</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-item">
@@ -259,7 +257,7 @@
                                 <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
                                     <div class="input-group">
                                         <input class="form-control" id="keyword" type="text" placeholder="Search for" aria-label="Search for..." aria-describedby="btnNavbarSearch"
-                                        style="border-radius: 10px;"/>
+                                               style="border-radius: 10px;"/>
                                         <label for="keyword" style="background-color: #FFFFFF"><a href="#" class="lni lni-search-alt theme-color"></a></label>
                                     </div>
                                 </form>
@@ -273,7 +271,7 @@
                                     }
                                 %>
                                 <label><%=seid%></label>
-                                </ul>
+                            </ul>
                         </div>
                         <ul class="header-btn d-md-flex" style="margin-bottom: 0">
                             <li>
@@ -285,12 +283,12 @@
                                     <%
                                         if(session.getAttribute("id") == null)
                                         {
-                                            %>
+                                    %>
                                     <li><a href="login">로그인</a></li>
                                     <li><a href="registerselect">회원가입</a></li>
                                     <%
-                                        } else
-                                            %><li><a href="logout">로그아웃</a></li>
+                                    } else
+                                    %><li><a href="logout">로그아웃</a></li>
 
 
                                     <li><a href="adminmain">어드민</a></li>
@@ -306,5 +304,4 @@
     </div> <!-- header navbar -->
 </header>
 <!--====== HEADER PART ENDS ======-->
-
 

@@ -28,8 +28,8 @@ public class bbsServiceImp implements bbsService {
     }
 
     @Override
-    public List<bbsDTO> bbsList(){
-        return bbsDAO.bbsList();
+    public List<bbsDTO> bbsList(String i){
+        return bbsDAO.bbsList(i);
     }
 
     @Override

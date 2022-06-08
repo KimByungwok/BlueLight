@@ -18,7 +18,7 @@
     </select>
     
     <select id="listBBS" resultType="map">
-        SELECT * FROM bbs_board ORDER BY m_bID DESC
+        SELECT * FROM bbs_board  WHERE m_bGroup = #{m_bGroup} ORDER BY m_bID desc
     </select>
 
     <select id="viewBBS" resultType="map">
