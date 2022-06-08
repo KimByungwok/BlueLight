@@ -18,8 +18,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+
     <meta charset="UTF-8">
     <title>ID 중복 확인</title>
+    <%@include file="script.jsp"%>
 
     <script type="text/javascript">
         function sendCheckValue() {
@@ -48,9 +50,10 @@
 <b><font size="4" color="gray">ID 중복 확인</font></b>
 <br>
 
+<%--ID 중복확인 start--%>
 <form name="checkIdForm">
 
-    <input type="text" name="id" value="${user_id}" id="user_id" disabled>
+    <input type="text" name="id" value="${user_id}" id="user_id" disabled style="border: solid 1px;">
 
 
     <c:choose>
@@ -67,10 +70,12 @@
             <input type="hidden" name="chResult" value="N"/>
         </c:otherwise>
     </c:choose>
+<%--ID 중복확인 end--%>
 
-    <input type="button" onclick="window.close()" value="취소"/><br>
-    <input type="button" onclick="sendCheckValue()" value="사용하기"/>
-
+    <%--버튼 그룹 start--%>
+    <input type="button" class="btn-outline-danger" onclick="window.close()" value="취소"/><br>
+    <input type="button" class="btn-outline-success" onclick="sendCheckValue()" value="사용하기"/>
+    <%--버튼 그룹 end--%>
 </form>
 
 </body>

@@ -47,15 +47,13 @@
                             <span class="bbsdate">${bbsDTO.m_bDate}</span>
                             <span class="bbshit">${bbsDTO.m_bHit}</span>
 
+
                         </article>
                     </c:forEach>
                 </article>
         </section>
 
         <button type="button" onclick="location.href='bbswrite?bd=sponsorschedule'">글 쓰기</button>
-
-
-
     </div>
 </div>
 <%@include file="footer.jsp"%>

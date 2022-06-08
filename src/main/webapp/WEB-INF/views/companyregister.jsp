@@ -12,7 +12,7 @@
 <div class="loginform"  style="margin-left: 20%; margin-right: 20%;">
 	<div class="container mt-3">
 		<h3 ><a href = "companyregister" style="text-decoration:none" >기업 회원가입</a></h3>
-		<br><a href="registerselect"><button class="btn btn-outline-success">뒤로가기</button></a>
+		<br><a href="javascript:window.history.back();"><button class="btn btn-outline-success">뒤로가기</button></a>
 		<%-- 아이디 입력 --%>
 		<form action="registerOk" class="was-validated" name="joinForm" id="joinForm" onsubmit="return ncheck();">		<%-- 아이디 입력 --%>
 			<%-- 아이디 입력 --%>
@@ -20,7 +20,7 @@
 				<label for="id" class="form-label">아이디:</label>
 				<input type="text" class="form-control" id="id" placeholder="Enter ID" name="id" required>
 				<div class="valid-feedback">확인</div>
-				<button type="button" id="idOverlap" onclick="fn_idOverlap2();">중복확인</button>
+				<button type="button" id="idOverlap" onclick="fn_idOverlap2();" class="btn-warning">중복확인</button>
 				<input hidden="hidden" id="idDuplication" name="idDuplication" value="idUncheck"/>
 			</div>
 				<script type="text/javascript">
@@ -99,10 +99,7 @@
 						}
 
 					}
-				</script
-				<div class="col-12 col-sm-4 col-xl-3">
-					<button type="button"  class="btn btn-primary">기업 회원가입</button>
-				</div>
+				</script>
 			</div>
 		</form>
 		<div style="display: flex; justify-content: flex-end">

@@ -12,11 +12,11 @@
     <%@include file="header.jsp"%><br><br><br><br>
 </head>
 <body>
-
+<%--회원가입 축하--%>
 <div class="container" style="text-align: center;">
     <br><br>
-    <h2>회원가입을 축하드립니다.</h2>
-    <br><br>
+    <h2>{@java} 님 회원가입을 축하드립니다.</h2>
+    <br><hr><br>
     <a href="login"><button class="btn btn-outline-secondary">로그인 하기</button></a>
     <br><br>
 </div>

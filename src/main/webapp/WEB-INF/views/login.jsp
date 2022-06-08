@@ -47,6 +47,7 @@
         </div>
     </form>
         <hr>
+        <%--회원가입 버튼--%>
         <div class="col-12 col-sm-12 col-lg-12">
             <div class="row" style="margin-left: 20%; margin-right: 20%;">
                 <h3 style="text-align: center;">회원가입</h3>

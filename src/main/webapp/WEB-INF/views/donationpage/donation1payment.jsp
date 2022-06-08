@@ -17,7 +17,7 @@
 
 <div class="container">
     <section class="mypage_sidebar">
-        <%--사이드 메뉴--%>
+        <%--사이드 메뉴 start--%>
         <article class="mypage_list">
             <ul>
                 <li><a href="main">메인화면</a></li>
@@ -25,6 +25,9 @@
                 <li><a href="livedonation">현장기부</a></li>
             </ul>
         </article>
+        <%--사이드 메뉴 end--%>
+
+        <%--후원하기 결제정보 입력 start--%>
         <article class="donationheader" style="flex-direction: column">
             <span class="donationinfo">후원정보 : 어쩌구~저쩌구~ 아무튼 기부할게~~</span><hr>
             <span class="userinfo">후원자 정보 : 행복한 돼지<%--${java}--%></span><hr>
@@ -38,6 +41,7 @@
                 </div>
                 </span>
             </span><hr>
+            <%--결제 버튼그룹 start--%>
             <article class="donationmid">
                 <div class="col-lg-12" style="display: flex; justify-content: space-evenly; flex-direction: column">
                     <a href="#"><input type="button" class="btn btn-outline-secondary" value="계좌 이체"></a>
@@ -46,7 +50,9 @@
                     <a href="#"><input type="button" class="btn btn-outline-secondary" value="페이 결제"></a>
                 </div>
             </article>
+            <%--결제 버튼그룹 end--%>
         </article>
+        <%--후원하기 결제정보 입력 end--%>
     </section>
 </div>
 
