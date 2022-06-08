@@ -36,9 +36,8 @@
                     <div class="footer-widget">
                         <h4>Support</h4>
                         <ul class="link">
-                            <li><a href="javascript:void(0)">실시간 상담</a></li>
                             <li><a href="javascript:void(0)">고객센터</a></li>
-                            <li><a href="javascript:void(0)">QnA</a></li>
+                            <li><a href="faq">FAQ</a></li>
                         </ul>
                     </div>
                 </div>
@@ -90,7 +89,3 @@
     </div>--%>
 </footer>
 <!--====== 푸터 끝 ======-->
-</div>
-
-</body>
-</html>

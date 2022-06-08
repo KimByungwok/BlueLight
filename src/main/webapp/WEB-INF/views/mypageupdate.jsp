@@ -16,7 +16,7 @@
 <body>
 
 <div class="container mt-3">
-    <h1>내정보</h1><br>
+    <h1>내정보수정</h1><br>
     <form action="<%-- 내정보 변경 OK.jsp --%>" class="was-validated">
         <a href="changepw"><input type="button" class="btn btn-outline-warning" value="비밀번호 변경하기"></a>
         <div class="mb-3 mt-3">

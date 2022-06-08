@@ -29,7 +29,7 @@
                     <li><a href="livedonation">현장기부</a></li>
                 </ul>
             </article>
-            <%--기부 메뉴 이미지--%>
+            <%--현장 기부 메뉴 이미지--%>
             <section class="menu image">
                 <div class="container">
                     <div class="row">
@@ -246,8 +246,6 @@
                 </div>
             </section>
         </section>
-
-        <%--공지사항 중앙--%>
     </div>
 </div>
 <%@include file="footer.jsp"%>

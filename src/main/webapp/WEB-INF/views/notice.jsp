@@ -28,6 +28,7 @@
                 <ul>
                     <li><a href="main">메인화면</a></li>
                     <li><a href="notice">공지사항</a></li>
+                    <li><a href="faq">FAQ</a></li>
                     <li><a href="sponsorschedule">후원일정</a></li>
                     <li><a href="donationreport">기부현황</a></li>
                 </ul>
@@ -39,7 +40,7 @@
                 <span class="bbsname">작성자</span>
                 <span class="bbsdate">작성 시간</span>
                 <span class="bbshit">조회수</span><hr>
-                <!-- 게시글  -->
+                <!-- 공지사항 내용 -->
                 <c:forEach items="${list}" var="bbsDTO" varStatus="status">
                 <article class="noticemiddle">
                     <span class="bbsnum">${bbsDTO.m_bId}</span>
@@ -56,11 +57,6 @@
                 </div>
             </article>
         </section>
-
-
-
-
-
     </div>
 </div>
 <%@include file="footer.jsp"%>

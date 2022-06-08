@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<%--슬라이드 캐러셀--%>
+<%--슬라이드 캐러셀 start--%>
 <section id="slider">
     <div class="container">
         <div id="demo" class="carousel slide" data-bs-ride="carousel">
@@ -44,6 +44,8 @@
     </div>
 </section>
 <br><br><br><br>
+<%--슬라이드 캐러셀 end--%>
+
 
 <%--검색바 form--%>
 <%--
@@ -65,7 +67,7 @@
 </div>
 --%>
 
-<%--기부 금액 및 인원--%>
+<%--기부 금액 및 인원 start--%>
 <br>
 <section class=money>
     <div class="container">
@@ -82,8 +84,9 @@
     </div>
 </section>
 <br>
+<%--기부 금액 및 인원 end--%>
 
-<%--기부 메뉴 이미지--%>
+<%--기부 메뉴 이미지 start--%>
 <section class="menu image">
     <div class="container">
         <div class="row">
@@ -316,9 +319,10 @@
         </div>
     </div>
 </section>
+<%--기부 메뉴 이미지 end--%>
 
-<!--====== LATEST PRODUCT PART ENDS ======-->
 
+<%--푸터 위에 리스트 2칸씩 떄려넣어주세용 시작이에오--%>
 <section class="lanking">
     <div class="container">
         <div class="row">
@@ -371,7 +375,7 @@
         </div>
     </div>
 </section>
-
+<%--푸터 위에 리스트 2칸씩 떄려넣어주세용--%>
 <section class="faq">
     <div class="container">
         <div class="row">
@@ -428,7 +432,7 @@
         </div>
     </div>
 </section>
-
+<%--푸터 위에 리스트 2칸씩 떄려넣어주세용 끝입니당--%>
 
 <%--푸터--%>
 <%@include file="footer.jsp" %>

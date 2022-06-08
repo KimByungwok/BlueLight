@@ -1,0 +1,16 @@
+.bbs_id{
+    width: 100px;
+}
+
+.bbs_name{
+    width: 150px;
+}
+
+.bbs_date{
+    width: 250px;
+}
+
+table.container{
+    text-align: center;
+}
+

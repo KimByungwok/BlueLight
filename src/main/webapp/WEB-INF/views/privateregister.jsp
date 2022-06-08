@@ -12,6 +12,7 @@
 </head>
 
 <body>
+<%--개인 회원가입--%>
 <div class="loginform"  style="margin-left: 20%; margin-right: 20%;">
 	<div class="container mt-3">
 
@@ -24,7 +25,7 @@
 				<input type="text" class="form-control" id="id" placeholder="Enter ID" name="id" required>
 				<div class="valid-feedback">확인</div>
 				<div class="invalid-feedback">아이디를 입력해주세요</div>
-				<button type="button" id="idOverlap" onclick="fn_idOverlap2();">중복확인</button>
+				<button type="button" id="idOverlap" onclick="fn_idOverlap2();" class="btn-outline-warning">중복확인</button>
 				<input hidden="hidden" id="idDuplication" name="idDuplication" value="idUncheck"/>
 
 			</div>

@@ -33,6 +33,7 @@
 <div class="container-lg" style="min-width: 842px">
     <div class="row">
         <h1>기업랭킹</h1><br>
+        <%--랭킹차트 오른쪽 글--%>
         <div class="card">
             <div class="card-body">
                 <canvas id="privaterank" width="600" height="500" style="display: inline-block"></canvas>
@@ -65,7 +66,7 @@
             </article>
             <%--랭킹 차트 구간--%>
 
-            <%--공지사항 헤더--%>
+            <%--랭킹차트 게시판 헤더--%>
             <article class="noticeheader">
                 <span class="bbsnum" style="width: 300px;">등수</span>
                 <span class="bbstitle" style="width: 500px;">글제목</span>
@@ -82,7 +83,7 @@
 </div>
 
 
-
+<%--랭킹차트 스크립트--%>
 <script>
     data = {
         datasets: [{

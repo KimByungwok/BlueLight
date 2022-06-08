@@ -241,6 +241,12 @@ public class MainController {
 		return "inquiry";
 	}
 
+	//FAQ
+	@RequestMapping("/faq")
+	public String faq() {
+		return "faq";
+	}
+
 	//어드민 인덱스
 	@RequestMapping("/index123")
 	public String index123() {

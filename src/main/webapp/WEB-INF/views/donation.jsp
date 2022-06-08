@@ -256,8 +256,6 @@
                     </div>
                 </section>
         </section>
-
-        <%--공지사항 중앙--%>
     </div>
 </div>
 <%@include file="footer.jsp"%>

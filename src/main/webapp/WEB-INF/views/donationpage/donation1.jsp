@@ -19,7 +19,7 @@
 
 <div class="container">
     <section class="mypage_sidebar">
-        <%--사이드 메뉴--%>
+        <%--사이드 메뉴 start--%>
         <article class="mypage_list">
             <ul>
                 <li><a href="main">메인화면</a></li>
@@ -27,11 +27,13 @@
                 <li><a href="livedonation">현장기부</a></li>
             </ul>
         </article>
-        <%--후원하기 헤더--%>
-        <article class="noticeheader">
+        <%--사이드 메뉴 end--%>
+
+        <%--후원하기 start --%>
+        <article class="noticeheader" >
             <span class="donationname">우크라이나 전쟁 후원</span>
             <span class="donationdate">2022.05.25 ~ 2022.12.30</span><hr>
-            <!-- 게시글  -->
+            <!-- 게시글 내용 start -->
             <article class="noticemiddle">
                 <div>
                     <div class="single-product">
@@ -50,13 +52,18 @@
                     <span>아무튼 기부나 좀 해라 불쌍하지도 않냐 이놈들아</span>
                 </div>
                 <br>
+                <!-- 게시글 내용 end -->
+
+                <!-- 후원버튼그룹 start -->
                 <div style="display: flex; justify-content: flex-end;">
                     <a href="donation1payment"><button class="btn-outline-primary btn-lg" style="margin: 2px;">후원하기</button></a>
                     <a href="livedonation1payment"><button class="btn-outline-success btn-lg" style="margin: 2px;">현장후원</button></a>
                     <a href="donation"><button class="btn-outline-dark btn-lg" style="margin: 2px;">목록</button></a>
                 </div>
+                <!-- 후원버튼그룹 end -->
             </article>
         </article>
+        <%--후원하기 end --%>
     </section>
 </div>
 
