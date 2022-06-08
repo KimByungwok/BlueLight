@@ -1,6 +1,6 @@
-
 <%@ page import="com.spring.ex.dto.bbsDTO" %>
-<%@ page import="java.util.List" %><%--
+<%@ page import="java.util.List" %>
+<%--
   Created by IntelliJ IDEA.
   User: user
   Date: 2022-05-17
@@ -13,9 +13,6 @@
 
 <head>
     <%@include file="header.jsp"%><br><br><br><br>
-<!--====== qudwok_style css ======-->
-<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/notice.css">
-
 </head>
 <body>
 
@@ -59,6 +56,7 @@
         </section>
     </div>
 </div>
+
 <%@include file="footer.jsp"%>
 
 </body>
