@@ -20,7 +20,7 @@ public class donationController {
     @Inject
     DonationService doneService;
 
-    @RequestMapping
+    @RequestMapping("donationWrite")
     public String donationWrite(HttpServletRequest request) {
 
         HttpSession session = request.getSession();
@@ -45,8 +45,8 @@ public class donationController {
 ;
             System.out.println(doneTitle+doneContent+doneID);
 
-            Timestamp doneDayStart = Timestamp.valueOf(request.getParameter("doneDayStart"));
-            Timestamp doneDayEnd = Timestamp.valueOf(request.getParameter("doneDayEnd"));
+//            Timestamp doneDayStart = Timestamp.valueOf(request.getParameter("doneDayStart"));
+//            Timestamp doneDayEnd = Timestamp.valueOf(request.getParameter("doneDayEnd"));
 
             Timestamp timestamp = new Timestamp(System.currentTimeMillis());
 
@@ -56,9 +56,9 @@ public class donationController {
             done.setM_dUserId(User_ID);
             done.setM_dGroup(done_Group);
             done.setM_dHit("0");
-            done.setM_dDate(timestamp);
-            done.setM_ddayStart(doneDayStart);
-            done.setM_ddayEnd(doneDayEnd);
+//            done.setM_dDate(timestamp);
+//            done.setM_ddayStart(doneDayStart);
+//            done.setM_ddayEnd(doneDayEnd);
 
 
 
