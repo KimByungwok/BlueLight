@@ -191,10 +191,6 @@ public class MainController {
 	@RequestMapping("/companyrank")
 	public String companyrank() { return "companyrank";}
 
-	//관리자 메인
-	@RequestMapping("/adminmain")
-	public String adminmain() { return "adminmain";}
-
 	//후원하기1
 	@RequestMapping("/donation1")
 	public String donation1() { return "/donationpage/donation1";}
@@ -245,13 +241,19 @@ public class MainController {
 		return "faq";
 	}
 
-	//inquirybbs
+	//inquirybbs	문의 게시판
 	@RequestMapping("/inquirybbs")
 	public String inquirybbs() {
 		return "inquirybbs";
 	}
 
-	//earningreport
+	//adminpage 관리자 메인
+	@RequestMapping("/admin")
+	public String admin() {
+		return "/adminpage/admin";
+	}
+
+	//earningreport 수입현황
 	@RequestMapping("/earningreport")
 	public String earningreport() {
 		return "/adminpage/earningreport";

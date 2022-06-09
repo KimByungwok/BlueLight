@@ -134,3 +134,20 @@ ul, li{
     bottom: 35px;
     line-height: 20px;
 }
+
+.memberid{
+    width: 30%;
+    text-align: center;
+}
+
+.membername{
+    width: 30%;
+    text-align: center;
+}
+
+.memberphone{
+    width: 30%;
+    text-align: center;
+}
+
+

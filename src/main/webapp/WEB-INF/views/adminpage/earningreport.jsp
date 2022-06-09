@@ -22,10 +22,10 @@
                 </ul>
             </article>
             <%--사이드 메뉴--%>
-            <article style="width: calc(100% - 180px); min-width: 570px">
+            <article>
                 <div style="margin-bottom: 10px;">
                     <ul>
-                        <li style="margin-bottom: 20px; min-width: 756px;">
+                        <li style="margin-bottom: 20px;">
                             <canvas id="month" width="500px" height="200px"></canvas>
                         </li>
                         <li style="min-width: 756px; margin-bottom: 20px; float: left">

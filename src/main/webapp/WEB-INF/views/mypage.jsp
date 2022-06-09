@@ -75,7 +75,7 @@
                     <!-- 문의사항 end -->
 
                     <%--각종 수정 버튼 그룹 start--%>
-                    <div style="display: flex; justify-content: flex-end;">
+                    <div class="buttongroup">
                         <a href="changepw"><input type="button" id="trigger" class="btn btn-outline-warning" value="비밀번호 변경" style=""></a>
                         <a href="mypageupdate"><input type="button" class="btn btn-outline-success" value="정보수정" style="margin-right: 10px; margin-left: 10px;"></a>
                         <a href="inquiry"><input type="button" class="btn btn-outline-primary" value="문의하기" style="margin-left: 20px; margin-right: 10px"></a>
