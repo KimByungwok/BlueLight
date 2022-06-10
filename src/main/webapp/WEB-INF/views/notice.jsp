@@ -1,4 +1,3 @@
-
 <%@ page import="com.spring.ex.dto.bbsDTO" %>
 <%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
@@ -13,8 +12,8 @@
 
 <head>
     <%@include file="header.jsp"%><br><br><br><br>
-<!--====== qudwok_style css ======-->
-<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/notice.css">
+    <!--====== qudwok_style css ======-->
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/notice.css">
 
 </head>
 <body>
@@ -28,27 +27,29 @@
                 <ul>
                     <li><a href="main">메인화면</a></li>
                     <li><a href="notice">공지사항</a></li>
-                    <li><a href="faq">FAQ</a></li>
                     <li><a href="sponsorschedule">후원일정</a></li>
                     <li><a href="donationreport">기부현황</a></li>
                 </ul>
             </article>
-<%--공지사항 헤더--%>
+            <%--공지사항 헤더--%>
             <article class="noticeheader">
                 <span class="bbsnum">글번호</span>
                 <span class="bbstitle">글제목</span>
                 <span class="bbsname">작성자</span>
                 <span class="bbsdate">작성 시간</span>
                 <span class="bbshit">조회수</span><hr>
-                <!-- 공지사항 내용 -->
+                <!-- 게시글  -->
                 <c:forEach items="${list}" var="bbsDTO" varStatus="status">
-                <article class="noticemiddle">
-                    <span class="bbsnum">${bbsDTO.m_bId}</span>
-                    <a href='bbsView?bId=<c:out value="${bbsDTO.m_bId}"/>'><span class="bbstitle">${bbsDTO.m_bTitle}</span></a>
-                    <span class="bbsname">${bbsDTO.m_bName}</span>
-                    <span class="bbsdate">${bbsDTO.m_bDate}</span>
-                    <span class="bbshit">${bbsDTO.m_bHit}</span>
-                </article>
+                    <article class="noticemiddle">
+                        <span class="bbsnum">${bbsDTO.m_bId}</span>
+                        <a href='bbsView?bId=<c:out value="${bbsDTO.m_bId}"/>'><span class="bbstitle">${bbsDTO.m_bTitle}</span></a>
+                        <span class="bbsname">${bbsDTO.m_bName}</span>
+                        <span class="bbsdate">${bbsDTO.m_bDate}</span>
+                        <span class="bbshit">${bbsDTO.m_bHit}</span>
+
+                    </article>
+
+
                 </c:forEach>
                 <br>
                 <%--버튼 오른쪽 끝에 두기--%>
