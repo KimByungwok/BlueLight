@@ -56,7 +56,7 @@ public class bbsController {
     {
         HttpSession session = request.getSession();
 
-        session.setAttribute("bbsID", bService.bbsthreadIDService());
+        session.setAttribute("bbsID",   bService.bbsthreadIDService());
         return "bbswrite";
     }
     //글작성처리

@@ -16,8 +16,8 @@
 
     </select>
 
-    <select id="listBBS" resultType="map">
-        SELECT * FROM bbs_donation  WHERE m_dGroup = #{m_dGroup} ORDER BY m_dID desc
+    <select id="listDonation" resultType="map">
+        SELECT * FROM bbs_donation WHERE m_dGroup = #{group} OR m_dGroup = #{group2} ORDER BY m_dID desc
     </select>
 
     <select id="viewBBS" resultType="map">

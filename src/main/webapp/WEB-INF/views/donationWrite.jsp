@@ -57,6 +57,7 @@
             <input type="hidden" name="id" value=<%=session.getAttribute("id")%>>
             <%--            <input type="hidden" name="bbsGroup" value=<%=request.getParameter("bd")%>>--%>
             <input type="hidden" name="doneID" value=<%=(int)session.getAttribute("doneID")%>>
+
             <div class="form-group">
 		<textarea class="form-control" rows="10" name="done_thread"
                   placeholder="내용을 입력해주세요" required

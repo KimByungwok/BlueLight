@@ -177,7 +177,7 @@ public class MainController {
 
 
 
-	//회원가입 축핳ㅎㅎ
+	//회원가입 축하
 	@RequestMapping("/joinsuccess")
 	public String joinsuccess() {
 		return "joinsuccess";
@@ -191,13 +191,7 @@ public class MainController {
 	@RequestMapping("/donationreport")
 	public String donationreport() { return "donationreport";}
 
-	//후원하기
-	@RequestMapping("/donation")
-	public String donation() { return "donation";}
 
-	//현장 기부
-	@RequestMapping("/livedonation")
-	public String livedonation() { return "livedonation";}
 
 	//개인랭킹
 	@RequestMapping("/privaterank")
@@ -207,25 +201,12 @@ public class MainController {
 	@RequestMapping("/companyrank")
 	public String companyrank() { return "companyrank";}
 
-	//후원하기1
-	@RequestMapping("/donation1")
-	public String donation1() { return "/donationpage/donation1";}
+	//관리자 메인
+	@RequestMapping("/adminmain")
+	public String adminmain() { return "adminmain";}
 
-	//후원하기1 결제
-	@RequestMapping("/donation1payment")
-	public String donation1payment() { return "/donationpage/donation1payment";}
 
-	//후원하기 결제 완료
-	@RequestMapping("/donationsuccess")
-	public String donationsuccess() { return "/donationpage/donationsuccess";}
 
-	//현장기부 신청 완료
-	@RequestMapping("/livedonationsuccess")
-	public String livedonationsuccess() { return "/donationpage/livedonationsuccess";}
-
-	//후원하기 결제 완료
-	@RequestMapping("/livedonation1payment")
-	public String livedonation1payment() { return "/donationpage/livedonation1payment";}
 
 	//마이페이지
 	@RequestMapping("/mypage")
