@@ -1,161 +1,310 @@
 
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <html>
+
 <head>
-<meta charset="utf-8">
-<title>Popup Demo</title>
+
+    <title>:: JavaScript Contenteditable ::</title>
+
     <style type="text/css">
-        h1{
-            font-family: 'Oswald', sans-serif;
-            font-size: 30px;
-            color: #216182;
-        }
-        label {
-            display: block;
-            margin-top: 20px;
-            letter-spacing: 2px;
-        }
-        form {
-            margin: 0 auto;
-            width: 459px;
-        }
-        input, textarea {
-            width: 439px;
-            height: 27px;
-            background-color: #efefef;
-            border-radius: 6px;
-            border: 1px solid #dedede;
-            padding: 10px;
-            margin-top: 3px;
-            font-size: 0.9em;
-            color: #3a3a3a;
-        }
-        input:focus, textarea:focus{
-            border: 1px solid #97d6eb;
+
+        table {
+            border-collapse: collapse;
+            border: 1px gray solid;
         }
 
-        textarea{
-            height: 60px;
-            background-color: #efefef;
-        }
-        #submit{
-            width: 127px;
-            height: 48px;
-            text-align: center;
-            border: none;
-            margin-top: 20px;
-            cursor: pointer;
-        }
-        #submit:hover{
-            color: #fff;
-            background-color: #216282;
-            opacity: 0.9;
-        }
-        #cancel {
-            width: 127px; height: 48px;
-            text-align: center;
-            border: none;
-            margin-top: 20px;
-            cursor: pointer;
-        }
-        #cancel:hover{
-            color: #fff;
-            background-color: #216282;
-            opacity: 0.9;
-        }
-
-        .modal {
-            position: fixed;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            opacity: 0;
-            visibility: hidden;
-            transform: scale(1.1);
-            transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
-        }
-        .modal-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: white;
-            padding: 1rem 1.5rem;
-            width: 500px;
-            height: 350px;
-            border-radius: 0.5rem;
-        }
-        .close-button {
-            float: right;
-            width: 1.5rem;
-            line-height: 1.5rem;
-            text-align: center;
-            cursor: pointer;
-            border-radius: 0.25rem;
-            background-color: lightgray;
-        }
-        .close-button:hover {
-            background-color: darkgray;
-        }
-        .show-modal {
-            opacity: 1;
-            visibility: visible;
-            transform: scale(1.0);
-            transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+        .rowColumn {
+            border-radius: 5px;
+            margin: 5px;
         }
 
     </style>
 
-    <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 </head>
 
-
 <body>
-<h1>레어어 팝업창 띄우기</h1>
-<!-- 버튼 -->
-<button class="trigger">이메일 보내기</button>
 
-<!-- 팝업 될 레이어 -->
-<div class="modal">
-    <div class="modal-content">
-        <span class="close-button">&times;</span>
-        <h1 class="title">메일 보내기</h1>
-        <form action="#post.php" method="POST">
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder="Your email" required="required">
-            <label for="textarea">ㅇㅇ</label>
-            <textarea name="message" id="textarea" placeholder="Test Message" required="required"></textarea>
-            <input type="button" id="cancel" value="취소">
-            <input type="submit" id="submit" value="보내기">
-        </form>
-    </div>
-</div>
+<table border="1">
 
-<script type="text/javascript">
-    var modal = document.querySelector(".modal");
-    var trigger = document.querySelector(".trigger");
-    var closeButton = document.querySelector(".close-button");
-    var cancelButton = document.querySelector("#cancel");
+    <thead>
 
-    //console.log(modal);
+    <tr>
 
-    function toggleModal() {
-        modal.classList.toggle("show-modal");
-    }
+        <th style="width:50px;">번호</th>
 
-    function windowOnClick(event) {
-        if (event.target === modal) {
-            toggleModal();
-        }
-    }
+        <th style="width:120px;">가수</th>
 
-    trigger.addEventListener("click", toggleModal);
-    closeButton.addEventListener("click", toggleModal);
-    cancel.addEventListener("click", toggleModal);
-    window.addEventListener("click", windowOnClick);
-</script>
+        <th style="width:350px;">노래</th>
+
+        <th style="width:100px;">발매일</th>
+
+    </tr>
+
+    </thead>
+
+    <tbody>
+
+    <tr>
+
+        <td style="text-align:center;">1</td>
+
+        <td>
+
+            <p class="rowColumn" contenteditable="false" data-default="윤하">윤하</p>
+
+        </td>
+
+        <td>
+
+            <p class="rowColumn" contenteditable="false" data-default="오렌지 첫사랑">오렌지 첫사랑</p>
+
+        </td>
+
+        <td>
+
+            <p class="rowColumn" contenteditable="false" data-default="2007-10-23">2007-10-23</p>
+
+        </td>
+
+    </tr>
+
+    <tr>
+
+        <td style="text-align:center;">2</td>
+
+        <td>
+
+            <p class="rowColumn" contenteditable="false" data-default="도원경">도원경</p>
+
+        </td>
+
+        <td>
+
+            <p class="rowColumn" contenteditable="false" data-default="다시 사랑한다면">다시 사랑한다면</p>
+
+        </td>
+
+        <td>
+
+            <p class="rowColumn" contenteditable="false" data-default="2001-05-01">2001-05-01</p>
+
+        </td>
+
+    </tr>
+
+    <tr>
+
+        <td style="text-align:center;">3</td>
+
+        <td>
+
+            <p class="rowColumn" contenteditable="false" data-default="더더">더더</p>
+
+        </td>
+
+        <td>
+
+            <p class="rowColumn" contenteditable="false" data-default="it's You">it's You</p>
+
+        </td>
+
+        <td>
+
+            <p class="rowColumn" contenteditable="false" data-default="1998-11-01">1998-11-01</p>
+
+        </td>
+
+    </tr>
+
+    <tr>
+
+        <td style="text-align:center;">4</td>
+
+        <td>
+
+            <p class="rowColumn" contenteditable="false" data-default="박기영">박기영</p>
+
+        </td>
+
+        <td>
+
+            <p class="rowColumn" contenteditable="false" data-default="시작">시작</p>
+
+        </td>
+
+        <td>
+
+            <p class="rowColumn" contenteditable="false" data-default="1999-04-07">1999-04-07</p>
+
+        </td>
+
+    </tr>
+
+    <tr>
+
+        <td style="text-align:center;">5</td>
+
+        <td>
+
+            <p class="rowColumn" contenteditable="false" data-default="이소은">이소은</p>
+
+        </td>
+
+        <td>
+
+            <p class="rowColumn" contenteditable="false" data-default="오래오래">오래오래</p>
+
+        </td>
+
+        <td>
+
+            <p class="rowColumn" contenteditable="false" data-default="2002-12-21">2002-12-21</p>
+
+        </td>
+
+    </tr>
+
+    </tboyd>
+
+    </talbe>
 
 </body>
+
 </html>
+
+<script type="text/javascript">
+
+
+    // @breif contenteditable 속성을 가진경우
+
+    contents = document.getElementsByClassName("rowColumn");
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+
+        // @breif rowColumn 클래스의 갯수 만큼 반복문을 실행한다.
+
+        Array.from(contents).forEach(function (content) {
+
+
+            // @breif 마우스로 해당영역을 더블클릭 한경우
+
+            content.addEventListener("dblclick", function (event) {
+
+
+                // @breif 전체 테이블 컬럼( td > p )에서 현재 사용중인 값의 존재여부를 확인한다.
+                Array.from(contents).forEach(function (defaultVal) {
+
+
+                    /*
+                    // @details 빈값( null )이 존재하는지 체크한다.
+                    if(
+                           defaultVal.textContent == ""
+                        || defaultVal.textContent == null
+                        || defaultVal.textContent == undefined
+                        || (defaultVal.textContent != null
+                        && typeof defaultVal.textContent == "object"
+                        && !Object.keys(defaultVal.textContent).length == ""))
+                    {
+
+                        // @details 내용이 존재하지 않다면 data 태그의 기본값으로 되돌린다.
+                        defaultVal.textContent = defaultVal.dataset.default;
+                    }
+                    */
+
+                    // @details 저장하지 않은 내용이라고 판단하여 data 태그의 기본값으로 되돌린다.
+                    defaultVal.textContent = defaultVal.dataset.default;
+
+                    // @breif 수정 불가 상태로 되돌린다.
+
+                    defaultVal.contentEditable = false;
+
+                    defaultVal.style.border = "0px";
+
+                });
+
+
+                if (content.isContentEditable == false) {
+
+
+                    // @details 편집 가능 상태로 변경
+
+                    content.contentEditable = true;
+
+
+                    // @details 텍스트 문구 변경
+
+                    // content.textContent = "";
+
+
+                    // @details CSS 효과 추가
+
+                    content.style.border = "1px solid #FFB6C1";
+
+
+                    // @details 포커스 지정
+
+                    content.focus();
+
+                }
+
+            });
+
+
+            // @breif 키보드 입력이 방생한 경우 실행
+
+            content.addEventListener("keypress", function (event) {
+
+
+                // @breif Enter키 입력시 실행
+
+                if (event.key === "Enter") {
+
+
+                    // @details 입력된 값이 빈값( null )인지 체크한다.
+
+                    if (
+
+                        content.textContent == ""
+
+                        || content.textContent == null
+
+                        || content.textContent == undefined
+
+                        || (content.textContent != null
+
+                            && typeof content.textContent == "object"
+
+                            && !Object.keys(content.textContent).length == "")) {
+
+
+                        // @details 내용이 존재하지 않다면 data 태그의 기본값으로 되돌린다.
+
+                        content.textContent = content.dataset.default;
+
+                    } else {
+
+
+                        // @details 내용의 수정이 완료되었다면 data 태그의 기본값도 바꿔준다.
+
+                        content.dataset.default = content.textContent;
+
+                    }
+
+
+                    // @breif 수정 불가 상태로 되돌린다.
+
+                    content.contentEditable = false;
+
+                    content.style.border = "0px";
+
+                }
+
+            });
+
+        });
+
+    });
+
+</script>

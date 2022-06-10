@@ -1,6 +1,7 @@
 
 <%@ page import="com.spring.ex.dto.bbsDTO" %>
-<%@ page import="java.util.List" %><%--
+<%@ page import="java.util.List" %>
+<%--
   Created by IntelliJ IDEA.
   User: user
   Date: 2022-05-17
@@ -13,9 +14,6 @@
 
 <head>
     <%@include file="header.jsp"%><br><br><br><br>
-<!--====== qudwok_style css ======-->
-<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/notice.css">
-
 </head>
 <body>
 
@@ -52,13 +50,14 @@
                 </c:forEach>
                 <br>
                 <%--버튼 오른쪽 끝에 두기--%>
-                <div style="display: flex; justify-content: flex-end;">
+                <div class="buttongroup">
                     <button type="button" class="btn btn-outline-dark lg" onclick="location.href='bbswrite?bd=notice'" style="margin-right: 20px;">글쓰기</button>
                 </div>
             </article>
         </section>
     </div>
 </div>
+
 <%@include file="footer.jsp"%>
 
 </body>
