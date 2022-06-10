@@ -129,7 +129,6 @@ public class bbsController {
             mv.addObject("list", bbsDTO);
         mv.addObject("bbsCount", (int)bbsDTO.size());
 
-
         return mv;
     }
 

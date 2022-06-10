@@ -38,6 +38,22 @@ public class MainController {
 	@Inject
 	bbsService bService;
 
+	@RequestMapping(value = "/favicon.ico", method = RequestMethod.GET)
+
+	public void favicon( HttpServletRequest request, HttpServletResponse reponse ) {
+
+		try {
+
+			reponse.sendRedirect("/resources/images/favicon.png");
+
+		} catch (IOException e) {
+
+			e.printStackTrace();
+
+		}
+
+	}
+
 
 	//회원가입처리
 	@RequestMapping("/registerOk")
@@ -161,7 +177,7 @@ public class MainController {
 
 
 
-	//회원가입 축핳ㅎㅎ
+	//회원가입 축하
 	@RequestMapping("/joinsuccess")
 	public String joinsuccess() {
 		return "joinsuccess";
@@ -188,6 +204,7 @@ public class MainController {
 	//관리자 메인
 	@RequestMapping("/adminmain")
 	public String adminmain() { return "adminmain";}
+
 
 
 
@@ -221,37 +238,37 @@ public class MainController {
 		return "faq";
 	}
 
-	//inquirybbs
+	//inquirybbs	문의 게시판
 	@RequestMapping("/inquirybbs")
 	public String inquirybbs() {
 		return "inquirybbs";
 	}
 
-	//earningreport
+	//adminpage 관리자 메인
+	@RequestMapping("/admin")
+	public String admin() {
+		return "/adminpage/admin";
+	}
+
+	//earningreport 수입현황
 	@RequestMapping("/earningreport")
 	public String earningreport() {
 		return "/adminpage/earningreport";
 	}
 
-	//memberdetail
-	@RequestMapping("/memberdetail")
-	public String memberdetail() {
-		return "/adminpage/memberdetail";
-	}
-
-	//membermodify
+	//membermodify	관리자 회원정보수정
 	@RequestMapping("/membermodify")
 	public String membermodify() {
 		return "/adminpage/membermodify";
 	}
 
-	//membermypage
+	//membermypage 관리자 회원상세
 	@RequestMapping("/membermypage")
 	public String membermypage() {
 		return "/adminpage/membermypage";
 	}
 
-	//membersearch
+	//membersearch	관리자 회원검색
 	@RequestMapping("/membersearch")
 	public String membersearch() {
 		return "/adminpage/membersearch";

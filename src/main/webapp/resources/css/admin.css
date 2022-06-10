@@ -36,9 +36,11 @@ ul, li {
     border-bottom:1px solid silver;
     vertical-align:middle;
 }
-#memberdetail_ulBoard_donation > li > ul > li:first-child               {width:20%;} /*No 열 크기*/
-#memberdetail_ulBoard_donation > li > ul > li:first-child +li           {width:60%;} /*제목 열 크기*/
-#memberdetail_ulBoard_donation > li > ul > li:first-child +li+li        {width:20%;} /*작성일 열 크기*/
+#memberdetail_ulBoard_donation > li > ul > li:first-child               {width:20%; text-align: center;} /*후원종류*/
+#memberdetail_ulBoard_donation > li > ul > li:first-child +li           {width:20%;text-align: center;} /*후원명*/
+#memberdetail_ulBoard_donation > li > ul > li:first-child +li+li        {width:20%;text-align: center;} /*후원금액*/
+#memberdetail_ulBoard_donation > li > ul > li:first-child +li+li+li        {width:15%;text-align: center;} /*후원자*/
+#memberdetail_ulBoard_donation > li > ul > li:first-child +li+li+li+li        {width:25%;text-align: center;} /*후원날짜*/
 
 /*#memberdetail_ulBoard_inquiry {*/
 /*    border-width: 0.5px;*/
@@ -55,9 +57,10 @@ ul, li {
     border-bottom:1px solid silver;
     vertical-align:middle;
 }
-#memberdetail_ulBoard_inquiry > li > ul > li:first-child               {width:20%;} /*No 열 크기*/
-#memberdetail_ulBoard_inquiry > li > ul > li:first-child +li           {width:60%;} /*제목 열 크기*/
-#memberdetail_ulBoard_inquiry > li > ul > li:first-child +li+li        {width:20%;} /*작성일 열 크기*/
+#memberdetail_ulBoard_inquiry > li > ul > li:first-child               {width:20%;text-align: center;} /*No 열 크기*/
+#memberdetail_ulBoard_inquiry > li > ul > li:first-child +li           {width:40%;text-align: center;} /*제목 열 크기*/
+#memberdetail_ulBoard_inquiry > li > ul > li:first-child +li+li        {width:15%;text-align: center;} /*작성일 열 크기*/
+#memberdetail_ulBoard_inquiry > li > ul > li:first-child +li+li+li        {width:25%;text-align: center;} /*작성일 열 크기*/
 
 #divPaging {
     clear:both;
@@ -85,4 +88,8 @@ ul, li {
     width: 30px;
     margin:0 auto;
     text-align:center;
+}
+
+.buttongroup{
+    display: flex; justify-content: flex-end;
 }

@@ -50,47 +50,50 @@ ul, li{
     margin:0;
 }
 
-#mypage_ulBoard_donation > li:first-child > ul > li {
+.mypage_ulBoard_donation > li:first-child > ul > li {
     background-color:#c9c9c9;
     font-weight:bold;
     text-align:center;
 }
 
-#mypage_ulBoard_donation > li > ul {
+.mypage_ulBoard_donation > li > ul {
     padding:0px auto;
     min-width:40px;
 }
-#mypage_ulBoard_donation > li > ul > li {
+.mypage_ulBoard_donation > li > ul > li {
     float:left;
     font-size:15pt;
     border-bottom:1px solid silver;
     vertical-align:middle;
 }
 
-#mypage_ulBoard_donation > li > ul > li:first-child               {width:20%;} /*No 열 크기*/
-#mypage_ulBoard_donation > li > ul > li:first-child +li           {width:60%;} /*제목 열 크기*/
-#mypage_ulBoard_donation > li > ul > li:first-child +li+li        {width:20%;} /*작성일 열 크기*/
+.mypage_ulBoard_donation > li > ul > li:first-child               {width:20%;text-align: center; } /*No 열 크기*/
+.mypage_ulBoard_donation > li > ul > li:first-child +li           {width:20%;text-align: center; } /*제목 열 크기*/
+.mypage_ulBoard_donation > li > ul > li:first-child +li+li        {width:20%;text-align: center; } /*작성일 열 크기*/
+.mypage_ulBoard_donation > li > ul > li:first-child +li+li+li     {width:20%;text-align: center; } /*작성일 열 크기*/
+.mypage_ulBoard_donation > li > ul > li:first-child +li+li+li     {width:20%;text-align: center; } /*작성일 열 크기*/
+.mypage_ulBoard_donation > li > ul > li:first-child +li+li+li+li  {width:20%;text-align: center; } /*작성일 열 크기*/
 
-
-#mypage_ulBoard_inquiry > li:first-child > ul > li {
+.mypage_ulBoard_inquiry > li:first-child > ul > li {
     background-color:#c9c9c9;
     font-weight:bold;
     text-align:center;
 }
 
-#mypage_ulBoard_inquiry > li > ul {
+.mypage_ulBoard_inquiry > li > ul {
     padding:0px auto;
     min-width:40px;
 }
-#mypage_ulBoard_inquiry > li > ul > li {
+.mypage_ulBoard_inquiry > li > ul > li {
     float:left;
     font-size:15pt;
     border-bottom:1px solid silver;
     vertical-align:middle;
 }
-#mypage_ulBoard_inquiry > li > ul > li:first-child               {width:20%;} /*No 열 크기*/
-#mypage_ulBoard_inquiry > li > ul > li:first-child +li           {width:60%;} /*제목 열 크기*/
-#mypage_ulBoard_inquiry > li > ul > li:first-child +li+li        {width:20%;} /*작성일 열 크기*/
+.mypage_ulBoard_inquiry > li > ul > li:first-child               {width:20%; text-align: center;} /*No 열 크기*/
+.mypage_ulBoard_inquiry > li > ul > li:first-child +li           {width:30%; text-align: center;} /*제목 열 크기*/
+.mypage_ulBoard_inquiry > li > ul > li:first-child +li+li        {width:20%; text-align: center;} /*작성일 열 크기*/
+.mypage_ulBoard_inquiry > li > ul > li:first-child +li+li+li     {width:30%; text-align: center;} /*작성일 열 크기*/
 
 #divPaging {
     clear:both;
@@ -134,3 +137,20 @@ ul, li{
     bottom: 35px;
     line-height: 20px;
 }
+
+.memberid{
+    width: 30%;
+    text-align: center;
+}
+
+.membername{
+    width: 30%;
+    text-align: center;
+}
+
+.memberphone{
+    width: 30%;
+    text-align: center;
+}
+
+
