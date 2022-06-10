@@ -17,10 +17,11 @@
         <%--사이드 메뉴 start--%>
         <article class="mypage_list">
             <ul>
-                <li><a href="adminmain">admin_main</a></li>
+                <li><a href="admin">admin</a></li>
                 <li><a href="membersearch">회원검색</a></li>
-                <li><a href="memberdetail">회원</a></li>
-                <li><a href="membermypage">회원검색</a></li>
+                <li><a href="membermodify">회원수정</a></li>
+                <li><a href="membermypage">회원정보</a></li>
+                <li><a href="earningreport">수입현황</a></li>
             </ul>
         </article>
         <%--사이드 메뉴 end--%>
@@ -164,7 +165,7 @@
                                     기타 : {@java} 원
                                 </li>
                                 <li>
-                                    <input type="submit" value="자세히" style="float: right; width: 80px; padding: 5px; border:solid 1px;">
+                                    <input type="button" class="btn btn-outline-dark" value="자세히" style="float: right; width: 80px; padding: 5px; border:solid 1px;">
                                 </li>
                             </ul>
                         </li>
@@ -190,7 +191,7 @@
                     options: {
                         title: {
                             display: true,
-                            text: '월별 수입 현황',
+                            text: '월별 수입 현황 (억)',
                             fontsize: 20
                         },
                         legend: {

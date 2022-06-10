@@ -17,8 +17,11 @@
             <%--사이드 메뉴--%>
             <article class="mypage_list">
                 <ul>
-                    <li><a href="earningreport">admin_main</a></li>
+                    <li><a href="admin">admin</a></li>
                     <li><a href="membersearch">회원검색</a></li>
+                    <li><a href="membermodify">회원수정</a></li>
+                    <li><a href="membermypage">회원정보</a></li>
+                    <li><a href="earningreport">수입현황</a></li>
                 </ul>
             </article>
             <%--사이드 메뉴--%>

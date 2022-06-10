@@ -3,7 +3,8 @@
          pageEncoding="UTF-8"%>
 <html>
 <head>
-
+    <!--====== Favicon Icon ======-->
+    <link rel="shortcut icon" href="${pageContext.request.contextPath}/resources/images/favicon.png" type="image/png">
 <%@include file="script.jsp"%>
 
 </head>

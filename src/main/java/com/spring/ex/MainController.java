@@ -38,6 +38,22 @@ public class MainController {
 	@Inject
 	bbsService bService;
 
+	@RequestMapping(value = "/favicon.ico", method = RequestMethod.GET)
+
+	public void favicon( HttpServletRequest request, HttpServletResponse reponse ) {
+
+		try {
+
+			reponse.sendRedirect("/resources/images/favicon.png");
+
+		} catch (IOException e) {
+
+			e.printStackTrace();
+
+		}
+
+	}
+
 
 	//회원가입처리
 	@RequestMapping("/registerOk")
@@ -259,25 +275,19 @@ public class MainController {
 		return "/adminpage/earningreport";
 	}
 
-	//memberdetail
-	@RequestMapping("/memberdetail")
-	public String memberdetail() {
-		return "/adminpage/memberdetail";
-	}
-
-	//membermodify
+	//membermodify	관리자 회원정보수정
 	@RequestMapping("/membermodify")
 	public String membermodify() {
 		return "/adminpage/membermodify";
 	}
 
-	//membermypage
+	//membermypage 관리자 회원상세
 	@RequestMapping("/membermypage")
 	public String membermypage() {
 		return "/adminpage/membermypage";
 	}
 
-	//membersearch
+	//membersearch	관리자 회원검색
 	@RequestMapping("/membersearch")
 	public String membersearch() {
 		return "/adminpage/membersearch";
