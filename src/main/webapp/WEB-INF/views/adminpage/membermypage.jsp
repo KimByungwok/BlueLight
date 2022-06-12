@@ -38,22 +38,44 @@
                             <ul class="mypage_ulBoard_donation">
                                 <li>
                                     <ul>
+                                        <li>관리자권한</li>
                                         <li>아이디</li>
                                         <li>이름</li>
                                         <li>전화번호</li>
                                         <li>주소</li>
                                         <li>이메일</li>
+                                        <li>사업자번호</li>
                                     </ul>
                                 </li>
                                 <!-- 게시물이 출력될 영역 -->
                                 <li>
+                                    <c:forEach items="${list}" var="search" varStatus="status">
                                     <ul>
-                                        <li>{@java}</li>
-                                        <li>{@java}</li>
-                                        <li>{@java}</li>
-                                        <li>{@java}</li>
-                                        <li>2022.06.06.14.17.15</li>
+                                        <c:choose>
+                                            <c:when test="${search.m_flag eq '0'}">
+                                                <li>유저</li>
+                                            </c:when>
+                                            <c:when test="${search.m_flag eq '1'}">
+                                                <li>관리자</li>
+                                            </c:when>
+                                        </c:choose>
+
+
+                                        <li><c:out value="${search.m_id}"/></li>
+                                        <li><c:out value="${search.m_name}"/></li>
+                                        <li><c:out value="${search.m_phone}"/></li>
+                                        <li><c:out value="${search.m_address}"/></li>
+                                        <li><c:out value="${search.m_email}"/></li>
+                                        <c:choose>
+                                            <c:when test="${empty search.m_s_number}">
+                                                <li>사업자아님</li>
+                                            </c:when>
+                                            <c:when test="${not empty search.m_s_number}">
+                                                <li><c:out value="${search.m_s_number}"/></li>
+                                            </c:when>
+                                        </c:choose>
                                     </ul>
+                                    </c:forEach>
                                 </li>
                             </ul>
                         </li>
@@ -63,7 +85,7 @@
                     <div style="display: flex; justify-content: flex-end;">
                         <a href="<%--delete--%>"><input type="button" class="btn btn-outline-danger" value="삭제"
                                                         style=""></a>
-                        <a href="membermodify"><input type="button" class="btn btn-warning" value="수정"
+                        <a href="membermodify?fId=${fId}"><input type="button" class="btn btn-warning" value="수정"
                                                       style="margin-right: 10px; margin-left: 10px;"></a>
                     </div>
                     <%--각종 수정 버튼 그룹 end--%>

@@ -134,10 +134,10 @@
                                     %>
 
                                     <%
-                                        if(session.getAttribute("id") == "rina")
+                                        if(session.getAttribute("adminflag").equals("1"))
                                         {
                                     %>
-                                    <li><a href="adminmain">어드민</a></li>
+                                    <li><a href="admin">어드민</a></li>
                                     <%
                                         }
                                     %>

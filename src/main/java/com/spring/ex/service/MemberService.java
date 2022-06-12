@@ -16,7 +16,7 @@ public interface MemberService {
 
     public int loginService(MemberDTO dto);
 
-    public List adminflagService(MemberDTO dto);
+    public String adminflagService(MemberDTO dto);
 
 }
 

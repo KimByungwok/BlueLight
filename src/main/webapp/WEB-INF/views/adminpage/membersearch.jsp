@@ -27,35 +27,39 @@
             </article>
             <%-- 개인 정보 start--%>
             <article class="membersearch_head">
-                회원검색 :
-                <%--검색 메뉴 start--%>
-                <select name="searchmenu" style="background-color: #cccccc">
-                    <option value="membername" selected>회원 이름</option>
-                    <option value="memberid">회원 아이디</option>
-                    <option value="memberphone">회원 전화번호</option>
-                </select>
-                <%--검색 메뉴 end--%>
-                <%--검색창 start--%>
-                <input type="text" id='txtSearch' placeholder="회원을 검색하세용"
-                       style="width: 400px; border: solid 1px; border-radius: 10px;"/>
-                <input type='button' class="btn-outline-dark" id="btnSearch" value='검색' style="width: 100px;"/>
-                <hr>
-                <%--검색창 end--%>
+                <form action="membersearch" id="seaok" name="seaok">
+                    회원검색 :
+                    <%--검색 메뉴 start--%>
+                    <select name="searchmenu" style="background-color: #cccccc">
+                        <option value="membername" selected>회원 이름</option>
+                        <option value="memberid">회원 아이디</option>
+                        <option value="memberphone">회원 전화번호</option>
+                    </select>
+                    <%--검색 메뉴 end--%>
+                    <%--검색창 start--%>
+                    <input type="text" id='txtSearch' placeholder="회원을 검색하세용"
+                           style="width: 400px; border: solid 1px; border-radius: 10px;"/>
+                    <input type='submit' class="btn-outline-dark" id="btnSearch" name ="btnSearch" value='검색' style="width: 100px;"/>
+                    <hr>
+                    <%--검색창 end--%>
+                </form>
                 <span class="memberid">아이디</span>
                 <span class="membername">이름</span>
                 <span class="memberphone">핸드폰 번호</span>
                 <%-- 내용 --%><br>
                 <article class="membersearch_mid">
-                    <a id="memberid" href="membersearch" class="member" style="width: 30%; text-align: center;">
-                        <span class="memberid" style="width: 30%">{@javaid}</span>
+                    <c:forEach items="${list}" var="search" varStatus="status">
+                    <a id="memberid" href="membermypage?fId=<c:out value="${search.m_id}"/>" class="member" style="width: 30%; text-align: center;">
+                        <span class="memberid" style="width: 30%">${search.m_id}</span>
                     </a>
-                    <a id="membername" href="membersearch" class="member" style="width: 30%; text-align: center;">
-                        <span class="memberid" style="width: 30%">{@javaid}</span>
+                    <a id="membername" href="membermypage?fId=<c:out value="${search.m_id}"/>" class="member" style="width: 30%; text-align: center;">
+                        <span class="membername" style="width: 30%">${search.m_name}</span>
                     </a>
-                    <a id="memberphone" href="membersearch" class="member" style="width: 30%; text-align: center;">
-                        <span class="memberid" style="width: 30%">{@javaid}</span>
+                    <a id="memberphone" href="membermypage?fId=<c:out value="${search.m_id}"/>" class="member" style="width: 30%; text-align: center;">
+                        <span class="memberphone" style="width: 30%">${search.m_phone}</span>
                     </a>
                     <hr>
+                    </c:forEach>
                 </article>
             </article>
             <%--개인정보 end--%>

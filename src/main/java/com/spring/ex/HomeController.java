@@ -11,6 +11,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 /**
  * Handles requests for the application home page.
  */
@@ -23,16 +26,28 @@ public class HomeController {
 	 * Simply selects the home view to render by returning its name.
 	 */
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home(Locale locale, Model model) {
+	public String home(Locale locale, Model model, HttpServletRequest request) {
 		logger.info("Welcome home! The client locale is {}.", locale);
-		
+
 		Date date = new Date();
 		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		
+
 		String formattedDate = dateFormat.format(date);
-		
+
 		model.addAttribute("serverTime", formattedDate );
-		
+
+		//-----------------------
+		HttpSession session = request.getSession();
+
+		session.setAttribute("id", null); //id세션초기화
+		session.setAttribute("adminflag", null);//adminflag세션초기화
+
+		int test=1;	//디버깅용 로그인 과정 스킵용 (0끄기 1켜기)
+		if(test != 0) {
+
+			session.setAttribute("id", "rina"); //디버깅용 강제 로그인 넣고 시작
+			session.setAttribute("adminflag", "1");//디버깅용 강제 어드민권한 넣고 시작
+		}
 		return "main";
 	}
 	
