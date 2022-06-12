@@ -32,23 +32,24 @@
                         <li style=" font-size: 20px; margin-bottom: 10px;">아이디 : {@java}</li><br>
                         <li style=" font-size: 20px; margin-bottom: 10px;">비밀번호</li>
                         <li>
-                            <input type="text" id="txtModifym_pw" style="border: solid 1px;" placeholder="{@java}">
+                            <input type="text" id="txtModifym_pw" style="border: solid 1px; padding: 5px 5px;" placeholder="{@java}">
                         </li>
                         <li style=" font-size: 20px; margin-bottom: 10px;">이름</li>
                         <li>
-                            <input type="text" id="txtModifym_name" style="border: solid 1px;" placeholder="{@java}">
+                            <input type="text" id="txtModifym_name" style="border: solid 1px; padding: 5px 5px;" placeholder="{@java}">
                         </li>
                         <li style=" font-size: 20px; margin-bottom: 10px;">전화번호</li>
                         <li>
-                            <input type="text" id="txtModifym_phone" style="border: solid 1px;" placeholder="{@java}">
+                            <input type="text" id="txtModifym_phone" style="border: solid 1px; padding: 5px 5px;" placeholder="{@java}">
                         </li>
                         <li style=" font-size: 20px; margin-bottom: 10px;">주소</li>
                         <li>
-                            <input type="text" id="txtModifym_address" style="border: solid 1px;" placeholder="{@java}">
+                            <input type="text" id="txtModifym_address" style="border: solid 1px; padding: 5px 5px; " placeholder="{@java}">
                         </li>
                         <li style=" font-size: 20px; margin-bottom: 10px;">이메일</li>
                         <li>
-                            <input type="text" id="txtModifym_email" style="border: solid 1px;" placeholder="{@java}">
+                            <input type="text" id="txtModifym_email" style="border: solid 1px; padding: 5px 5px; " placeholder="{@java}">
+
                         </li>
                         <div style="display: flex; justify-content: flex-end;">
                             <a href="javascript:window.history.back();"><input type="button" class="btn-outline-danger" value="취소"></a>

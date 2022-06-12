@@ -207,7 +207,6 @@ public class MainController {
 
 
 
-
 	//마이페이지
 	@RequestMapping("/mypage")
 	public String mypage() {

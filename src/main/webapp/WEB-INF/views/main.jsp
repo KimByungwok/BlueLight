@@ -250,104 +250,94 @@
 <section class="lanking">
     <div class="container">
         <div class="row">
-            <div class="col-xl-6 col-6 col-sm-6" style="text-align: center; border: 1px solid gray;">
+            <div class="col-xl-6 col-6 col-sm-6" style="text-align: center;">
                 <a href="privaterank"><h1>개인 랭킹</h1></a>
                 <!-- 게시글  -->
                 <table class="container">
                     <thead>
                     <tr>
-                        <th>순위</th>
+                        <th style="width: 50px;">순위</th>
                         <th>이름</th>
                         <th>금액</th>
-                        <th>기부 시간</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
-                        <td>번호가 어쩌구</td>
+                        <td style="width: 50px;">번호가 어쩌구</td>
                         <td>이름 어쩌구</td>
                         <td>금액 어쩌구</td>
-                        <td>시간 어쩌구</td>
                     </tr>
                     </tbody>
                 </table>
                 <br>
             </div>
-            <div class="col-xl-6 col-6 col-sm-6" style="text-align: center; border: 1px solid gray;">
+            <div class="col-xl-6 col-6 col-sm-6" style="text-align: center;">
                 <a href="companyrank"><h1>기업 랭킹</h1></a>
                 <!-- 게시글  -->
                 <table class="container">
                     <thead>
                     <tr>
-                        <th>순위</th>
+                        <th style="width: 50px;">순위</th>
                         <th>기업 이름</th>
                         <th>금액</th>
-                        <th>기부 시간</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
-                        <td>번호가 어쩌구</td>
+                        <td style="width: 50px;">번호가 어쩌구</td>
                         <td>이름 어쩌구</td>
                         <td>금액 어쩌구</td>
-                        <td>시간 어쩌구</td>
                     </tr>
                     </tbody>
                 </table>
                 <br>
             </div>
         </div>
+        <hr>
     </div>
 </section>
+<br>
 <%--푸터 위에 리스트 2칸씩 떄려넣어주세용--%>
 <section class="faq">
     <div class="container">
         <div class="row">
-            <div class="col-xl-6 col-6 col-sm-6" style="text-align: center; border: 1px solid gray;">
+            <div class="col-xl-6 col-6 col-sm-6" style="text-align: center;">
                 <a href="notice"><h1>공지사항</h1></a>
                 <!-- 게시글  -->
                 <table class="container">
                     <thead>
                     <tr>
-                        <th>글번호</th>
+                        <th style="width: 50px;">글번호</th>
                         <th>글제목</th>
-                        <th>작성자</th>
                         <th>등록시간</th>
-                        <th>조회수</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
-                        <td>번호가 어쩌구</td>
+                        <td style="width: 50px;">번호가 어쩌구</td>
                         <td>제목이 어쩌구</td>
-                        <td>작성자 어쩌구</td>
                         <td>시간 어쩌구</td>
-                        <td>조회수 어쩌구</td>
                     </tr>
                     </tbody>
                 </table>
                 <br>
             </div>
-            <div class="col-xl-6 col-6 col-sm-6" style="text-align: center; border: 1px solid gray;">
-                <a href="privaterank"><h1>FAQ</h1></a>
+            <div class="col-xl-6 col-6 col-sm-6" style="text-align: center;">
+                <a href="faq"><h1>FAQ</h1></a>
                 <!-- 게시글  -->
                 <table class="container">
                     <thead>
                     <tr>
-                        <th>글번호</th>
+                        <th style="width: 50px;">글번호</th>
                         <th>글제목</th>
-                        <th>작성자</th>
                         <th>등록시간</th>
-                        <th>조회수</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
-                        <td>번호가 어쩌구</td>
+                        <td style="width: 50px;">번호가 어쩌구</td>
                         <td>제목이 어쩌구</td>
-                        <td>작성자 어쩌구</td>
                         <td>시간 어쩌구</td>
-                        <td>조회수 어쩌구</td>
                     </tr>
                     </tbody>
                 </table>
