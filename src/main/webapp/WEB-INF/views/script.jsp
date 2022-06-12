@@ -66,8 +66,10 @@
     <!--====== mypage css ======-->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/mypage.css">
 
+
     <!--====== admin css ======-->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/admin.css">
+
 
     <!--====== bbsview css ======-->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bbsview.css">

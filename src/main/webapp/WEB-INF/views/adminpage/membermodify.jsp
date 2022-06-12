@@ -49,6 +49,7 @@
                         <li style=" font-size: 20px; margin-bottom: 10px;">이메일</li>
                         <li>
                             <input type="text" id="txtModifym_email" style="border: solid 1px; padding: 5px 5px; " placeholder="{@java}">
+
                         </li>
                         <div style="display: flex; justify-content: flex-end;">
                             <a href="javascript:window.history.back();"><input type="button" class="btn-outline-danger" value="취소"></a>

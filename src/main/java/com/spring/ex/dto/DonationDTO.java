@@ -19,7 +19,7 @@ public class DonationDTO {
         return m_dId;
     }
 
-    public void setM_dId(String m_did) {
+    public void setM_dId(String m_dId) {
         this.m_dId = m_dId;
     }
 

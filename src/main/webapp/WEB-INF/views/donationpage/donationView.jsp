@@ -5,6 +5,8 @@
   Time: 오전 9:48
   To change this template use File | Settings | File Templates.
 --%>
+<%@ page import="com.spring.ex.dto.DonationDTO" %>
+<%@ page import="java.util.List" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <html>
@@ -28,42 +30,42 @@
             </ul>
         </article>
         <%--사이드 메뉴 end--%>
-
+        <c:forEach items="${data}" var="DonationDTO" varStatus="status">
         <%--후원하기 start --%>
         <article class="noticeheader" >
-            <span class="donationname">우크라이나 전쟁 후원</span>
-            <span class="donationdate">2022.05.25 ~ 2022.12.30</span><hr>
+            <span class="donationname">${DonationDTO.m_dTitle}</span>
+            <span class="donationdate">${DonationDTO.m_ddayStart} ~ ${DonationDTO.m_ddayEnd}</span>
+            <span class="donationHit">조회수 : ${DonationDTO.m_dHit}</span>
+
+            <hr>
             <!-- 게시글 내용 start -->
             <article class="noticemiddle">
                 <div>
                     <div class="single-product">
                         <div class="product-img">
-                            <a href="donation1">
-                                <img src="${pageContext.request.contextPath}/resources/images/product/donationimg1.jpg" alt="">
-                            </a>
+
+                            <img src='${pageContext.request.contextPath}/resources/donationUploadImg/<c:out value="${dId}" />/<c:out value="${dId}"/>'/>
+
                         </div>
                     </div>
                 </div>
                 <div>
-                    <h3>할무니 도와됴,,,</h3>
-                    <span>설명이</span><br>
-                    <span>어쩌구</span><br>
-                    <span>저쩌구</span><br>
-                    <span>아무튼 기부나 좀 해라 불쌍하지도 않냐 이놈들아</span>
-                </div>
+                    <span><c:out value="${DonationDTO.m_dContent}"/></span><br>
+                    </div>
                 <br>
                 <!-- 게시글 내용 end -->
 
                 <!-- 후원버튼그룹 start -->
                 <div style="display: flex; justify-content: flex-end;">
-                    <a href="donation1payment"><button class="btn-outline-primary btn-lg" style="margin: 2px;">후원하기</button></a>
-                    <a href="livedonation1payment"><button class="btn-outline-success btn-lg" style="margin: 2px;">현장후원</button></a>
+                    <a href="donation_payment?dId=<c:out value="${dId}" />"><button class="btn-outline-primary btn-lg" style="margin: 2px;">후원하기</button></a>
+                    <a href="livedonation_payment?dId=<c:out value="${dId}" />"><button class="btn-outline-success btn-lg" style="margin: 2px;">현장후원</button></a>
                     <a href="donation"><button class="btn-outline-dark btn-lg" style="margin: 2px;">목록</button></a>
                 </div>
                 <!-- 후원버튼그룹 end -->
             </article>
         </article>
         <%--후원하기 end --%>
+        </c:forEach>
     </section>
 </div>
 

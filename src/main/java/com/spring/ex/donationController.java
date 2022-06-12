@@ -1,35 +1,77 @@
 package com.spring.ex;
 
 import com.spring.ex.dto.DonationDTO;
+import com.spring.ex.dto.bbsDTO;
 import com.spring.ex.service.DonationService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.File;
+import java.sql.Time;
 import java.sql.Timestamp;
+import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 
 @Controller
 public class donationController {
     @Inject
     DonationService doneService;
 
-    @RequestMapping
+
+    //후원하기 리스트 현장 기부 리스트
+    @RequestMapping(value={"donation", "livedonation"})
+    public ModelAndView donation(HttpServletRequest request) throws Exception {
+        //HttpSession session = request.getSession();
+
+        String group = request.getRequestURI();
+        String group2 = null;
+        System.out.println(group);
+        group = group.substring(1);//슬래시 제거
+
+        System.out.println(group);
+        ModelAndView mv = new ModelAndView(group);
+        if(group.equals("donation")) {
+            group = "종합기부";
+            group2 = "일반기부";
+        }
+        if(group.equals("livedonation")) {
+            group = "현장기부";
+            group2 = null;
+        }
+
+        Map<String,Object> groupmap = new HashMap<String,Object>();
+        groupmap.put("group", group);
+        groupmap.put("group2", group2);
+        List<DonationDTO> doneDTO = doneService.DonationList(groupmap);
+        System.out.println((int) doneDTO.size());
+
+        mv.addObject("list", doneDTO);
+        mv.addObject("doneCount", (int) doneDTO.size());
+
+
+        return mv;
+    }
+    //기부글쓰기
+    @RequestMapping("donationWrite")
     public String donationWrite(HttpServletRequest request) {
 
         HttpSession session = request.getSession();
 
         session.setAttribute("doneID", doneService.donethreadIDService());
+
         return "donationWrite";
     }
 
-
+    //기부글쓰기완료 로직
     @RequestMapping("donationWriteOK")
     public String donationWriteOK(MultipartHttpServletRequest request, HttpServletResponse response) throws Exception {
             HttpSession session = request.getSession();
@@ -43,11 +85,15 @@ public class donationController {
             String User_ID = request.getParameter("id");
             String done_Group = request.getParameter("done_Group");
 ;
+            System.out.println(doneID);
             System.out.println(doneTitle+doneContent+doneID);
 
-            Timestamp doneDayStart = Timestamp.valueOf(request.getParameter("doneDayStart"));
-            Timestamp doneDayEnd = Timestamp.valueOf(request.getParameter("doneDayEnd"));
+            String tempdoneDayStart = request.getParameter("doneDayStart") + " 00:00:00";
+            String tempdoneDayEnd = request.getParameter("doneDayEnd") + " 00:00:00";
+            Timestamp doneDayStart = Timestamp.valueOf(tempdoneDayStart);
+            Timestamp doneDayEnd = Timestamp.valueOf(tempdoneDayEnd);
 
+            System.out.println(tempdoneDayStart + tempdoneDayEnd);
             Timestamp timestamp = new Timestamp(System.currentTimeMillis());
 
             done.setM_dId(doneID);
@@ -88,5 +134,41 @@ public class donationController {
 
             return "redirect:/donation";
         }
+
+    //후원하기 뷰
+    @RequestMapping("/donationView")
+    public ModelAndView donationView(HttpServletRequest request) {
+        String did = request.getParameter("dId");
+        System.out.println(did);
+        ModelAndView mv = new ModelAndView("/donationpage/donationView");
+        List<DonationDTO> doneDTO = doneService.viewBBS(did);
+        doneService.hitBBS(did);//조회수카운트업
+        System.out.println(doneDTO);
+        mv.addObject("data", doneDTO);
+        mv.addObject("dId", did);
+        return mv;
+    }
+
+    //후원하기1 결제
+    @RequestMapping("/donation_payment")
+    public ModelAndView donation_payment(HttpServletRequest request) {
+        String did = request.getParameter("dId");
+        ModelAndView mv = new ModelAndView("/donationpage/donation_payment");
+        List<DonationDTO> doneDTO = doneService.viewBBS(did);
+        mv.addObject("data", doneDTO);
+        mv.addObject("dId", did);
+        return mv;}
+    //후원하기 결제
+    @RequestMapping("/livedonation_payment")
+    public String livedonation_payment() { return "/donationpage/livedonation_payment";}
+
+    //후원하기 결제 완료
+    @RequestMapping("/donation_success")
+    public String donation_success() { return "/donationpage/donation_success";}
+
+    //현장기부 신청 완료
+    @RequestMapping("/livedonation_success")
+    public String livedonation_success() { return "/donationpage/livedonation_success";}
+
 
 }

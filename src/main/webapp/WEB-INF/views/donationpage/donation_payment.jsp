@@ -27,10 +27,11 @@
         </article>
         <%--사이드 메뉴 end--%>
 
+    <c:forEach items="${data}" var="DonationDTO" varStatus="status">
         <%--후원하기 결제정보 입력 start--%>
         <article class="donationheader" style="flex-direction: column">
-            <span class="donationinfo">후원정보 : 어쩌구~저쩌구~ 아무튼 기부할게~~</span><hr>
-            <span class="userinfo">후원자 정보 : 행복한 돼지<%--${java}--%></span><hr>
+            <span class="donationinfo">후원정보 : ${DonationDTO.m_dTitle}</span><hr>
+            <span class="userinfo">후원자 정보 : <%=session.getAttribute("id")%></span><hr>
             <span class="donationmoney">후원금액
                 <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" class="donationtextarea" placeholder="숫자를 입력해주세요" style="width: 50%; margin-left: 10px;"></input>
                 <p style="font-weight: bold; margin-left: 10px;">원</p>
@@ -53,6 +54,7 @@
             <%--결제 버튼그룹 end--%>
         </article>
         <%--후원하기 결제정보 입력 end--%>
+    </c:forEach>
     </section>
 </div>
 
