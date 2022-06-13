@@ -27,6 +27,7 @@
         <%--사이드 메뉴 end--%>
         <%-- 관리자 메인 start--%>
         <article class="col-xl-9">
+            <form action="membersearch" id="seaok" name="seaok">
             회원검색 :
             <%--검색 메뉴 start--%>
             <select name="searchmenu" style="background-color: #cccccc">
@@ -36,11 +37,12 @@
             </select>
             <%--검색 메뉴 end--%>
             <%--검색창 start--%>
-            <input type="text" id='txtSearch' placeholder="회원을 검색하세용"
+            <input type="text" id='txtSearch' name='txtSearch' placeholder="회원을 검색하세용"
                    style="width: 400px; border: solid 1px; border-radius: 10px;"/>
-            <input type='button' class="btn-outline-dark" id="btnSearch" value='검색' style="width: 100px;"/>
+            <input type='submit' class="btn-outline-dark" id="btnSearch" name ="btnSearch" value='검색' style="width: 100px;"/>
             <hr>
             <%--검색창 end--%>
+            </form>
             <!-- 최근 후원 목록 start -->
             <div>
                 <ul>

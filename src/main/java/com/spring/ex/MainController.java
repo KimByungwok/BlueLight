@@ -93,12 +93,14 @@ public class MainController {
 		if(result == 1)
 		{
 			//로그인성공
+			String adf = mService.adminflagService(dto);
+			dto.setM_flag(adf);
+			System.out.println("adf"+dto.getM_flag());
 			session.setAttribute("id", dto.getM_id());
 			session.setAttribute("adminflag", dto.getM_flag());
 
 
-			List<String> as = mService.adminflagService(dto);
-			System.out.println(as);
+
 			return "main";
 		} else
 		{
@@ -201,9 +203,7 @@ public class MainController {
 	@RequestMapping("/companyrank")
 	public String companyrank() { return "companyrank";}
 
-	//관리자 메인
-	@RequestMapping("/adminmain")
-	public String adminmain() { return "adminmain";}
+
 
 
 
@@ -243,35 +243,7 @@ public class MainController {
 		return "inquirybbs";
 	}
 
-	//adminpage 관리자 메인
-	@RequestMapping("/admin")
-	public String admin() {
-		return "/adminpage/admin";
-	}
 
-	//earningreport 수입현황
-	@RequestMapping("/earningreport")
-	public String earningreport() {
-		return "/adminpage/earningreport";
-	}
-
-	//membermodify	관리자 회원정보수정
-	@RequestMapping("/membermodify")
-	public String membermodify() {
-		return "/adminpage/membermodify";
-	}
-
-	//membermypage 관리자 회원상세
-	@RequestMapping("/membermypage")
-	public String membermypage() {
-		return "/adminpage/membermypage";
-	}
-
-	//membersearch	관리자 회원검색
-	@RequestMapping("/membersearch")
-	public String membersearch() {
-		return "/adminpage/membersearch";
-	}
 
 	//테스트 페이지
 	@RequestMapping("/test123")
