@@ -157,10 +157,18 @@ public class donationController {
         List<DonationDTO> doneDTO = doneService.viewBBS(did);
         mv.addObject("data", doneDTO);
         mv.addObject("dId", did);
-        return mv;}
+        return mv;
+    }
     //후원하기 결제
     @RequestMapping("/livedonation_payment")
-    public String livedonation_payment() { return "/donationpage/livedonation_payment";}
+    public ModelAndView livedonation_payment(HttpServletRequest request) {
+        String did = request.getParameter("dId");
+        ModelAndView mv = new ModelAndView("/donationpage/livedonation_payment");
+        List<DonationDTO> doneDTO = doneService.viewBBS(did);
+        mv.addObject("data", doneDTO);
+        mv.addObject("dId", did);
+        return mv;
+    }
 
     //후원하기 결제 완료
     @RequestMapping("/donation_success")

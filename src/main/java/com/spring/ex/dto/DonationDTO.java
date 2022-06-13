@@ -3,10 +3,7 @@ package com.spring.ex.dto;
 import java.sql.Timestamp;
 
 public class DonationDTO {
-
     String m_dId;
-
-
     String m_dUserId;
     String m_dTitle;
     String m_dContent;
@@ -15,9 +12,8 @@ public class DonationDTO {
     Timestamp m_dDate;
     String m_dHit;
     String m_dGroup;
-    public String getM_dId() {
-        return m_dId;
-    }
+
+    public String getM_dId() {return m_dId;}
 
     public void setM_dId(String m_dId) {
         this.m_dId = m_dId;

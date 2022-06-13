@@ -31,7 +31,7 @@
         <%--후원하기 결제정보 입력 start--%>
         <article class="donationheader" style="flex-direction: column">
             <span class="donationinfo">후원정보 : ${DonationDTO.m_dTitle}</span><hr>
-            <span class="userinfo">후원자 정보 : <%=session.getAttribute("id")%></span><hr>
+            <span class="userinfo">후원자 정보 : ${DonationDTO.m_dUserId}</span><hr>
             <span class="donationmoney">후원금액
                 <input type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" class="donationtextarea" placeholder="숫자를 입력해주세요" style="width: 50%; margin-left: 10px;"></input>
                 <p style="font-weight: bold; margin-left: 10px;">원</p>

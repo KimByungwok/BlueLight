@@ -6,6 +6,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page import="com.spring.ex.dto.DonationDTO" %>
+<%@ page import="java.util.List" %>
 <html>
 <head>
     <%@include file="../header.jsp" %>
@@ -27,12 +29,12 @@
             </ul>
         </article>
         <%--사이드 메뉴 end--%>
-
+        <c:forEach items="${data}" var="DonationDTO" varStatus="status">
         <%-- 현장후원 start--%>
         <article class="donationheader" style="flex-direction: column">
-            <span class="donationinfo">후원정보 : 어쩌구~저쩌구~ 아무튼 기부할게~~</span>
+            <span class="donationinfo">후원정보 : ${DonationDTO.m_dTitle}</span>
             <hr>
-            <span class="userinfo">후원자 정보 : 행복한 돼지<%--${java}--%></span>
+            <span class="userinfo">후원자 정보 : ${DonationDTO.m_dName}</span>
             <hr>
 
             <article>
@@ -60,7 +62,7 @@
             <hr>
             <article>
                 <span style="width: 100px;">신청 날짜<%--${java}--%></span>
-                    <input type="date" name="selectday" style="width: 30%; margin-left: 70px;border: 1px solid;">
+                <input type="date" name="selectday" style="width: 30%; margin-left: 70px;border: 1px solid;">
                 <hr>
             </article>
             <article>
@@ -70,6 +72,7 @@
             </article>
         </article>
         <%-- 현장후원 end--%>
+        </c:forEach>
     </section>
 </div>
 <%@include file="../footer.jsp" %>
