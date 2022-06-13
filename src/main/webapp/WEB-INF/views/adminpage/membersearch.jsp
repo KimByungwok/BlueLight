@@ -50,13 +50,13 @@
                 <article class="membersearch_mid">
                     <c:forEach items="${list}" var="search" varStatus="status">
                     <a id="memberid" href="membermypage?fId=<c:out value="${search.m_id}"/>" class="member" style="width: 30%; text-align: center;">
-                        <span class="memberid" style="width: 30%">${search.m_id}</span>
+                        <span class="memberid">${search.m_id}</span>
                     </a>
                     <a id="membername" href="membermypage?fId=<c:out value="${search.m_id}"/>" class="member" style="width: 30%; text-align: center;">
-                        <span class="membername" style="width: 30%">${search.m_name}</span>
+                        <span class="membername">${search.m_name}</span>
                     </a>
-                    <a id="memberphone" href="membermypage?fId=<c:out value="${search.m_id}"/>" class="member" style="width: 30%; text-align: center;">
-                        <span class="memberphone" style="width: 30%">${search.m_phone}</span>
+                    <a id="memberphone" href="membermypage?fId=<c:out value="${search.m_id}"/>" class="member" style="width: 23%; text-align: center;">
+                        <span class="memberphone">${search.m_phone}</span>
                     </a>
                     <hr>
                     </c:forEach>

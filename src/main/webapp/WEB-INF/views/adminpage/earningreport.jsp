@@ -52,7 +52,7 @@
                                     기타 : {@java} 원
                                 </li>
                                 <li>
-                                    <input type="submit" value="자세히" style="float: right; width: 80px; padding: 5px;">
+                                    <input type="button" class="btn btn-outline-dark" value="자세히" style="float: right; width: 80px; padding: 5px; border:solid 1px;">
                                 </li>
                             </ul>
                         </li>
