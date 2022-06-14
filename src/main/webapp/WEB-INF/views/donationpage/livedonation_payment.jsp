@@ -29,12 +29,12 @@
             </ul>
         </article>
         <%--사이드 메뉴 end--%>
-        <c:forEach items="${data}" var="DonationDTO" varStatus="status">
+        <c:forEach items="${data}" var="LiveDonationDTO" varStatus="status">
         <%-- 현장후원 start--%>
         <article class="donationheader" style="flex-direction: column">
-            <span class="donationinfo">후원정보 : ${DonationDTO.m_dTitle}</span>
+            <span class="donationinfo">후원정보 : ${LiveDonationDTO.m_dTitle}</span>
             <hr>
-            <span class="userinfo">후원자 정보 : ${DonationDTO.m_dName}</span>
+            <span class="userinfo">후원자 정보 : ${LiveDonationDTO.m_dUserId}</span>
             <hr>
 
             <article>

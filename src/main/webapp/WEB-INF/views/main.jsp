@@ -71,11 +71,11 @@
 <section class=money>
     <div class="container">
         <div class="row">
-            <div class="col-xl-6 col-6 col-sm-6" style="text-align: center; border: 1px solid gray;">
+            <div class="col-xl-6 col-6 col-sm-6" style="text-align: center; ">
                 <h2>오늘의 후원 금액</h2><br>
                 <h4><%--<%= //값 %>--%> {$java} 원</h4>
             </div>
-            <div class="col-xl-6 col-6 col-sm-6" style="text-align: center; border: 1px solid gray;">
+            <div class="col-xl-6 col-6 col-sm-6" style="text-align: center;">
                 <h2>오늘의 기부 인원</h2><br>
                 <h4><%--<%= //값%>--%> {$java} 명</h4>
             </div>
