@@ -96,6 +96,7 @@ public class MainController {
 			System.out.println("adf"+dto.getM_flag());
 			session.setAttribute("id", dto.getM_id());
 			session.setAttribute("adminflag", dto.getM_flag());
+			session.setAttribute("name",dto.getM_name());
 
 
 

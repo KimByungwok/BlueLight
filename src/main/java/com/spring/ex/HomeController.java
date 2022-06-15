@@ -40,9 +40,9 @@ public class HomeController {
 		HttpSession session = request.getSession();
 
 		session.setAttribute("id", null); //id세션초기화
-		session.setAttribute("adminflag", null);//adminflag세션초기화
+		session.setAttribute("adminflag", "0");//adminflag세션초기화
 
-		int test=1;	//디버깅용 로그인 과정 스킵용 (0끄기 1켜기)
+		int test=0;	//디버깅용 로그인 과정 스킵용 (0끄기 1켜기)
 		if(test != 0) {
 
 			session.setAttribute("id", "rina"); //디버깅용 강제 로그인 넣고 시작

@@ -42,7 +42,6 @@
                                     <div class="product-img">
                                         <a href='donation?dId=<c:out value="${DonationDTO.m_dId}"/>'/>
                                             <img width="370px" height="210px" src='${pageContext.request.contextPath}/resources/donationUploadImg/<c:out value="${DonationDTO.m_dId}" />/<c:out value="${DonationDTO.m_dId}"/>'/>
-
                                         </a>
                                     </div>
                                     <div class="product-content">

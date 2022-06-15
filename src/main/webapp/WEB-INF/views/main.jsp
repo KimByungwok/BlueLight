@@ -1,9 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
+<%@ page import="com.spring.ex.dto.DonationDTO" %>
 
 <html>
 <head>
-    <%@include file="header.jsp" %>
+    <%@include file="header.jsp" %><br><br><br><br>
 </head>
 <body>
 
@@ -71,11 +72,11 @@
 <section class=money>
     <div class="container">
         <div class="row">
-            <div class="col-xl-6 col-6 col-sm-6" style="text-align: center; border: 1px solid gray;">
+            <div class="col-xl-6 col-6 col-sm-6" style="text-align: center; ">
                 <h2>오늘의 후원 금액</h2><br>
                 <h4><%--<%= //값 %>--%> {$java} 원</h4>
             </div>
-            <div class="col-xl-6 col-6 col-sm-6" style="text-align: center; border: 1px solid gray;">
+            <div class="col-xl-6 col-6 col-sm-6" style="text-align: center;">
                 <h2>오늘의 기부 인원</h2><br>
                 <h4><%--<%= //값%>--%> {$java} 명</h4>
             </div>
@@ -93,21 +94,21 @@
             <div class="col-xl-4 col-lg-6 col-md-6">
                 <div class="single-product">
                     <div class="product-img">
-                        <a href="donation1">
+                        <a href="donationView?dId=1">
                             <img src="${pageContext.request.contextPath}/resources/images/product/donationimg1.jpg"
                                  alt="">
                         </a>
                     </div>
                     <div class="product-content">
-                        <h3 class="name"><a href="donation1">우크라이나 전쟁</a></h3>
+                        <h3 class="name"><a href="donationView?dId=1">우크라이나 전쟁</a></h3>
                         <ul class="address">
                             <li>
-                                <a href="donation1"><i class="lni lni-calendar"></i>시작 : 2022.05.25</a>
-                                <a href="donation1"> ~ 종료 : 2022.12.30</a>
+                                <a href="donationView?dId=1"><i class="lni lni-calendar"></i>시작 : 2022.05.25</a>
+                                <a href="donationView?dId=1"> ~ 종료 : 2022.12.30</a>
                             </li>
                         </ul>
                         <div class="product-bottom">
-                            <a href="donation1">
+                            <a href="donationView?dId=1">
                                 <button class="btn btn-dark btn-lg">후원하기</button>
                             </a>
                         </div>
@@ -118,21 +119,21 @@
             <div class="col-xl-4 col-lg-6 col-md-6">
                 <div class="single-product">
                     <div class="product-img">
-                        <a href="donation1">
+                        <a href="donationView?dId=7">
                             <img src="${pageContext.request.contextPath}/resources/images/product/lives.jpg"
                                  alt="">
                         </a>
                     </div>
                     <div class="product-content">
-                        <h3 class="name"><a href="donation1">혼자사는 어르신을 위하여</a></h3>
+                        <h3 class="name"><a href="donationView?dId=7">혼자사는 어르신을 위하여</a></h3>
                         <ul class="address">
                             <li>
-                                <a href="donation1"><i class="lni lni-calendar"></i>시작 : 2022.05.25</a>
-                                <a href="donation1"> ~ 종료 : 2022.12.30</a>
+                                <a href="donationView?dId=7"><i class="lni lni-calendar"></i>시작 : 2022.05.25</a>
+                                <a href="donationView?dId=7"> ~ 종료 : 2022.12.30</a>
                             </li>
                         </ul>
                         <div class="product-bottom">
-                            <a href="donation1">
+                            <a href="donationView?dId=7">
                                 <button class="btn btn-dark btn-lg">후원하기</button>
                             </a>
                         </div>
@@ -143,21 +144,21 @@
             <div class="col-xl-4 col-lg-6 col-md-6">
                 <div class="single-product">
                     <div class="product-img">
-                        <a href="donation1">
+                        <a href="donationView?dId=9">
                             <img src="${pageContext.request.contextPath}/resources/images/product/age.png"
                                  alt="">
                         </a>
                     </div>
                     <div class="product-content">
-                        <h3 class="name"><a href="donation1">베네수엘라 이주민</a></h3>
+                        <h3 class="name"><a href="donationView?dId=9">베네수엘라 이주민</a></h3>
                         <ul class="address">
                             <li>
-                                <a href="donation1"><i class="lni lni-calendar"></i>시작 : 2022.05.25</a>
-                                <a href="donation1"> ~ 종료 : 2022.12.30</a>
+                                <a href="donationView?dId=9"><i class="lni lni-calendar"></i>시작 : 2022.05.25</a>
+                                <a href="donationView?dId=9"> ~ 종료 : 2022.12.30</a>
                             </li>
                         </ul>
                         <div class="product-bottom">
-                            <a href="donation1">
+                            <a href="donationView?dId=9">
                                 <button class="btn btn-dark btn-lg">후원하기</button>
                             </a>
                         </div>
@@ -168,21 +169,21 @@
             <div class="col-xl-4 col-lg-6 col-md-6">
                 <div class="single-product">
                     <div class="product-img">
-                        <a href="donation1">
+                        <a href="donationView?dId=8">
                             <img src="${pageContext.request.contextPath}/resources/images/product/eat.jpg"
                                  alt="">
                         </a>
                     </div>
                     <div class="product-content">
-                        <h3 class="name"><a href="donation1">아동학대 아이들에게</a></h3>
+                        <h3 class="name"><a href="donationView?dId=8">아동학대 아이들에게</a></h3>
                         <ul class="address">
                             <li>
-                                <a href="donation1"><i class="lni lni-calendar"></i>시작 : 2022.05.25</a>
-                                <a href="donation1"> ~ 종료 : 2022.12.30</a>
+                                <a href="donationView?dId=8"><i class="lni lni-calendar"></i>시작 : 2022.05.25</a>
+                                <a href="donationView?dId=8"> ~ 종료 : 2022.12.30</a>
                             </li>
                         </ul>
                         <div class="product-bottom">
-                            <a href="donation1">
+                            <a href="donationView?dId=8">
                                 <button class="btn btn-dark btn-lg">후원하기</button>
                             </a>
                         </div>
@@ -193,21 +194,21 @@
             <div class="col-xl-4 col-lg-6 col-md-6">
                 <div class="single-product">
                     <div class="product-img">
-                        <a href="donation1">
+                        <a href="donationView?dId=10">
                             <img src="${pageContext.request.contextPath}/resources/images/product/water.jpg"
                                  alt="">
                         </a>
                     </div>
                     <div class="product-content">
-                        <h3 class="name"><a href="donation1">아프리카 주민을 위해</a></h3>
+                        <h3 class="name"><a href="donationView?dId=10">아프리카 주민을 위해</a></h3>
                         <ul class="address">
                             <li>
-                                <a href="donation1"><i class="lni lni-calendar"></i>시작 : 2022.05.25</a>
-                                <a href="donation1"> ~ 종료 : 2022.12.30</a>
+                                <a href="donationView?dId=10"><i class="lni lni-calendar"></i>시작 : 2022.05.25</a>
+                                <a href="donationView?dId=10"> ~ 종료 : 2022.12.30</a>
                             </li>
                         </ul>
                         <div class="product-bottom">
-                            <a href="donation1">
+                            <a href="donationView?dId=10">
                                 <button class="btn btn-dark btn-lg">후원하기</button>
                             </a>
                         </div>
@@ -218,21 +219,21 @@
             <div class="col-xl-4 col-lg-6 col-md-6">
                 <div class="single-product">
                     <div class="product-img">
-                        <a href="donation1">
+                        <a href="donationView?dId=6">
                             <img src="${pageContext.request.contextPath}/resources/images/product/so.jpg"
                                  alt="">
                         </a>
                     </div>
                     <div class="product-content">
-                        <h3 class="name"><a href="donation1">형제의 나라 에티오피아</a></h3>
+                        <h3 class="name"><a href="donationView?dId=6">형제의 나라 에티오피아</a></h3>
                         <ul class="address">
                             <li>
-                                <a href="donation1"><i class="lni lni-calendar"></i>시작 : 2022.05.25</a>
-                                <a href="donation1"> ~ 종료 : 2022.12.30</a>
+                                <a href="donationView?dId=6"><i class="lni lni-calendar"></i>시작 : 2022.05.25</a>
+                                <a href="donationView?dId=6"> ~ 종료 : 2022.12.30</a>
                             </li>
                         </ul>
                         <div class="product-bottom">
-                            <a href="donation1">
+                            <a href="donationView?dId=6">
                                 <button class="btn btn-dark btn-lg">후원하기</button>
                             </a>
                         </div>

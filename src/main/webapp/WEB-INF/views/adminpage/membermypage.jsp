@@ -37,46 +37,57 @@
                         <li>
                             <ul class="mypage_ulBoard_donation">
                                 <li>
-                                    <ul>
+                                    <ul style="">
                                         <li>관리자권한</li>
                                         <li>아이디</li>
                                         <li>이름</li>
                                         <li>전화번호</li>
-                                        <li>주소</li>
-                                        <li>이메일</li>
-                                        <li>사업자번호</li>
                                     </ul>
                                 </li>
                                 <!-- 게시물이 출력될 영역 -->
                                 <li>
                                     <c:forEach items="${list}" var="search" varStatus="status">
+                                        <ul style="display: flex; justify-content: space-around;">
+                                            <c:choose>
+                                                <c:when test="${search.m_flag eq '0'}">
+                                                    <li>유저</li>
+                                                </c:when>
+                                                <c:when test="${search.m_flag eq '1'}">
+                                                    <li>관리자</li>
+                                                </c:when>
+                                            </c:choose>
+                                            <li><c:out value="${search.m_id}"/></li>
+                                            <li><c:out value="${search.m_name}"/></li>
+                                            <li><c:out value="${search.m_phone}"/></li>
+                                        </ul>
+                                    </c:forEach>
+                                </li>
+                            </ul>
+                            <ul class="mypage_ulBoard_donation">
+                                <li>
+                                    <c:forEach items="${list}" var="search" varStatus="status">
                                     <ul>
-                                        <c:choose>
-                                            <c:when test="${search.m_flag eq '0'}">
-                                                <li>유저</li>
-                                            </c:when>
-                                            <c:when test="${search.m_flag eq '1'}">
-                                                <li>관리자</li>
-                                            </c:when>
-                                        </c:choose>
-
-
-                                        <li><c:out value="${search.m_id}"/></li>
-                                        <li><c:out value="${search.m_name}"/></li>
-                                        <li><c:out value="${search.m_phone}"/></li>
-                                        <li><c:out value="${search.m_address}"/></li>
-                                        <li><c:out value="${search.m_email}"/></li>
+                                        <li style="width:33%;text-align: center;">주소</li>
+                                        <li style="width:33%;text-align: center;">이메일</li>
+                                        <li style="width:34%;text-align: center;">사업자번호</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <ul>
+                                        <li style="width:33%; text-align: center;"><c:out value="${search.m_address}"/></li>
+                                        <li style="width:33%; text-align: center;"><c:out value="${search.m_email}"/></li>
                                         <c:choose>
                                             <c:when test="${empty search.m_s_number}">
-                                                <li>사업자아님</li>
+                                                <li  style="width:34%; text-align: center;">사업자아님</li>
                                             </c:when>
                                             <c:when test="${not empty search.m_s_number}">
-                                                <li><c:out value="${search.m_s_number}"/></li>
+                                                <li style="width:34%; text-align: center;"><c:out
+                                                        value="${search.m_s_number}"/></li>
                                             </c:when>
                                         </c:choose>
                                     </ul>
-                                    </c:forEach>
                                 </li>
+                                </c:forEach>
                             </ul>
                         </li>
                     </ul>
@@ -86,7 +97,7 @@
                         <a href="<%--delete--%>"><input type="button" class="btn btn-outline-danger" value="삭제"
                                                         style=""></a>
                         <a href="membermodify?fId=${fId}"><input type="button" class="btn btn-warning" value="수정"
-                                                      style="margin-right: 10px; margin-left: 10px;"></a>
+                                                                 style="margin-right: 10px; margin-left: 10px;"></a>
                     </div>
                     <%--각종 수정 버튼 그룹 end--%>
                 </div>
@@ -99,21 +110,21 @@
                                 <ul class="mypage_ulBoard_donation">
                                     <li>
                                         <ul>
-                                            <li>후원종류</li>
-                                            <li>후원명</li>
-                                            <li>후원금액</li>
-                                            <li>후원자</li>
-                                            <li>날짜</li>
+                                            <li style="width:20%;text-align: center;">후원종류</li>
+                                            <li style="width:20%;text-align: center;">후원명</li>
+                                            <li style="width:20%;text-align: center;">후원금액</li>
+                                            <li style="width:20%;text-align: center;">후원자</li>
+                                            <li style="width:20%;text-align: center;">날짜</li>
                                         </ul>
                                     </li>
                                     <!-- 게시물이 출력될 영역 -->
                                     <li>
                                         <ul>
-                                            <li>{@java}</li>
-                                            <li>{@java}</li>
-                                            <li>{@java}</li>
-                                            <li>{@java}</li>
-                                            <li>2022.06.06.14.17.15</li>
+                                            <li style="width:20%;text-align: center;">{@java}</li>
+                                            <li style="width:20%;text-align: center;">{@java}</li>
+                                            <li style="width:20%;text-align: center;">{@java}</li>
+                                            <li style="width:20%;text-align: center;">{@java}</li>
+                                            <li style="width:20%;text-align: center;">2022.06.06.14.17.15</li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -136,7 +147,7 @@
                             <a href="<%--delete--%>"><input type="button" class="btn btn-outline-danger" value="삭제"
                                                             style=""></a>
                             <a href="#"><input type="button" class="btn btn-outline-success" value="추가"
-                                                          style="margin-right: 10px; margin-left: 10px;"></a>
+                                               style="margin-right: 10px; margin-left: 10px;"></a>
                         </div>
                         <%--각종 수정 버튼 그룹 end--%>
                     </div>
@@ -184,7 +195,7 @@
                             <a href="<%--delete--%>"><input type="button" class="btn btn-outline-danger" value="삭제"
                                                             style=""></a>
                             <a href="#"><input type="button" class="btn btn-outline-success" value="수정?"
-                                                          style="margin-right: 10px; margin-left: 10px;"></a>
+                                               style="margin-right: 10px; margin-left: 10px;"></a>
                         </div>
                         <%--각종 수정 버튼 그룹 end--%>
                     </div>

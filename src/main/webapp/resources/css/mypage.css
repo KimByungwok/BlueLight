@@ -67,12 +67,10 @@ ul, li{
     vertical-align:middle;
 }
 
-.mypage_ulBoard_donation > li > ul > li:first-child               {width:20%;text-align: center; } /*No 열 크기*/
-.mypage_ulBoard_donation > li > ul > li:first-child +li           {width:20%;text-align: center; } /*제목 열 크기*/
-.mypage_ulBoard_donation > li > ul > li:first-child +li+li        {width:20%;text-align: center; } /*작성일 열 크기*/
-.mypage_ulBoard_donation > li > ul > li:first-child +li+li+li     {width:20%;text-align: center; } /*작성일 열 크기*/
-.mypage_ulBoard_donation > li > ul > li:first-child +li+li+li     {width:20%;text-align: center; } /*작성일 열 크기*/
-.mypage_ulBoard_donation > li > ul > li:first-child +li+li+li+li  {width:20%;text-align: center; } /*작성일 열 크기*/
+.mypage_ulBoard_donation > li > ul > li:first-child               {width:25%;text-align: center; } /*No 열 크기*/
+.mypage_ulBoard_donation > li > ul > li:first-child +li           {width:25%;text-align: center; } /*제목 열 크기*/
+.mypage_ulBoard_donation > li > ul > li:first-child +li+li        {width:25%;text-align: center; } /*작성일 열 크기*/
+.mypage_ulBoard_donation > li > ul > li:first-child +li+li+li     {width:25%;text-align: center; } /*작성일 열 크기*/
 
 .mypage_ulBoard_inquiry > li:first-child > ul > li {
     background-color:#c9c9c9;
