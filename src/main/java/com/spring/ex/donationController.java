@@ -1,10 +1,16 @@
 package com.spring.ex;
 
 import com.spring.ex.dto.DonationDTO;
+import com.spring.ex.dto.MemberDTO;
 import com.spring.ex.dto.bbsDTO;
+import com.spring.ex.dto.paymentDTO;
 import com.spring.ex.service.DonationService;
+import com.spring.ex.service.MemberService;
+import com.spring.ex.service.paymentService;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
@@ -14,6 +20,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.File;
+import java.lang.reflect.Member;
 import java.sql.Time;
 import java.sql.Timestamp;
 import java.util.HashMap;
@@ -25,6 +32,10 @@ import java.util.Map;
 public class donationController {
     @Inject
     DonationService doneService;
+    @Inject
+    MemberService memberService;
+    @Inject
+    paymentService paymentService;
 
 
     //후원하기 리스트 현장 기부 리스트
@@ -155,12 +166,28 @@ public class donationController {
         String did = request.getParameter("dId");
         ModelAndView mv = new ModelAndView("/donationpage/donation_payment");
         List<DonationDTO> doneDTO = doneService.viewBBS(did);
+        List<MemberDTO> memberDTO = memberService.memberView(did);
         mv.addObject("data", doneDTO);
+        mv.addObject("user", memberDTO);
         mv.addObject("dId", did);
         return mv;}
     //후원하기 결제
     @RequestMapping("/livedonation_payment")
     public String livedonation_payment() { return "/donationpage/livedonation_payment";}
+
+    @RequestMapping(value = "/insertPay.do")
+    @ResponseBody
+    public int pay(@RequestBody paymentDTO paydto) {
+        System.out.println("글번호 : " + paydto.getM_pbbsID());
+        int res = paymentService.insertPay(paydto);
+        if(res == 1) {
+
+            if(res == 1)
+                System.out.println("성공");
+        }
+
+        return res;
+    }
 
     //후원하기 결제 완료
     @RequestMapping("/donation_success")

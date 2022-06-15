@@ -53,6 +53,8 @@
         <typeAlias alias="DTO" type="com.spring.ex.dto.MemberDTO"></typeAlias>
         <typeAlias alias="bbsDTO" type="com.spring.ex.dto.bbsDTO"></typeAlias>
         <typeAlias alias="donationDTO" type="com.spring.ex.dto.DonationDTO"></typeAlias>
+        <typeAlias alias="paymentDTO" type="com.spring.ex.dto.paymentDTO"></typeAlias>
+
 
 
 

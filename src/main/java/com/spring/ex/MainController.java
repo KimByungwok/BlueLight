@@ -35,8 +35,6 @@ public class MainController {
 	@Inject
 	MemberService mService;
 
-	@Inject
-	bbsService bService;
 
 	@RequestMapping(value = "/favicon.ico", method = RequestMethod.GET)
 
@@ -250,6 +248,9 @@ public class MainController {
 	public String test123() {
 		return "test123";
 	}
+
+
+
 
 
 

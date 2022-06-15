@@ -2,6 +2,7 @@ package com.spring.ex.service;
 
 import com.spring.ex.dao.MemberDAO;
 import com.spring.ex.dto.MemberDTO;
+import com.spring.ex.dto.bbsDTO;
 import org.springframework.stereotype.Service;
 
 import javax.inject.Inject;
@@ -10,6 +11,11 @@ import java.util.List;
 public class MemberServiceImp implements MemberService {
     @Inject
     MemberDAO memberDAO;
+
+    @Override
+    public List<MemberDTO> memberView(String i){
+        return memberDAO.memberView(i);
+    }
     @Override
     public int testMember(MemberDTO dto) {
         System.out.println("te" + dto);
