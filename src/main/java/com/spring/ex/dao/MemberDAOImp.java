@@ -1,6 +1,7 @@
 package com.spring.ex.dao;
 
 import com.spring.ex.dto.MemberDTO;
+import com.spring.ex.dto.bbsDTO;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
@@ -12,6 +13,10 @@ public class MemberDAOImp implements MemberDAO{
     @Inject
     SqlSession sqlSession;
 
+    @Override
+    public List<MemberDTO> memberView(String i){
+        return sqlSession.selectList("member.viewMember", i);
+    }
     @Override
     public List<MemberDTO> memberList() {
         return sqlSession.selectList("member.memberList");

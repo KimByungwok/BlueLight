@@ -29,7 +29,7 @@
 
         <!-- 기부완료 start -->
         <article class="noticeheader">
-            <span class="donationname" style="text-align: center">{@java}님 후원이 완료되었습니다.</span>
+            <span class="donationname" style="text-align: center"><%=session.getAttribute("id")%>님 후원이 완료되었습니다.</span>
             <hr>
             <span class="mypageid">기부 종류</span>
             <span class="mypagepw">기부 내용</span>
