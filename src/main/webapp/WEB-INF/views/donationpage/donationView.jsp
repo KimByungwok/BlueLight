@@ -32,7 +32,7 @@
         <%--사이드 메뉴 end--%>
         <c:forEach items="${data}" var="DonationDTO" varStatus="status">
         <%--후원하기 start --%>
-        <article class="noticeheader" >
+        <article class="noticeheader" style="width:900px;">
             <span class="donationname">${DonationDTO.m_dTitle}</span>
             <span class="donationdate">${DonationDTO.m_ddayStart} ~ ${DonationDTO.m_ddayEnd}</span>
             <span class="donationHit">조회수 : ${DonationDTO.m_dHit}</span>

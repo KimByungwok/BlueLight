@@ -45,10 +45,10 @@
             <%--결제 버튼그룹 start--%>
             <article class="donationmid">
                 <div class="col-lg-12" style="display: flex; justify-content: space-evenly; flex-direction: column">
-                    <a href="#"><input type="button" class="btn btn-outline-secondary" value="계좌 이체"></a>
-                    <a href="#"><input type="button" class="btn btn-outline-secondary" value="카드 결제"></a>
-                    <a href="#"><input type="button" class="btn btn-outline-secondary" value="휴대폰 결제"></a>
-                    <a href="#"><input type="button" class="btn btn-outline-secondary" value="페이 결제"></a>
+                    <a href="donation_success"><input type="button" class="btn btn-outline-secondary" value="계좌 이체"></a>
+                    <a href="donation_success"><input type="button" class="btn btn-outline-secondary" value="카드 결제"></a>
+                    <a href="donation_success"><input type="button" class="btn btn-outline-secondary" value="휴대폰 결제"></a>
+                    <a href="donation_success"><input type="button" class="btn btn-outline-secondary" value="페이 결제"></a>
                 </div>
             </article>
             <%--결제 버튼그룹 end--%>

@@ -67,7 +67,7 @@
             </article>
             <article>
                 <div class="col-lg-12" style="display: flex; justify-content: space-evenly; flex-direction: column">
-                    <a href="#"><input type="button" class="btn btn-outline-secondary" value="신청하기"></a>
+                    <a href="livedonation_success"><input type="button" class="btn btn-outline-secondary" value="신청하기"></a>
                 </div>
             </article>
         </article>
