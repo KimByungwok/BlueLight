@@ -58,6 +58,7 @@
 
 
 
+
         <!--        <typeAlias alias="DAO" type="com.spring.ex.dao.MemberDAO"></typeAlias>-->
 
     </typeAliases>

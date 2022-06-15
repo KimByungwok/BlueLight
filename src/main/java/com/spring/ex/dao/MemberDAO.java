@@ -16,7 +16,6 @@ public interface MemberDAO {
     public int loginService(MemberDTO dto);
 
     public String adminflagService(MemberDTO dto);
-
     public List<MemberDTO> memberView(String i);
 
 }
