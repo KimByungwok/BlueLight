@@ -1,6 +1,8 @@
 package com.spring.ex.dao;
 
 import com.spring.ex.dto.MemberDTO;
+import com.spring.ex.dto.bbsDTO;
+
 import java.util.List;
 
 public interface MemberDAO {
@@ -14,5 +16,6 @@ public interface MemberDAO {
     public int loginService(MemberDTO dto);
 
     public String adminflagService(MemberDTO dto);
+    public List<MemberDTO> memberView(String i);
 
 }
