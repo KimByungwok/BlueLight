@@ -34,7 +34,7 @@
         <article class="donationheader" style="flex-direction: column">
             <span class="donationinfo">후원정보 : ${LiveDonationDTO.m_dTitle}</span>
             <hr>
-            <span class="userinfo">후원자 정보 : ${LiveDonationDTO.m_dUserId}</span>
+            <span class="userinfo">후원자 정보 : ${call_MList[0].m_name}</span>
             <hr>
 
             <article>

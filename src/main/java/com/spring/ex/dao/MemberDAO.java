@@ -18,4 +18,5 @@ public interface MemberDAO {
     public String adminflagService(MemberDTO dto);
     public List<MemberDTO> memberView(String i);
 
+    public List<MemberDTO> call_name_Service (String i);
 }

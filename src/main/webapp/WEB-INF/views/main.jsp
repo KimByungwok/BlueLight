@@ -41,9 +41,10 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
+        <hr>
     </div>
 </section>
-<br><br><br><br>
+<br>
 <%--슬라이드 캐러셀 end--%>
 
 
@@ -68,182 +69,75 @@
 --%>
 
 <%--기부 금액 및 인원 start--%>
-<br>
-<section class=money>
+<section class="donationinfomation">
     <div class="container">
         <div class="row">
-            <div class="col-xl-6 col-6 col-sm-6" style="text-align: center; ">
-                <h2>오늘의 후원 금액</h2><br>
-                <h4><%--<%= //값 %>--%> {$java} 원</h4>
+            <div class="col-xl-6 col-6 col-sm-6" style="text-align: center;">
+                <a href="privaterank"><h3>오늘의 후원 금액 </h3></a>
+                <!-- 게시글  -->
+                <table class="container">
+                    <thead>
+                    <tr>
+                        <th style="text-align: center;">{&java} 원</th>
+                    </tr>
+                    </thead>
+                </table>
+                <br>
             </div>
             <div class="col-xl-6 col-6 col-sm-6" style="text-align: center;">
-                <h2>오늘의 기부 인원</h2><br>
-                <h4><%--<%= //값%>--%> {$java} 명</h4>
+                <a href="companyrank"><h3>오늘의 후원자</h3></a>
+                <!-- 게시글  -->
+                <table class="container">
+                    <thead>
+                    <tr>
+                        <th style="text-align: center;">{&java} 명</th>
+                    </tr>
+                    </thead>
+                </table>
+                <br>
             </div>
         </div>
+        <hr>
     </div>
 </section>
 <br>
 <%--기부 금액 및 인원 end--%>
 
 <%--기부 메뉴 이미지 start--%>
+<%--기부 메뉴 이미지 start--%>
 <section class="menu image">
     <div class="container">
         <div class="row">
-            <%--1번 메인 기부 이미지--%>
-            <div class="col-xl-4 col-lg-6 col-md-6">
-                <div class="single-product">
-                    <div class="product-img">
-                        <a href="donationView?dId=1">
-                            <img src="${pageContext.request.contextPath}/resources/images/product/donationimg1.jpg"
-                                 alt="">
-                        </a>
-                    </div>
-                    <div class="product-content">
-                        <h3 class="name"><a href="donationView?dId=1">우크라이나 전쟁</a></h3>
-                        <ul class="address">
-                            <li>
-                                <a href="donationView?dId=1"><i class="lni lni-calendar"></i>시작 : 2022.05.25</a>
-                                <a href="donationView?dId=1"> ~ 종료 : 2022.12.30</a>
-                            </li>
-                        </ul>
-                        <div class="product-bottom">
-                            <a href="donationView?dId=1">
-                                <button class="btn btn-dark btn-lg">후원하기</button>
+            <c:forEach items="${list}" var="DonationDTO" varStatus="status">
+
+                <div class="col-xl-4 col-lg-6 col-md-6">
+                    <div class="single-product">
+                        <div class="product-img">
+                            <a href='donation?dId=<c:out value="${DonationDTO.m_dId}"/>'/>
+                            <img width="370px" height="210px" src='${pageContext.request.contextPath}/resources/donationUploadImg/<c:out value="${DonationDTO.m_dId}" />/<c:out value="${DonationDTO.m_dId}"/>'/>
                             </a>
+                        </div>
+                        <div class="product-content">
+                            <h5 class="name"><a href='donationView?dId=<c:out value="${DonationDTO.m_dId}"/>'/><c:out value="${DonationDTO.m_dTitle}"/></h5>
+                            <ul class="address">
+                                <li>
+                                    <a href='donationView?dId=<c:out value="${DonationDTO.m_dId}"/>'><i class="lni lni-calendar"></i>시작 : <c:out value="${DonationDTO.m_ddayStart}"/></a>
+                                    <a href='donationView?dId=<c:out value="${DonationDTO.m_dId}"/>'> ~ 종료 : <c:out value="${DonationDTO.m_ddayEnd}"/></a>
+                                </li>
+                            </ul>
+                            <div class="product-bottom">
+                                <a href='donationView?dId=<c:out value="${DonationDTO.m_dId}"/>'>
+                                    <button class="btn btn-dark btn-lg">후원하기</button>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <%--2번 메인 기부 이미지--%>
-            <div class="col-xl-4 col-lg-6 col-md-6">
-                <div class="single-product">
-                    <div class="product-img">
-                        <a href="donationView?dId=7">
-                            <img src="${pageContext.request.contextPath}/resources/images/product/lives.jpg"
-                                 alt="">
-                        </a>
-                    </div>
-                    <div class="product-content">
-                        <h3 class="name"><a href="donationView?dId=7">혼자사는 어르신을 위하여</a></h3>
-                        <ul class="address">
-                            <li>
-                                <a href="donationView?dId=7"><i class="lni lni-calendar"></i>시작 : 2022.05.25</a>
-                                <a href="donationView?dId=7"> ~ 종료 : 2022.12.30</a>
-                            </li>
-                        </ul>
-                        <div class="product-bottom">
-                            <a href="donationView?dId=7">
-                                <button class="btn btn-dark btn-lg">후원하기</button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <%--3번 메인 기부 이미지--%>
-            <div class="col-xl-4 col-lg-6 col-md-6">
-                <div class="single-product">
-                    <div class="product-img">
-                        <a href="donationView?dId=9">
-                            <img src="${pageContext.request.contextPath}/resources/images/product/age.png"
-                                 alt="">
-                        </a>
-                    </div>
-                    <div class="product-content">
-                        <h3 class="name"><a href="donationView?dId=9">베네수엘라 이주민</a></h3>
-                        <ul class="address">
-                            <li>
-                                <a href="donationView?dId=9"><i class="lni lni-calendar"></i>시작 : 2022.05.25</a>
-                                <a href="donationView?dId=9"> ~ 종료 : 2022.12.30</a>
-                            </li>
-                        </ul>
-                        <div class="product-bottom">
-                            <a href="donationView?dId=9">
-                                <button class="btn btn-dark btn-lg">후원하기</button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <%--4번 메인 기부 이미지--%>
-            <div class="col-xl-4 col-lg-6 col-md-6">
-                <div class="single-product">
-                    <div class="product-img">
-                        <a href="donationView?dId=8">
-                            <img src="${pageContext.request.contextPath}/resources/images/product/eat.jpg"
-                                 alt="">
-                        </a>
-                    </div>
-                    <div class="product-content">
-                        <h3 class="name"><a href="donationView?dId=8">아동학대 아이들에게</a></h3>
-                        <ul class="address">
-                            <li>
-                                <a href="donationView?dId=8"><i class="lni lni-calendar"></i>시작 : 2022.05.25</a>
-                                <a href="donationView?dId=8"> ~ 종료 : 2022.12.30</a>
-                            </li>
-                        </ul>
-                        <div class="product-bottom">
-                            <a href="donationView?dId=8">
-                                <button class="btn btn-dark btn-lg">후원하기</button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <%--5번 메인 기부 이미지--%>
-            <div class="col-xl-4 col-lg-6 col-md-6">
-                <div class="single-product">
-                    <div class="product-img">
-                        <a href="donationView?dId=10">
-                            <img src="${pageContext.request.contextPath}/resources/images/product/water.jpg"
-                                 alt="">
-                        </a>
-                    </div>
-                    <div class="product-content">
-                        <h3 class="name"><a href="donationView?dId=10">아프리카 주민을 위해</a></h3>
-                        <ul class="address">
-                            <li>
-                                <a href="donationView?dId=10"><i class="lni lni-calendar"></i>시작 : 2022.05.25</a>
-                                <a href="donationView?dId=10"> ~ 종료 : 2022.12.30</a>
-                            </li>
-                        </ul>
-                        <div class="product-bottom">
-                            <a href="donationView?dId=10">
-                                <button class="btn btn-dark btn-lg">후원하기</button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <%--6번 메인 기부 이미지--%>
-            <div class="col-xl-4 col-lg-6 col-md-6">
-                <div class="single-product">
-                    <div class="product-img">
-                        <a href="donationView?dId=6">
-                            <img src="${pageContext.request.contextPath}/resources/images/product/so.jpg"
-                                 alt="">
-                        </a>
-                    </div>
-                    <div class="product-content">
-                        <h3 class="name"><a href="donationView?dId=6">형제의 나라 에티오피아</a></h3>
-                        <ul class="address">
-                            <li>
-                                <a href="donationView?dId=6"><i class="lni lni-calendar"></i>시작 : 2022.05.25</a>
-                                <a href="donationView?dId=6"> ~ 종료 : 2022.12.30</a>
-                            </li>
-                        </ul>
-                        <div class="product-bottom">
-                            <a href="donationView?dId=6">
-                                <button class="btn btn-dark btn-lg">후원하기</button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </c:forEach>
         </div>
-        <%-- 메인 기부 이미지 end--%>
     </div>
 </section>
+<%--기부 메뉴 이미지 end--%>
 <%--기부 메뉴 이미지 end--%>
 
 
@@ -297,7 +191,6 @@
         <hr>
     </div>
 </section>
-<br>
 <%--푸터 위에 리스트 2칸씩 떄려넣어주세용--%>
 <section class="faq">
     <div class="container">
@@ -348,7 +241,6 @@
     </div>
 </section>
 <%--푸터 위에 리스트 2칸씩 떄려넣어주세용 끝입니당--%>
-
 <%--푸터--%>
 <%@include file="footer.jsp" %>
 </body>

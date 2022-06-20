@@ -3,7 +3,6 @@ package com.spring.ex.dto;
 public class MemberDTO {
     String m_flag = null;
     String m_id = null;
-
     String m_pw = null;
     String m_name = null;
     String m_phone = null;

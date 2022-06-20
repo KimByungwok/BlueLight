@@ -6,6 +6,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page import="com.spring.ex.dto.DonationDTO" %>
+<%@ page import="java.util.List" %>
 <html>
 <head>
     <%@include file="../header.jsp" %>
@@ -26,15 +28,17 @@
             </ul>
         </article>
         <%--사이드 메뉴 end--%>
-
-        <%--현장 후원 완료 start--%>
-        <article class="noticeheader">
-            <span class="donationname" style="text-align: center">신청이 완료되었습니다.</span>
-            <hr>
-            <span class="donationdate" style="text-align: center">기부 방법과 상세 내용이 어쩌구~~</span>
-            <a href="livedonation"><input type="button" class="btn btn-outline-dark" value="목록"></a>
-        </article>
-        <%--현장 후원 완료 end--%>
+        <c:forEach items="${data}" var="LiveDonationDTO" varStatus="status">
+            <%--현장 후원 완료 start--%>
+            <article class="noticeheader">
+                <span class="donationname"
+                      style="text-align: center">${call_MList[0].m_name}님 ${LiveDonationDTO.m_dTitle} 후원신청이 완료되었습니다.</span>
+                <hr>
+                <span class="donationdate" style="text-align: center">기부 방법과 상세 내용이 어쩌구~~</span>
+                <a href="livedonation"><input type="button" class="btn btn-outline-dark" value="목록"></a>
+            </article>
+            <%--현장 후원 완료 end--%>
+        </c:forEach>
     </section>
 </div>
 

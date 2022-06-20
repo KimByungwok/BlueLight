@@ -2,7 +2,6 @@ package com.spring.ex;
 
 import com.spring.ex.dto.DonationDTO;
 import com.spring.ex.dto.MemberDTO;
-import com.spring.ex.dto.bbsDTO;
 import com.spring.ex.dto.paymentDTO;
 import com.spring.ex.service.DonationService;
 import com.spring.ex.service.MemberService;
@@ -20,8 +19,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.File;
-import java.lang.reflect.Member;
-import java.sql.Time;
 import java.sql.Timestamp;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -143,7 +140,7 @@ public class donationController {
 
             doneService.insertDonationService(done);
 
-            return "redirect:/donation";
+            return "donation";
         }
 
     //후원하기 뷰
@@ -180,6 +177,15 @@ public class donationController {
         List<DonationDTO> doneDTO = doneService.viewBBS(did);
         mv.addObject("data", doneDTO);
         mv.addObject("dId", did);
+
+
+        HttpSession session = request.getSession();
+        String name = (String) session.getAttribute("id");
+        System.out.println(name);
+
+        List<MemberDTO> callM_DTO = memberService.call_name_Service(name);
+        mv.addObject("call_MList",callM_DTO);
+        System.out.println(callM_DTO);
         return mv;
     }
 
@@ -199,11 +205,30 @@ public class donationController {
 
     //후원하기 결제 완료
     @RequestMapping("/donation_success")
-    public String donation_success() { return "/donationpage/donation_success";}
+    public String donation_success() {
+        return "/donationpage/donation_success";
+    }
 
     //현장기부 신청 완료
     @RequestMapping("/livedonation_success")
-    public String livedonation_success() { return "/donationpage/livedonation_success";}
+    public ModelAndView donation_success(HttpServletRequest request) {
+        String did = request.getParameter("dId");
+        ModelAndView mv = new ModelAndView("/donationpage/livedonation_success");
+        List<DonationDTO> doneDTO = doneService.viewBBS(did);
+        mv.addObject("data", doneDTO);
+        mv.addObject("dId", did);
+
+
+        HttpSession session = request.getSession();
+        String name = (String) session.getAttribute("id");
+        System.out.println(name);
+
+        List<MemberDTO> callM_DTO = memberService.call_name_Service(name);
+        mv.addObject("call_MList", callM_DTO);
+        System.out.println(callM_DTO);
+        return mv;
+    }
+
 
 
 }

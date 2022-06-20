@@ -27,4 +27,8 @@
         SELECT m_flag FROM member WHERE m_id = #{m_id}
     </select>
 
+    <select id="call_name_Service" parameterType="String" resultType="map">
+        select * from member where m_id = #{m_id}
+    </select>
+
 </mapper>

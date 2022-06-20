@@ -53,4 +53,11 @@ public class MemberServiceImp implements MemberService {
         System.out.println("service"+dto);
         return memberDAO.adminflagService(dto);
     }
+
+    @Override
+    public List<MemberDTO> call_name_Service (String i){
+        System.out.println(i);
+        return memberDAO.call_name_Service(i);
+    }
+
 }

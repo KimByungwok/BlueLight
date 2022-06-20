@@ -192,8 +192,6 @@ public class MainController {
 	@RequestMapping("/donationreport")
 	public String donationreport() { return "donationreport";}
 
-
-
 	//개인랭킹
 	@RequestMapping("/privaterank")
 	public String privaterank() { return "privaterank";}
@@ -201,9 +199,6 @@ public class MainController {
 	//기업랭킹
 	@RequestMapping("/companyrank")
 	public String companyrank() { return "companyrank";}
-
-
-
 
 
 	//마이페이지

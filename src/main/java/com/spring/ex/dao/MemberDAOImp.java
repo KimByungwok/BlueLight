@@ -52,4 +52,11 @@ public class MemberDAOImp implements MemberDAO{
         return sqlSession.selectOne("member.admin_flag_Service", dto);
 
     }
+
+    @Override
+        public List<MemberDTO> call_name_Service (String i){
+        System.out.println(i);
+        return sqlSession.selectList("call_name_Service",i);
+    }
+
 }
