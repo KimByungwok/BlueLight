@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
+import org.springframework.web.servlet.ModelAndView;
+
 import javax.servlet.http.HttpServletResponse;
 
 import javax.inject.Inject;
@@ -118,8 +120,68 @@ public class MainController {
 		HttpSession session = request.getSession();
 		session.setAttribute("result", result);
 		return "CheckID";
+	}
+
+	@RequestMapping(value = "/dbfindID", method = RequestMethod.GET)
+	public ModelAndView dbfindID(HttpServletRequest request) {
+		MemberDTO dto = new MemberDTO();
+		dto.setM_name(request.getParameter("findID_name"));
+		dto.setM_phone(request.getParameter("findID_phone"));
+		String result = mService.findIDService(dto);
+		ModelAndView mv = new ModelAndView("findIDResult");
+		mv.addObject("findID", result);
+		return mv;
+	}
+
+	@RequestMapping(value = "/findIDResult", method = RequestMethod.GET)
+	public String findIDResult(HttpServletRequest request) {
+		request.getParameter("findID");
+
+		return "findIDResult";
+	}
 
 
+
+
+	@RequestMapping(value = "/dbnewPW")
+	public ModelAndView dbnewPW(HttpServletRequest request) {
+		MemberDTO dto = new MemberDTO();
+		//MemberDAO dao = null;
+
+		dto.setM_id(request.getParameter("newPW_id"));
+		dto.setM_phone(request.getParameter("newPW_phone"));
+
+		String result = mService.newPW_check_Service(dto);
+
+		System.out.println(dto.getM_id());
+
+		ModelAndView mv;
+		if(result == null)
+		{
+			mv = new ModelAndView("newPWfail");
+		} else
+		{
+			mv = new ModelAndView("newPW2");
+			mv.addObject("newPW2_id", dto.getM_id());
+			mv.addObject("newPW2_phone", dto.getM_phone());
+		}
+
+		return mv;
+	}
+
+	@RequestMapping("/dbnewPW2")
+	public String dbnewPW2(HttpServletRequest request) {
+		MemberDTO dto = new MemberDTO();
+		//MemberDAO dao = null;
+
+		dto.setM_id(request.getParameter("newPW2_id"));
+		dto.setM_phone(request.getParameter("newPW2_phone"));
+		dto.setM_pw(request.getParameter("nPW"));
+
+		System.out.println(dto.getM_id());
+
+		mService.newPWService(dto);
+		return "newPWok";
 	}
 
 
@@ -176,16 +238,33 @@ public class MainController {
 		return "main";
 	}
 
-
-
 	//회원가입 축하
 	@RequestMapping("/joinsuccess")
 	public String joinsuccess() {
 		return "joinsuccess";
 	}
 
+	//아이디 찾기
+	@RequestMapping("/findID")
+	public String findID() { return "findID"; }
 
+	// 비밀번호 재설정 하기 전 아이디, 전화번호 확인
+	@RequestMapping(value = "/newPW")
+	public String newPW(HttpServletRequest request) {
+		return "newPW";
+	}
 
+	// 비밀번호 재설정
+	@RequestMapping(value = "/newPW2")
+	public String newPW2(HttpServletRequest request) {
+		return "newPW2";
+	}
+
+	// 비밀번호 재설정 완료
+	@RequestMapping(value = "/newPWok")
+	public String newPWok(HttpServletRequest request) {
+		return "newPWok";
+	}
 
 
 	//기부현황
