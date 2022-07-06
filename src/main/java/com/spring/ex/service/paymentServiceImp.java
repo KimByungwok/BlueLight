@@ -22,4 +22,10 @@ public class paymentServiceImp implements paymentService {
     public int insertPay(paymentDTO pDTO){
         return pDAO.insertPay(pDTO);
     }
+
+    @Override
+    public List<paymentDTO> load_payment_service()
+    {
+        return pDAO.load_payment_service();
+    }
 }

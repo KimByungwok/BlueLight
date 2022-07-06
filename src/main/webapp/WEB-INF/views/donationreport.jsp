@@ -46,6 +46,17 @@
                     <span class="bbsratio">83.3%</span><hr>
                 </article>
 
+                <c:forEach items="${paydata}" var="paymentDTO" varStatus="status">
+                    <article class="noticemiddle">
+                        <span>${paymentDTO.m_pID}</span>
+                        <span>${paymentDTO.m_pDate}</span>
+                        <span>${paymentDTO.m_pPtype}</span>
+                        <span>${paymentDTO.m_pPrice}</span>
+                        <span>${paymentDTO.m_pbbsID}</span>
+                        <span>${paymentDTO.m_pCard_num}</span>
+                        <span>${paymentDTO.m_prefund}</span>
+                    </article>
+                </c:forEach>
                 <article class="reportmiddle">
 
                     <span class="bbsdivision">현장 후원</span>

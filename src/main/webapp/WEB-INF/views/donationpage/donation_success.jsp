@@ -29,7 +29,7 @@
 
         <!-- 기부완료 start -->
         <article class="noticeheader">
-            <span class="donationname" style="text-align: center"><%=session.getAttribute("id")%>님 후원이 완료되었습니다.</span>
+            <span class="donationname" style="text-align: center"><%=session.getAttribute("name")%>(<%=session.getAttribute("id")%>)님 후원이 완료되었습니다.</span>
             <hr>
             <span class="mypageid">기부 종류</span>
             <span class="mypagepw">기부 내용</span>
@@ -38,12 +38,19 @@
             <span class="mypageaddress" style="width: 200px;">날짜</span>
             <br><br>
             <article class="noticemiddle">
-                <span class="mypageid">현장 기부</span>
-                <span class="mypagepw">우크라이나 전쟁 후원</span>
-                <span class="mypagename" style="width: 200px;">200,000 원</span>
-                <span class="mypagepnum">카드</span>
-                <span class="mypageaddress" style="width: 200px;">22.05.27</span>
+                <span class="mypageid">기부</span>
+                <span class="mypagepw"> ${payData.m_pbbsID}</span>
+                <span class="mypagename" style="width: 200px;">${payData.m_pPrice}원</span>
+                <span class="mypagepnum">${payData.m_pPtype}</span>
+                <span class="mypageaddress" style="width: 200px;">${payData.m_pDate}</span>
             </article>
+<%--            //        m_pId 유저아이디--%>
+<%--            //        m_pbbsID 글번호--%>
+<%--            //        m_pDate 기부날짜--%>
+<%--            //        m_pPrice 기부금액--%>
+<%--            //        m_pCard_num 카드넘버--%>
+<%--            //        m_prefund 결제성공유무--%>
+<%--            //        m_Ptype 기부형식--%>
             <%--목록으로 가기--%>
             <div style="display: flex; justify-content: flex-end;">
                 <a href="donation"><input type="button" class="btn btn-outline-dark" value="목록"></a>

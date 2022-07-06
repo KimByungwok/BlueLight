@@ -8,6 +8,7 @@ import com.spring.ex.service.DonationService;
 import com.spring.ex.service.MemberService;
 import com.spring.ex.service.paymentService;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -23,10 +24,9 @@ import java.io.File;
 import java.lang.reflect.Member;
 import java.sql.Time;
 import java.sql.Timestamp;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
+import java.text.DateFormat;
+import java.time.LocalDateTime;
+import java.util.*;
 
 @Controller
 public class donationController {
@@ -172,7 +172,42 @@ public class donationController {
         mv.addObject("dId", did);
         return mv;
     }
-    //후원하기 결제
+    @RequestMapping("donation_OK")
+    public String donationOK(HttpServletRequest request) {
+        return "0";
+    }
+    //후원하기 결제 완료
+    @RequestMapping("/donation_success")
+    public ModelAndView donation_success(HttpServletRequest request) {
+        HttpSession session = request.getSession();
+        paymentDTO payDTO = new paymentDTO();
+        String donationmoney = request.getParameter("donationmoney");
+        String did = request.getParameter("dID");
+        String userID = (String)session.getAttribute("id");
+        System.out.println(userID);
+        Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+
+        payDTO.setM_pID(userID);
+        payDTO.setM_pbbsID(did);
+        payDTO.setM_pDate(timestamp);
+        payDTO.setM_pPrice(donationmoney);
+        payDTO.setM_pCard_num("1212-1212-1212");
+        payDTO.setM_prefund("0");
+        payDTO.setM_pPtype("card");
+
+//        m_pId 유저아이디
+//        m_pbbsID 글번호
+//        m_pDate 기부날짜
+//        m_pPrice 기부금액
+//        m_pCard_num 카드넘버
+//        m_prefund 결제성공유무
+//        m_Ptype 기부형식
+        paymentService.insertPay(payDTO);
+        ModelAndView mv = new ModelAndView("/donationpage/donation_success");
+        mv.addObject("payData", payDTO);
+        return mv;
+    }
+    //현장후원하기 결제
     @RequestMapping("/livedonation_payment")
     public ModelAndView livedonation_payment(HttpServletRequest request) {
         String did = request.getParameter("dId");
@@ -197,9 +232,7 @@ public class donationController {
         return res;
     }
 
-    //후원하기 결제 완료
-    @RequestMapping("/donation_success")
-    public String donation_success() { return "/donationpage/donation_success";}
+
 
     //현장기부 신청 완료
     @RequestMapping("/livedonation_success")

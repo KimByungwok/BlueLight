@@ -24,4 +24,9 @@ public class paymentDAOImp implements paymentDAO{
         return sqlSession.insert("payment.insertPay", pDTO);
     }
 
+    @Override
+    public List<paymentDTO> load_payment_service(){
+        return sqlSession.selectList("payment.load_payment_service");
+    }
+
 }

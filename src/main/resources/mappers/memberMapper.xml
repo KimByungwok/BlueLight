@@ -27,6 +27,7 @@
         SELECT m_flag FROM member WHERE m_id = #{m_id}
     </select>
 
+
     <select id="findIDService" parameterType="DTO" resultType="String">
         SELECT m_id FROM member WHERE m_phone = #{m_phone} and m_name = #{m_name}
     </select>

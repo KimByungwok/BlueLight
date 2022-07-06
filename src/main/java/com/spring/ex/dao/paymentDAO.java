@@ -10,4 +10,6 @@ public interface paymentDAO {
 
     public int insertPay(paymentDTO pDTO);
 
+    public List<paymentDTO> load_payment_service();
+
 }

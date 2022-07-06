@@ -3,14 +3,14 @@
 
 <mapper namespace="payment">
 
-    <select id="memberList" resultType="DTO">
+    <select id="memberList" resultType="paymentDTO">
         SELECT * FROM payment WHERE #{m_pID}
     </select>
     <insert id="updateMember" parameterType="DTO">
         UPDATE member SET m_flag = #{m_flag}, m_id = #{m_id}, m_pw = #{m_pw}, m_name = #{m_name}, m_phone = #{m_phone}, m_address = #{m_address}, m_email = #{m_email}, m_s_number = #{m_s_number} WHERE m_id = #{m_id}
     </insert>
     <insert id="insertPay" parameterType="DTO">
-        INSERT INTO payment(m_pID, m_pbbsID, m_pDate, m_pPrice, m_pCard_num, m_prefund, m_pPtype) VALUES (#{m_pID}, #{m_pbbsID}, #{m_pDate}, #{m_pPrice}, #{m_pCard_num}, #{m_prefund}, #{m_pPtype})
+        INSERT INTO payment(m_pID, m_pbbsID, m_pDate, m_pPrice, m_pCard_num, m_prefund, m_pPtype) VALUES (#{m_pID}, #{m_pbbsID}, #{m_pDate,javaType=java.sql.Timestamp,jdbcType=TIMESTAMP}, #{m_pPrice}, #{m_pCard_num}, #{m_prefund}, #{m_pPtype})
     </insert>
 
     <select id="checkID" parameterType="DTO" resultType="int">
@@ -24,5 +24,7 @@
     <select id="admin_flag_Service" parameterType="DTO" resultType="String">
         SELECT m_flag FROM member WHERE m_id = #{m_id}
     </select>
-
+    <select id="load_payment_service" resultType="map">
+        SELECT * FROM payment
+    </select>
 </mapper>

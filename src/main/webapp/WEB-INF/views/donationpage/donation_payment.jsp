@@ -38,7 +38,8 @@
 
             <span class="donationinfo">후원정보 : ${data[0].m_dTitle}</span><hr>
             <span class="userinfo">후원자 정보 : <%=session.getAttribute("id")%></span><hr>
-            <form name="payy" action="/donation_success"></form>
+
+            <form action="donation_success">
             <span class="donationmoney">후원금액
                 <input type="text" id="donationmoney" name="donationmoney" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" class="donationtextarea" placeholder="숫자를 입력해주세요" style="width: 50%; margin-left: 10px;"></input>
                 <p style="font-weight: bold; margin-left: 10px;">원</p>
@@ -52,13 +53,17 @@
             <%--결제 버튼그룹 start--%>
             <article class="donationmid">
                 <div class="col-lg-12" style="display: flex; justify-content: space-evenly; flex-direction: column">
-                    <a href="donation_success"><input type="button" class="btn btn-outline-secondary" value="계좌 이체"></a>
-                    <a href="donation_success"><input type="button" class="btn btn-outline-secondary" value="카드 결제"></a>
-                    <a href="donation_success"><input type="button" class="btn btn-outline-secondary" value="휴대폰 결제"></a>
-                    <a href="donation_success"><input type="button" class="btn btn-outline-secondary" value="페이 결제"></a>
+                        <input type="hidden" id="dID" name="dID" value="${data[0].m_dId}"/>
+                        <input type="submit" class="btn btn-outline-secondary" value="결제하기"/>
 
 
-                    <a href="/donation_success"><input type="button" class="btn btn-outline-secondary" id="checkpay" value="결제하기"></a>
+
+<%--                    <a href="donation_success"><input type="button" class="btn btn-outline-secondary" value="계좌 이체"></a>--%>
+<%--                    <a href="donation_success"><input type="button" class="btn btn-outline-secondary" value="카드 결제"></a>--%>
+<%--                    <a href="donation_success"><input type="button" class="btn btn-outline-secondary" value="휴대폰 결제"></a>--%>
+<%--                    <a href="donation_success"><input type="button" class="btn btn-outline-secondary" value="페이 결제"></a>--%>
+
+
 <%--                    <a href="#"><input type="button" class="btn btn-outline-secondary" value="결제하기"></a>--%>
                     <!-- pay js -->
 <%--                    <script type="text/javascript">--%>
@@ -127,11 +132,6 @@
 
 <%--                        }); //doc.ready--%>
 <%--                    </script>--%>
-                    <a href="#"><input type="button" class="btn btn-outline-secondary" value="계좌 이체"></a>
-                    <a href="#"><input type="button" class="btn btn-outline-secondary" value="카드 결제"></a>
-                    <a href="#"><input type="button" class="btn btn-outline-secondary" value="휴대폰 결제"></a>
-                    <a href="#"><input type="button" class="btn btn-outline-secondary" value="페이 결제"></a>
-
                 </div>
             </article>
             <%--결제 버튼그룹 end--%>

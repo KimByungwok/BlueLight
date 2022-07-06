@@ -42,10 +42,11 @@ public class HomeController {
 		session.setAttribute("id", null); //id세션초기화
 		session.setAttribute("adminflag", "0");//adminflag세션초기화
 
-		int test=0;	//디버깅용 로그인 과정 스킵용 (0끄기 1켜기)
+		int test=1;	//디버깅용 로그인 과정 스킵용 (0끄기 1켜기)
 		if(test != 0) {
 
 			session.setAttribute("id", "rina"); //디버깅용 강제 로그인 넣고 시작
+			session.setAttribute("name","제 이름은 코난");
 			session.setAttribute("adminflag", "1");//디버깅용 강제 어드민권한 넣고 시작
 		}
 		return "main";

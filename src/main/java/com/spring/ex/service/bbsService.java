@@ -15,5 +15,7 @@ public interface bbsService {
 
     public int hitBBS(String i);
 
+
+
     }
 

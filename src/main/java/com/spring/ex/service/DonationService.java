@@ -16,4 +16,6 @@ public interface DonationService {
     public List<DonationDTO> viewBBS(String i);
 
     public int hitBBS(String i);
+
+
 }
