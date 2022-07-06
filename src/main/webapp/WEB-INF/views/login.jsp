@@ -55,6 +55,13 @@
                 <button type="button" class="btn btn-outline-primary"onclick="location.href='companyregister'">기업 회원가입</button>
             </div>
         </div>
+        <%--아이디, 비번 찾기--%>
+        <div class="col-12 col-sm-12 col-lg-12">
+            <div class="row" style="margin-left: 20%; margin-right: 20%;">
+                <a style="" href="findID">아이디 찾기</a>
+                <a href="newPW">비밀번호 재설정</a>
+            </div>
+        </div>
     </div>
 </div>
 

@@ -19,5 +19,11 @@ public interface MemberService {
     public String adminflagService(MemberDTO dto);
 
     public List<MemberDTO> memberView(String i);
+
+    public String findIDService(MemberDTO dto);
+
+    public Integer newPWService(MemberDTO dto);
+
+    public String newPW_check_Service(MemberDTO dto);
 }
 

@@ -53,4 +53,20 @@ public class MemberServiceImp implements MemberService {
         System.out.println("service"+dto);
         return memberDAO.adminflagService(dto);
     }
+
+    @Override
+    public String findIDService(MemberDTO dto)
+    {
+        return memberDAO.findIDService(dto);
+    }
+
+    public Integer newPWService(MemberDTO dto)
+    {
+        return memberDAO.newPWService(dto);
+    }
+
+    public String newPW_check_Service(MemberDTO dto) {
+        System.out.println(dto + "service");
+        return memberDAO.newPW_check_Service(dto);
+    }
 }

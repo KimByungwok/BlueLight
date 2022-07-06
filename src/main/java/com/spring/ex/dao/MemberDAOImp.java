@@ -50,6 +50,20 @@ public class MemberDAOImp implements MemberDAO{
         System.out.println("dao"+dto);
 
         return sqlSession.selectOne("member.admin_flag_Service", dto);
+    }
 
+    @Override
+    public String findIDService(MemberDTO dto) {
+        return sqlSession.selectOne("member.findIDService", dto);
+    }
+
+    @Override
+    public Integer newPWService(MemberDTO dto) {
+        return sqlSession.selectOne("member.newPWService", dto);
+    }
+
+    public String newPW_check_Service(MemberDTO dto) {
+        System.out.println(dto + "dao");
+        return sqlSession.selectOne("member.newPW_check_Service", dto);
     }
 }
