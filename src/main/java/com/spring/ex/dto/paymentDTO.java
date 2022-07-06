@@ -1,22 +1,24 @@
 package com.spring.ex.dto;
 
+import java.sql.Timestamp;
+
 public class paymentDTO {
 
 
-    String m_pId;
+    String m_pID;
     String m_pbbsID;
-    String m_pDate;
+    Timestamp m_pDate;
     String m_pPrice;
     String m_pCard_num;
     String m_prefund;
-    String m_sPtype;
+    String m_pPtype;
 
-    public String getM_pId() {
-        return m_pId;
+    public String getM_pID() {
+        return m_pID;
     }
 
-    public void setM_pId(String m_pId) {
-        this.m_pId = m_pId;
+    public void setM_pID(String m_pID) {
+        this.m_pID = m_pID;
     }
 
     public String getM_pbbsID() {
@@ -27,11 +29,11 @@ public class paymentDTO {
         this.m_pbbsID = m_pbbsID;
     }
 
-    public String getM_pDate() {
+    public Timestamp getM_pDate() {
         return m_pDate;
     }
 
-    public void setM_pDate(String m_pDate) {
+    public void setM_pDate(Timestamp m_pDate) {
         this.m_pDate = m_pDate;
     }
 
@@ -59,11 +61,11 @@ public class paymentDTO {
         this.m_prefund = m_prefund;
     }
 
-    public String getM_sPtype() {
-        return m_sPtype;
+    public String getM_pPtype() {
+        return m_pPtype;
     }
 
-    public void setM_sPtype(String m_sPtype) {
-        this.m_sPtype = m_sPtype;
+    public void setM_pPtype(String m_pPtype) {
+        this.m_pPtype = m_pPtype;
     }
 }

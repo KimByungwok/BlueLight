@@ -6,9 +6,11 @@ import com.spring.ex.dao.MemberDAO;
 import com.spring.ex.dto.MemberDTO;
 import com.spring.ex.dao.bbsDAO;
 import com.spring.ex.dto.bbsDTO;
+import com.spring.ex.dto.paymentDTO;
 import com.spring.ex.service.MemberService;
 import com.spring.ex.service.bbsService;
 
+import com.spring.ex.service.paymentService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -16,6 +18,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
+import org.springframework.web.servlet.ModelAndView;
+
 import javax.servlet.http.HttpServletResponse;
 
 import javax.inject.Inject;
@@ -35,6 +39,8 @@ public class MainController {
 	@Inject
 	MemberService mService;
 
+	@Inject
+	paymentService payService;
 
 	@RequestMapping(value = "/favicon.ico", method = RequestMethod.GET)
 
@@ -172,6 +178,7 @@ public class MainController {
 
 		HttpSession session = request.getSession();
 		session.removeAttribute("id");
+		session.removeAttribute("name");
 		session.removeAttribute("adminflag");
 		return "main";
 	}
@@ -190,7 +197,13 @@ public class MainController {
 
 	//기부현황
 	@RequestMapping("/donationreport")
-	public String donationreport() { return "donationreport";}
+	public ModelAndView donationreport() {
+
+
+		ModelAndView mv = new ModelAndView("donationreport");
+		mv.addObject("paydata", payService.load_payment_service());
+
+		return mv;}
 
 
 

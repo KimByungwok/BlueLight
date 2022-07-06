@@ -28,4 +28,6 @@
     <update id="hitBBS">
         update bbs_board set m_bHit = m_bHit+1 WHERE m_bId = #{m_bId}
     </update>
+
+
 </mapper>

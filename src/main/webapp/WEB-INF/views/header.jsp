@@ -103,7 +103,7 @@
                                         seid = "로그인을 해주세요";
                                     } else {
 
-                                        seid = (String) session.getAttribute("id") +  "님 환영합니다.";
+                                        seid = (String) session.getAttribute("name") + "("+session.getAttribute("id") +")"+  "님 환영합니다.";
                                     }
                                 %>
                                 <label><%=seid%></label>
