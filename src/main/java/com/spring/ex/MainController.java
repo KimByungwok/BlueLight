@@ -35,6 +35,8 @@ public class MainController {
 	@Inject
 	MemberService mService;
 
+	// 배고파
+
 
 	@RequestMapping(value = "/favicon.ico", method = RequestMethod.GET)
 
